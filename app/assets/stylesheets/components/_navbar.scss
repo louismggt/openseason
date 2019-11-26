@@ -1,12 +1,22 @@
-.navbar-lewagon {
+.navbar-openseason {
   justify-content: space-between;
-  background: white;
+  background: #364156;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-openseason .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-openseason .navbar-brand img {
+  width: 150px;
 }
+.navbar .nav-item a{
+  color: #F9F8F8;
+  padding-bottom: 16px;
+
+}
+.navbar .nav-item a:hover {
+  padding-bottom: 16px;
+  border-bottom: 1px solid;
+}
+

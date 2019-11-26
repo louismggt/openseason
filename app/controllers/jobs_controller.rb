@@ -2,7 +2,7 @@ class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @jobs = Job.all
+    @jobs = policy_scope(job).order(created_at: :desc)
   end
 
   def show
@@ -15,6 +15,7 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(jobs_params)
+    authorize @job
     if @job.save!
       redirect_to job_path(@job)
     else
