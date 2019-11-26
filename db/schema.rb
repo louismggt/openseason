@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_123711) do
+ActiveRecord::Schema.define(version: 2019_11_26_133508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 2019_11_26_123711) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "land_type"
+    t.string "professional_domain"
+    t.string "title"
   end
 
   create_table "missions", force: :cascade do |t|
@@ -56,7 +58,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_123711) do
 
   create_table "preferences", force: :cascade do |t|
     t.integer "duration"
-    t.date "star_date"
+    t.date "start_date"
     t.date "end_date"
     t.string "land_type"
     t.string "category"
