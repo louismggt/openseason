@@ -1,6 +1,39 @@
 
+
+.head-quizz h1 {
+  font-family: 'Rancho', cursive;
+  font-size: 56px;
+}
+.head-quizz {
+  transform: rotate(-20deg);
+}
+
 .cat-mer {
   background-image: image_tag("cat-mer.png");
+}
+
+.quizz a, p {
+  margin-top: 10px;
+  text-decoration: none;
+  font-family: 'Rancho', cursive;
+  font-size: 36px;
+  color: #3F3D56;
+}
+
+.quizz img {
+  max-height: 200px;
+}
+
+
+.quizz-layout {
+  margin-top: 20%;
+}
+
+.quizz:hover {
+  opacity:0.8;
+  -moz-transition: opacity 0.7s;
+  -webkit-transition: opacity 0.7s;
+  -o-transition: opacity 0.7s;
 }
 
 input[type=checkbox] {

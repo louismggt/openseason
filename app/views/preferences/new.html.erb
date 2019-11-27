@@ -1,39 +1,81 @@
 <div class="container">
-  <div class="row d-flexinline">
 
-    <% if params[:step] == "1" %>
-      <%= link_to preferences_path(step: 1, value: "mer"), method: :post do %>
-        Mer
+    <div class="head-quizz">
+      <h1>Quel environnement préfères-tu ?</h1>
+    </div>
+    <div class="quizz-layout">
+    <div class="row d-flex justify-content-around">
+
+      <% if params[:step] == "1" %>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 1, value: "mer"), method: :post do %>
+            <%= image_tag "mer.png" %>
+            <p>MER</p>
+          <% end %>
+        </div>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 1, value: "campagne"), method: :post do %>
+            <%= image_tag "campagne.png" %>
+            <p>CAMPAGNE</p>
+          <% end %>
+        </div>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 1, value: "ville"), method: :post do %>
+            <%= image_tag "ville.png" %>
+            <p>VILLE</p>
+          <% end %>
+        </div>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 1, value: "montagne"), method: :post do %>
+            <%= image_tag "montagne.png" %>
+            <p>MONTAGNE</p>
+          <% end %>
+        </div>
+      <% elsif params[:step] == "2" %>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 2, value: "service"), method: :post do %>
+            <%= image_tag "service.png" %>
+            <p>SERVICE</p>
+          <% end %>
+        </div>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 2, value: "nature"), method: :post do %>
+            <%= image_tag "agri.png" %>
+            <p>Agriculture</p>
+          <% end %>
+        </div>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 2, value: "industrie"), method: :post do %>
+            <%= image_tag "industrie.png" %>
+            <p>Industrie</p>
+          <% end %>
+        </div>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 2, value: "social"), method: :post do %>
+            <%= image_tag "social.png" %>
+            <p>Social</p>
+          <% end %>
+        </div>
+      <% else params[:step] == "3" %>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 3), method: :post do %>
+            <%= image_tag "1-week.png" %>
+            <p>1 semaine</p>
+          <% end %>
+        </div>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 3), method: :post do %>
+            <%= image_tag "1-month.png" %>
+            <p>1 mois</p>
+          <% end %>
+        </div>
+        <div class="quizz text-center">
+          <%= link_to preferences_path(step: 3), method: :post do %>
+            <%= image_tag "2-month.png" %>
+            <p>2 mois</p>
+          <% end %>
+        </div>
       <% end %>
-      <%= link_to preferences_path(step: 1, value: "campagne"), method: :post do %>
-        Campagne
-      <% end %>
-      <%= link_to preferences_path(step: 1, value: "ville"), method: :post do %>
-        Ville
-      <% end %>
-      <%= link_to preferences_path(step: 1, value: "montagne"), method: :post do %>
-        Montagne
-      <% end %>
-    <% elsif params[:step] == "2" %>
-      <%= link_to preferences_path(step: 2), method: :post do %>
-        Service
-      <% end %>
-      <%= link_to preferences_path(step: 2), method: :post do %>
-        Nature
-      <% end %>
-      <%= link_to preferences_path(step: 2), method: :post do %>
-        Industrie
-      <% end %>
-    <% elsif params[:step] == "3" %>
-      <%= link_to preferences_path(step: 3), method: :post do %>
-        1 semaine
-      <% end %>
-      <%= link_to preferences_path(step: 3), method: :post do %>
-        1 mois
-      <% end %>
-      <%= link_to preferences_path(step: 3), method: :post do %>
-        2 mois
-      <% end %>
-    <% end %>
+    </div>
   </div>
 </div>

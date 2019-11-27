@@ -20,13 +20,13 @@ class PreferencesController < ApplicationController
     if user_signed_in?
       @preference.value = params[:value]
       @preference.user  = current_user
-      @preference.type  = type_of_preference(params[:step])
+      @preference.preference_type = type_of_preference(params[:step])
       @preference.save
     end
     cookies[type_of_preference(params[:step]).to_sym] = params[:value]
     next_step = params[:step].to_i + 1
     if params[:step].to_i == 3
-      redirect_to root_path
+      redirect_to jobs_path
     else
       redirect_to new_preference_path(step: next_step)
     end
