@@ -8,6 +8,11 @@ class MissionsController < ApplicationController
     @mission = Mission.new
   end
 
+  def show
+    @mission = Mission.find(params[:id])
+    authorize @mission
+  end
+
   def create
     @job = Job.find(params[:job_id])
     @mission = Mission.new

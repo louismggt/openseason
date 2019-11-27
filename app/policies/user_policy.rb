@@ -1,4 +1,4 @@
-class JobPolicy < ApplicationPolicy
+class UserPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -6,7 +6,11 @@ class JobPolicy < ApplicationPolicy
   end
 
   def create?
-    return false
+    return true
+  end
+
+  def show?
+    return true
   end
 
 end
