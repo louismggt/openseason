@@ -1,4 +1,6 @@
 class PreferencesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new, :create]
+
   def index
     @preferences = Preference.all
   end
@@ -9,15 +11,24 @@ class PreferencesController < ApplicationController
 
   def new
     @preference = Preference.new
+    authorize @preference
   end
 
   def create
-    @preference = Preference.new(preferences_params)
-    @preference.user = current_user
-    if @preference.save!
-      redirect_to preference_path(@preference)
+    @preference = Preference.new
+    authorize @preference
+    if user_signed_in?
+      @preference.value = params[:value]
+      @preference.user  = current_user
+      @preference.type  = type_of_preference(params[:step])
+      @preference.save
+    end
+    cookies[type_of_preference(params[:step]).to_sym] = params[:value]
+    next_step = params[:step].to_i + 1
+    if params[:step].to_i == 3
+      redirect_to root_path
     else
-      render :new
+      redirect_to new_preference_path(step: next_step)
     end
   end
 
@@ -48,5 +59,15 @@ class PreferencesController < ApplicationController
 
   def preferences_params
     params.require(:preference).permit(:duration, :start_date, :end_date, :land_type, :category)
+  end
+
+  def type_of_preference(step)
+    if step == "1"
+      "land_type"
+    elsif step == "2"
+      "category"
+    elsif step == "3"
+      "duration"
+    end
   end
 end
