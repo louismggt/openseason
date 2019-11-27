@@ -1,79 +1,40 @@
-<div class="container">
-
-    <div class="head-quizz">
-      <h1>Quel environnement préfères-tu ?</h1>
-    </div>
-    <div class="quizz-layout">
-    <div class="row d-flex justify-content-around">
-
+<div class="main">
+  <div class="container">
       <% if params[:step] == "1" %>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 1, value: "mer"), method: :post do %>
-            <%= image_tag "mer.png" %>
-            <p>MER</p>
-          <% end %>
+        <div class="head-quizz">
+          <p>Trouve ton job saisonnier idéal en 3 question!</p>
+          <h1>Quel environnement préfères-tu ?</h1>
         </div>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 1, value: "campagne"), method: :post do %>
-            <%= image_tag "campagne.png" %>
-            <p>CAMPAGNE</p>
-          <% end %>
-        </div>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 1, value: "ville"), method: :post do %>
-            <%= image_tag "ville.png" %>
-            <p>VILLE</p>
-          <% end %>
-        </div>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 1, value: "montagne"), method: :post do %>
-            <%= image_tag "montagne.png" %>
-            <p>MONTAGNE</p>
-          <% end %>
+        <div class="quizz-layout">
+          <div class="row d-flex justify-content-around">
+            <% Preference::PREFERENCE_TYPES[:land_type].each do |preference| %>
+              <%= render "card", step: 1, value: preference %>
+            <% end %>
+          </div>
         </div>
       <% elsif params[:step] == "2" %>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 2, value: "service"), method: :post do %>
-            <%= image_tag "service.png" %>
-            <p>SERVICE</p>
-          <% end %>
+        <div class="head-quizz">
+          <p>Ok, ça focalise déjà ta recherche,<br>encore deux petites questions </p>
+          <h1>Quel secteur d'activité ?</h1>
         </div>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 2, value: "nature"), method: :post do %>
-            <%= image_tag "agri.png" %>
-            <p>Agriculture</p>
-          <% end %>
-        </div>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 2, value: "industrie"), method: :post do %>
-            <%= image_tag "industrie.png" %>
-            <p>Industrie</p>
-          <% end %>
-        </div>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 2, value: "social"), method: :post do %>
-            <%= image_tag "social.png" %>
-            <p>Social</p>
-          <% end %>
+        <div class="quizz-layout">
+          <div class="row d-flex justify-content-around">
+            <% Preference::PREFERENCE_TYPES[:category].each do |preference| %>
+              <%= render "card", step: 2, value: preference %>
+            <% end %>
+          </div>
         </div>
       <% else params[:step] == "3" %>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 3), method: :post do %>
-            <%= image_tag "1-week.png" %>
-            <p>1 semaine</p>
-          <% end %>
+        <div class="head-quizz">
+          <p>Ok, dernière question </p>
+          <h1>Pour combien de temps ?</h1>
         </div>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 3), method: :post do %>
-            <%= image_tag "1-month.png" %>
-            <p>1 mois</p>
-          <% end %>
-        </div>
-        <div class="quizz text-center">
-          <%= link_to preferences_path(step: 3), method: :post do %>
-            <%= image_tag "2-month.png" %>
-            <p>2 mois</p>
-          <% end %>
+        <div class="quizz-layout">
+          <div class="row d-flex justify-content-around">
+            <% Preference::PREFERENCE_TYPES[:duration].each do |preference| %>
+              <%= render "card", step: 3, value: preference %>
+            <% end %>
+          </div>
         </div>
       <% end %>
     </div>

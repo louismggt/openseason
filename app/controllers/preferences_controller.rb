@@ -66,7 +66,7 @@ class PreferencesController < ApplicationController
       "land_type"
     elsif step == "2"
       "category"
-    elsif step == "3"
+    else
       "duration"
     end
   end
