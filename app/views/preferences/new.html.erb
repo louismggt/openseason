@@ -1,42 +1,15 @@
 <div class="main">
   <div class="container">
-      <% if params[:step] == "1" %>
-        <div class="head-quizz">
-          <p>Trouve ton job saisonnier idéal en 3 question!</p>
-          <h1>Quel environnement préfères-tu ?</h1>
-        </div>
-        <div class="quizz-layout">
-          <div class="row d-flex justify-content-around">
-            <% Preference::PREFERENCE_TYPES[:land_type].each do |preference| %>
-              <%= render "card", step: 1, value: preference %>
-            <% end %>
-          </div>
-        </div>
-      <% elsif params[:step] == "2" %>
-        <div class="head-quizz">
-          <p>Ok, ça focalise déjà ta recherche,<br>encore deux petites questions </p>
-          <h1>Quel secteur d'activité ?</h1>
-        </div>
-        <div class="quizz-layout">
-          <div class="row d-flex justify-content-around">
-            <% Preference::PREFERENCE_TYPES[:category].each do |preference| %>
-              <%= render "card", step: 2, value: preference %>
-            <% end %>
-          </div>
-        </div>
-      <% else params[:step] == "3" %>
-        <div class="head-quizz">
-          <p>Ok, dernière question </p>
-          <h1>Pour combien de temps ?</h1>
-        </div>
-        <div class="quizz-layout">
-          <div class="row d-flex justify-content-around">
-            <% Preference::PREFERENCE_TYPES[:duration].each do |preference| %>
-              <%= render "card", step: 3, value: preference %>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
+    <div class="head-quizz">
+      <p><%= raw(@step_infos[:text]) %></p>
+      <h1><%= @step_infos[:title] %></h1>
+    </div>
+    <div class="quizz-layout">
+      <div class="row d-flex justify-content-around">
+        <% @step_infos[:values].each do |preference| %>
+          <%= render "card", step: params[:step].to_i, value: preference %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -11,6 +11,7 @@ class PreferencesController < ApplicationController
 
   def new
     @preference = Preference.new
+    @step_infos = Preference::PREFERENCE_TYPES[params[:step].to_i]
     authorize @preference
   end
 
@@ -25,7 +26,7 @@ class PreferencesController < ApplicationController
     end
     cookies[type_of_preference(params[:step]).to_sym] = params[:value]
     next_step = params[:step].to_i + 1
-    if params[:step].to_i == 3
+    if params[:step].to_i == 2
       redirect_to jobs_path
     else
       redirect_to new_preference_path(step: next_step)
