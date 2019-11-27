@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2019_11_27_113229) do
 
   create_table "preferences", force: :cascade do |t|
     t.integer "duration"
-    t.date "star_date"
+    t.date "start_date"
     t.date "end_date"
     t.string "land_type"
     t.string "category"
