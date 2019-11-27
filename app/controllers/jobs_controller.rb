@@ -2,11 +2,13 @@ class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @jobs = policy_scope(job).order(created_at: :desc)
+    @jobs        = policy_scope(Job)
+    @preferences = Preference::PREFERENCE_TYPES.map {|key, value| cookies[key]}
   end
 
   def show
     @job = Job.find(params[:id])
+    authorize @job
   end
 
   def new
