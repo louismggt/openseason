@@ -1,0 +1,25 @@
+
+.cat-mer {
+  background-image: image_tag("cat-mer.png");
+}
+
+input[type=checkbox] {
+  display:none;
+}
+input[type=checkbox] + label
+ {
+     background-image: image_tag("cat-mer.png");
+     height: 16px;
+     width: 16px;
+     display:inline-block;
+     padding: 0 0 0 0px;
+ }
+
+ input[type=checkbox]:checked + label
+  {
+      background-image: image_tag("cat-mer.png");
+      height: 16px;
+      width: 16px;
+      display:inline-block;
+      padding: 0 0 0 0px;
+    }
