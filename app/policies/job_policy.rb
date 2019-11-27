@@ -9,4 +9,8 @@ class JobPolicy < ApplicationPolicy
     return false
   end
 
+  def show?
+    return true
+  end
+
 end

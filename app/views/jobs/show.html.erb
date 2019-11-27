@@ -1,1 +1,49 @@
-show.html.erb
+<div class="container d-flex justify-content-around" style="background-color: red">
+  <div class="index-jobs" style="background-color: black">
+    <p> liste de tous les jobs</p>
+  </div>
+  <div class="container-show-job py-6 px-6" style="background-color: yellow">
+    <div class="headers d-flex">
+      <img src="" alt="">
+      <div class="job-headers">
+        <h2>Titre de l'annonce</h2>
+        <div class="title_job d-flex">
+          <div class="date-info d-flex">
+            <i class="far fa-calendar-plus"></i>
+            <p>text date (end-date - star-date)</p>
+          </div>
+          <div class="salary-info d-flex">
+            <i class="fas fa-euro-sign"></i>
+            <p>text salary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="job-content">
+      <h3>Intitulé du job :</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sit corporis distinctio, reiciendis ipsa ea odio delectus minus ipsam, in recusandae unde ipsum sint placeat sequi possimus ex modi hic!</p>
+    </div>
+    <div class="job-footer-infos d-flex">
+      <div class="address">
+        <i class="far fa-map"></i>
+        <p> Lieu de travail</p>
+      </div>
+      <div class="accommodation">
+        <i class="fas fa-bed"></i>
+        <p> places disponible ou non</p>
+      </div>
+      <div class="meal">
+        <i class="fas fa-utensils"></i>
+        <p> Repas compris ou non</p>
+      </div>
+      <div class="contact">
+        <i class="far fa-id-card"></i>
+        <p> Info concernant l'employeur</p>
+      </div>
+    </div>
+    <div class="buttons">
+    <%= link_to "sauvegarder", new_job_favorite_path(@job)  %>
+    <%= link_to "postuler", new_job_mission_path(@job)  %>
+    </div>
+  </div>
+</div>
