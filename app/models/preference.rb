@@ -3,7 +3,7 @@ class Preference < ApplicationRecord
     {
       name: "land_type",
       values: ["mer", "campagne", "ville", "montagne"],
-      text: 'Trouve ton job saisonnier idéal en 3 question!',
+      text: "3 petites questions qui vont nous aider:",
       title: 'Quel environnement préfères-tu ?'
     },
     {

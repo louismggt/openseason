@@ -1,6 +1,6 @@
 <div class="quizz text-center">
   <%= link_to preferences_path(step: step, value: "#{value}"), method: :post do %>
     <%= image_tag "#{value}.png" %>
-    <p><%= value.gsub("-", " ").upcase %></p>
+    <div class="title-category"><%= value.gsub("-", " ").upcase %></div>
   <% end %>
 </div>
