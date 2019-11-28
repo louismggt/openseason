@@ -15,4 +15,9 @@ class Job < ApplicationRecord
       return "2-mois"
     end
   end
+
+  def zip_code_and_city
+     self.address.match(/\d{5}.*/)[0].first(17)...
+   end
+
 end
