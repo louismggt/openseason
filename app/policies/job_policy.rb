@@ -9,7 +9,7 @@ class JobPolicy < ApplicationPolicy
     return false
   end
 
-  # def index?
-  #   return true
-  # end
+  def show?
+    return true
+  end
 end

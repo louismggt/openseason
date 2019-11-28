@@ -11,6 +11,7 @@ class PreferencesController < ApplicationController
 
   def new
     @preference = Preference.new
+    @step_infos = Preference::PREFERENCE_TYPES[params[:step].to_i]
     authorize @preference
   end
 
@@ -20,13 +21,13 @@ class PreferencesController < ApplicationController
     if user_signed_in?
       @preference.value = params[:value]
       @preference.user  = current_user
-      @preference.type  = type_of_preference(params[:step])
+      @preference.preference_type = type_of_preference(params[:step])
       @preference.save
     end
     cookies[type_of_preference(params[:step]).to_sym] = params[:value]
     next_step = params[:step].to_i + 1
-    if params[:step].to_i == 3
-      redirect_to root_path
+    if params[:step].to_i == 2
+      redirect_to jobs_path
     else
       redirect_to new_preference_path(step: next_step)
     end
@@ -66,7 +67,7 @@ class PreferencesController < ApplicationController
       "land_type"
     elsif step == "2"
       "category"
-    elsif step == "3"
+    else
       "duration"
     end
   end
