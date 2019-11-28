@@ -1,19 +1,19 @@
-<div class="main">
-  <header>
-    <div class="header__bg">
-    </div>
-    <div class="head-quizz">
-      <div class="text"><%= raw(@step_infos[:text]) %></div>
-      <h1><%= @step_infos[:title] %></h1>
-    </div>
-  </header>
-  <div class="container-content">
-    <div class="quizz-layout d-flex justify-content-around col-md-8 offset-md-2">
-      <!-- <div class="row  "> -->
-        <% @step_infos[:values].each do |preference| %>
-          <%= render "card", step: params[:step].to_i, value: preference %>
-        <% end %>
-      <!-- </div> -->
-    </div>
+<header>
+  <div class="header__bg">
+  </div>
+  <div class="head-quizz">
+    <div class="text"><%= raw(@step_infos[:text]) %></div>
+    <h1><%= @step_infos[:title] %></h1>
+  </div>
+</header>
+<div class="container-content">
+  <div class="quizz-layout d-flex justify-content-around col-md-8 offset-md-2">
+    <!-- <div class="row  "> -->
+      <% @step_infos[:values].each do |preference| %>
+        <%= render "card", step: params[:step].to_i, value: preference %>
+      <% end %>
+    <!-- </div> -->
   </div>
 </div>
+
+<%= console %>
