@@ -2,12 +2,11 @@
 .footer {
   background-color: #364156;
   position: relative;
-
 }
 
 .footer-menu {
   padding-top: 20px;
-  height: 67px;
+  height: 70px;
 }
 
 .copyright {
@@ -19,18 +18,19 @@
   padding-bottom: 3px
 }
 
-span {
-  font-family: Rancho;
-  font-size: 50px;
-  color: #499EAA;
-}
+// span {
+//   font-family: Rancho;
+//   font-size: 50px;
+//   color: #499EAA;
+// }
 
 .logo p {
   font-family: Rancho;
   font-size: 28px;
   color: #499EAA;
+  text-align: center;
 }
 
-.logo {
-  margin-top: 5px
-}
+// .logo {
+//   margin-top: 5px
+// }
