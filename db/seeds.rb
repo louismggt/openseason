@@ -24,22 +24,22 @@ User.create!(
   last_name: "Paturel",
   username: "patujulie",
   nationality: "francaise",
-  address: "310 ter rue de tourcoing, 59420 Mouvaux",
+  address: "310 ter rue de tourcoing - 59420 Mouvaux",
   biograophy: "Jeune femme dynamique a la recherche d'un job d'été en extérieur. Je suis souriante, j'aime beaucoup rire et raconter des comptes avec de nouveaux amis ! ",
   photo:"https://lh3.googleusercontent.com/a-/AAuE7mC0uPzlRZ3t_rUybWI-TCUY56t8FOP8WTBFOpjgaA=s96-cc-rg",
   age: 23
 )
 
 Job.create!(
-  title: "Ouvrier / Ouvrière  taille des arbres en pépinière.",
+  title: "Ouvrier taille des arbres en pépinière H/F.",
   address: "190, Route des Pépinières - 38270 JARCIEU",
   land_type: "Campagne",
   meal: false,
   accommodation: false,
   salary: 1680,
   places: 1,
-  start_date: nil,
-  end_date: nil,
+  start_date: Date.new(2019,12,18),
+  end_date: Date.new(2020,4,18),
   description: "Taille des arbres en pépinière (H/F).",
   content: "Contrat de 4 mois. Amateur de plantes, vous aimez travailler dehors dans toutes les conditions, au contact de la terre. La taille (principalement au sécateur) est une des compétences clef de notre métier.",
   category: "Nature",
@@ -53,8 +53,8 @@ Job.create!(
 )
 
 Job.create!(
-  title: "Animateur / Animatrice d'enfants",
-  address: "Immeuble La Lauzière 73 130 SAINT FRANÇOIS",
+  title: "Animateur d'enfants H/F",
+  address: "Immeuble La Lauzière - 73130 SAINT FRANÇOIS",
   land_type: "Montagne",
   meal: false,
   accommodation: true,
@@ -98,7 +98,7 @@ Job.create!(
 
 Job.create!(
   title: "Réceptionniste polyvalent H/F",
-  address: "LE BORSAT IV, Tignes",
+  address: "LE BORSAT IV, 73320 Tignes",
   land_type: "Montagne",
   meal: false,
   accommodation: true,
@@ -125,7 +125,7 @@ Assurer l’ensemble des opérations d’entretien journalier et de nettoyage n�
 
 
 Job.create!(
-  title: "Tailleur / Tailleuse de vigne",
+  title: "Tailleur de vigne H/F",
   address: "15 Rue DU CHENE LA JEANSONNE - 51270 COURJEONNET",
   land_type: "Campagne",
   meal: true,
@@ -171,8 +171,8 @@ Job.create!(
 
 
 Job.create!(
-  title: "Éducateur / Éducatrice de jeunes enfants",
-  address: "VILLAGE CLUBS DU SOLEIL, 38 - MONT DE LANS",
+  title: "Éducateur de jeunes enfants H/F",
+  address: "VILLAGE CLUBS DU SOLEIL, 38000 - MONT DE LANS",
   land_type: "Montagne",
   meal: true,
   accommodation: true,
@@ -209,7 +209,7 @@ Les Villages Clubs du Soleil étudient, à compétences égales, toutes candidat
 
 Job.create!(
   title: "Skiman / Skiwoman",
-  address: "74 - LES GETS",
+  address: "74000 - LES GETS",
   land_type: "Montagne",
   meal: false,
   accommodation: false,
@@ -235,7 +235,7 @@ sport d'hiver",
 
 Job.create!(
   title: "Chef de rang",
-  address: "73 - ARC 1950",
+  address: "73000 - ARC 1950",
   land_type: "Montagne",
   meal: true,
   accommodation: true,
@@ -256,7 +256,7 @@ Job.create!(
 )
 
 Job.create!(
-  title: "Conditionneur / Conditionneuse main (H/F)",
+  title: "Conditionneur main (H/F)",
   address: "13002 MARSEILLE",
   land_type: "Ville",
   meal: false,
@@ -279,7 +279,7 @@ Job.create!(
 
 Job.create!(
   title: "Conducteur de ligne de production/fabrication",
-  address: "Bordeaux",
+  address: "33000 Bordeaux",
   land_type: "Ville",
   meal: true,
   accommodation: false,
@@ -310,8 +310,8 @@ Inscription réunion 05 24 07 70 21 de 10h30 à12h15 ou mrsgironde.33062@pole-em
 
 
 Job.create!(
-  title: "Tailleur / Tailleuse de vigne",
-  address: "34 - CAZOULS LES BEZIERS",
+  title: "Tailleur de vigne H/F",
+  address: "34000 - CAZOULS LES BEZIERS",
   land_type: "Campagne",
   meal: true,
   accommodation: true,
@@ -356,7 +356,7 @@ Vous serez amené à conduire le matériel de l'exploitation.",
 )
 
 Job.create!(
-  title: "Agent / Agente de fabrication de production alimentaire (H/F)",
+  title: "Agent fabrication de production alimentaire (H/F)",
   address: "67150 - ERSTEIN",
   land_type: "Ville",
   meal: false,

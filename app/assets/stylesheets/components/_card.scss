@@ -1,51 +1,87 @@
 .container {
   display: flex;
-overflow: hidden;
+  overflow: hidden;
+}
+
+.job-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 70px;
 }
 
 .job-container {
-flex-direction:wrap;
-background-color: #F9F8F8;;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-box-sizing: border-box;
-border-radius: 5px;
+  flex: 1 0 40%;
+  min-height: 250px;
+  min-width: 350px;
+  max-width: 329px;
+  background-color: #F9F8F8;;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .job-logo img {
-  width: 200px;
-  height: 200px;
+  width: 125px;
+  height: 125px;
   object-fit: contain;
-  margin-left: 20px;
-  margin-top: 15px;
+  // margin-left: 20px;
+  // margin-top: 15px;
   border-radius: 3px;
   background-color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.job-description {
+  text-align: center;
+  margin: 0;
+}
+
+
+.lower-side {
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  font-size: 13px;
+}
+
 .text-elements {
   text-align: center;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
 }
 
 .text-elements h4 {
-width: 220px;
-margin-right: 20px;
-margin-top: 10px;
-margin-left: 15px;
-padding: 5px 10px 10px 10px;
-font-family: Ubuntu;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 20px;
-letter-spacing: 0.2px;
-color: #364156;
-border-bottom:1px solid black;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px 10px 10px 10px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #364156;
+  border-bottom:1px solid black;
 }
 
 .text-elements p {
-padding: 15px;
-font-family: Montserrat;
-font-size: 14px;
-line-height: 20px;
-color: #364156;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-height: lighter;
+  line-height: 20px;
+  color: #364156;
+  margin-left: 10px;
+  margin-right: 10px;
 }
+
+
