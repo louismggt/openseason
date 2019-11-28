@@ -1,6 +1,8 @@
 .navbar-openseason {
   justify-content: space-between;
   background: #364156;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+  height: 100px;
 }
 
 .navbar-openseason .navbar-collapse {
@@ -21,5 +23,6 @@
 }
 .navbar .nav-item .dropdown {
   color: black;
+  z-index: 999;
 }
 

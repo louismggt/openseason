@@ -3,21 +3,62 @@
   background: -o-linear-gradient(top left, #364156 50%, #F8F9FA 50%);
   background: linear-gradient(to bottom right, #364156 50%, #F8F9FA 50%);
   height: 300px;
+  z-index: 10;
 }
+
 .head-quizz h1 {
+  // from header.scss H1
+  margin: 0;
+  padding: 100px 0;
+  text-align: center;
+
+  // from header h1 in header.scss
+  position: relative;
+  color: white;
+
   font-family: 'Rancho', cursive;
   font-size: 56px;
 }
-.head-quizz {
-  transform: rotate(-15deg);
+
+.head-quizz p {
+  font-size: 14px;
+  font-family: "roboto";
 }
 
-.quizz a, p {
+.head-quizz {
+  transform: rotate(-6deg);
+}
+
+.container-content {
+  position: relative;
+  top: -300px;
+  margin: 50px;
+  padding: 100px;
+  height: 50vh;
+}
+
+.quizz a {
   margin-top: 10px;
   text-decoration: none;
   font-family: 'Rancho', cursive;
   font-size: 36px;
-  color: #3F3D56;
+  color: white;
+  text-align: center;
+}
+
+.text {
+  position: absolute;
+  top: 10px;
+  padding-left: 50px;
+  font-family: "Montserrat";
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  transform: rotate(+6deg);
+}
+
+.quizz .title-category {
+  color: #364156;
 }
 
 .quizz img {
@@ -25,7 +66,7 @@
 }
 
 .quizz-layout {
-  margin-top: 200px;
+  margin-top: 250px;
 }
 
 .quizz:hover {
@@ -35,23 +76,13 @@
   -o-transition: opacity 0.7s;
 }
 
-input[type=checkbox] {
-  display:none;
-}
-input[type=checkbox] + label
- {
-     background-image: image_tag("cat-mer.png");
-     height: 16px;
-     width: 16px;
-     display:inline-block;
-     padding: 0 0 0 0px;
- }
+@media screen and (max-width: 700px) {
+  .quizz img {
+    max-height: 100px;
+  }
 
- input[type=checkbox]:checked + label
-  {
-      background-image: image_tag("cat-mer.png");
-      height: 16px;
-      width: 16px;
-      display:inline-block;
-      padding: 0 0 0 0px;
-    }
+  .quizz-layout {
+    margin-top: 100px;
+  }
+}
+

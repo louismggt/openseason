@@ -14,13 +14,15 @@
 // }
 
 .banner-container {
-  padding: 40px;
+  padding-top: 50px;
+  vertical-align: middle;
   justify-content: space-around;
   background-color: #499EAA;
+  height: 100vh;
 }
 
 .banner-title {
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .banner-title button {
