@@ -2,7 +2,8 @@ class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @jobs = policy_scope(job).order(created_at: :desc)
+    # @jobs = Job.all
+    @jobs = policy_scope(Job)
   end
 
   def show

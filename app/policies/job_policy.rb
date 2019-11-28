@@ -1,7 +1,7 @@
 class JobPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope.all.order(created_at: :desc)
     end
   end
 
@@ -9,4 +9,7 @@ class JobPolicy < ApplicationPolicy
     return false
   end
 
+  # def index?
+  #   return true
+  # end
 end
