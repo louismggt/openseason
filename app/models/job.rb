@@ -4,4 +4,8 @@ class Job < ApplicationRecord
 
   has_many :missions
   has_many :favorites
+
+  def zip_code_and_city
+     self.address.match(/\d{5}.*/)[0].first(17)...
+   end
 end
