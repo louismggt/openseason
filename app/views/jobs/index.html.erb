@@ -2,7 +2,7 @@
 <div class="main">
   <div class="wrapper">
     <div class="row">
-      <% @jobs.sample(4).each do |job| %>
+      <% @jobs.each do |job| %>
         <div class="col-xs-12 col-md-6">
           <%= render 'components/card', job: job %>
         </div>
@@ -11,3 +11,4 @@
   </div>
 </div>
 
+<%= console %>

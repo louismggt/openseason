@@ -1,5 +1,5 @@
 class MissionsController < ApplicationController
-    def index
+  def index
     @missions = Mission.all
   end
 
@@ -45,4 +45,4 @@ class MissionsController < ApplicationController
   end
 end
 
-end
+

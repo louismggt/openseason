@@ -4,4 +4,15 @@ class Job < ApplicationRecord
 
   has_many :missions
   has_many :favorites
+
+
+  def duration
+    if (end_date - start_date).to_i < 15
+      return "1-semaine"
+    elsif (end_date - start_date).to_i >= 15 && (end_date - start_date).to_i < 50
+      return "1-mois"
+    else
+      return "2-mois"
+    end
+  end
 end
