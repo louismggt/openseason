@@ -26,7 +26,6 @@ User.create!(
   nationality: "francaise",
   address: "310 ter rue de tourcoing - 59420 Mouvaux",
   biograophy: "Jeune femme dynamique a la recherche d'un job d'été en extérieur. Je suis souriante, j'aime beaucoup rire et raconter des comptes avec de nouveaux amis ! ",
-  photo:"https://lh3.googleusercontent.com/a-/AAuE7mC0uPzlRZ3t_rUybWI-TCUY56t8FOP8WTBFOpjgaA=s96-cc-rg",
   age: 23
 )
 
