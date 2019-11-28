@@ -1,4 +1,122 @@
-.container-show {
+.container {
+min-height: calc(100vh - 90px);
 margin-left: 50px;
 margin-right: 50px;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  width: bold;
+  text-align:center;
+  color: #405F76;
+}
+.contact {
+
+}
+.photo-profil {
+  text-align: center;
+  padding: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  background-color: #F9F8F8;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+.fa-user-circle {
+  border-radius: 50%;
+  text-shadow: 1px 1px 3px grey;
+  font-size: 150px;
+  color: lightgray;
+  margin-bottom: 5px;
+}
+.photo-profil p {
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: normal;
+  padding:5px;
+}
+.info-contact {
+  padding: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  background-color: #F9F8F8;
+  border-radius: 7px;
+}
+.info-contact p {
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: normal;
+  padding:5px;
+  border-bottom: 1px solid #499EAA;
+}
+.info-contact p i {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.info-contact h4 {
+  margin-right: 7px;
+  border-bottom: 1px solid #499EAA;
+}
+.favorite {
+  padding: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  background-color: #F9F8F8;
+  border-radius: 7px;
+  width: 360px;
+  height: 280px;
+}
+.favorite h3 {
+  border-bottom: 1px solid #499EAA;
+  font-family: 'Montserrat', sans-serif;
+  color: #405F76;
+  text-align: center;
+}
+.favorite h3 i {
+  color: #405F76;
+  margin-right: 5px;
+  text-align: right;
+}
+.favorite p {
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: normal;
+  padding:5px;
+}
+.my-missions {
+  padding: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  background-color: #F9F8F8;
+  border-radius: 7px;
+  width: 350px;
+  height: 280px;
+}
+.my-missions h3 {
+  border-bottom: 1px solid #499EAA;
+  font-family: 'Montserrat', sans-serif;
+  color: #405F76;
+}
+.my-missions h3 i {
+  color: #405F76;
+  margin-right: 5px;
+}
+.my-missions p {
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: normal;
+  padding:5px;
+}
+.work-experiences {
+  padding: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  background-color: #F9F8F8;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.work-experiences h3 {
+  border-bottom: 1px solid #499EAA;
+  font-family: 'Montserrat', sans-serif;
+  color: #405F76;
 }
