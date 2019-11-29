@@ -6,12 +6,16 @@ class MissionPolicy < ApplicationPolicy
   end
 
   def create?
-    return true
+    user # TODO: checker si la mission est deja prise ?
   end
 
   def show?
-    true
+    user
     # return true, compare le user qui a postulé et le user signed
   end
 
+  def destroy?
+    record.user = user
+    # return true, compare le user qui a postulé et le user signed
+  end
 end

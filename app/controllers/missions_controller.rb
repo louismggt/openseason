@@ -3,11 +3,6 @@ class MissionsController < ApplicationController
     @missions = Mission.all
   end
 
-  def new
-    @job = Job.find(params[:job_id])
-    @mission = Mission.new
-  end
-
   def show
     @mission = Mission.find(params[:id])
     authorize @mission
@@ -18,8 +13,9 @@ class MissionsController < ApplicationController
     @mission = Mission.new
     @mission.user = current_user
     @mission.job = @job
+    authorize @mission
     if @mission.save
-      redirect_to job_path(@job)
+      redirect_to profil_path(current_user)
     else
       render :new
     end
@@ -41,7 +37,9 @@ class MissionsController < ApplicationController
 
   def destroy
     @mission = Mission.find(params[:id])
+    authorize @mission
     @mission.destroy
+    redirect_to profil_path(current_user)
   end
 end
 

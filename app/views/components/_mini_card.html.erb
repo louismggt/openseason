@@ -1,8 +1,21 @@
 <div class="mini-card">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+<%= image_tag job.logo %>
   <div class="mini-card-infos">
-    <h2><%= job.title %></h2>
-    <p><%= job.description %></p>
+    <h2><%= link_to job.title, job_path(job.id)  %></h2>
+    <div class="d-flex justify-content-between">
+      <p><%= job.description %></p>
+      <% if favorite %>
+
+        <%= link_to favorite_path(favorite), method: :delete do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+      <% else %>
+        <%= link_to mission_path(mission), method: :delete do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
+
 

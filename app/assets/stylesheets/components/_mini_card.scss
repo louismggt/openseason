@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 4px;
+  border-radius: 10px;
 }
 
 .mini-card img {
@@ -14,10 +15,18 @@
   object-fit: cover;
 }
 
-.mini-card h2 {
+.mini-card h2 a {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-decoration: none;
+  color: #364156;
+  transition: 0.2s ease;
+}
+.mini-card h2 a:hover {
+  color: lightgrey;
+  transition: 0.2s ease;
 }
 
 .mini-card p {
@@ -25,7 +34,7 @@
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 2px;
 }
 
 .mini-card .mini-card-infos {

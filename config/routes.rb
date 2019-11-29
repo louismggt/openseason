@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   resources :preferences
   resources :work_experiences
   resources :jobs do
-    resources :missions
-    resources :favorites
+    resources :missions, only: [:create]
+    resources :favorites, except: [:destroy]
   end
+  resources :favorites, only: [:destroy]
+  resources :missions, only: [:destroy]
+
 end

@@ -30,13 +30,16 @@
             <h3> <i class="fas fa-heart"></i>Mes annonces sauvegardées </h3>
             <div class="favorite-jobs">
               <% @favorites.each do |favorite| %>
-                <%= render "components/mini_card", job: favorite.job %>
+                <%= render "components/mini_card", job: favorite.job, favorite: favorite, mission: nil %>
               <% end %>
             </div>
           </div>
           <div class="my-missions">
             <h3><i class="fas fa-arrow-circle-right"></i>Mes candidatures</h3>
             <div class="mission-jobs">
+              <% @missions.each do |mission| %>
+                <%= render "components/mini_card", job: mission.job, mission: mission, favorite: nil %>
+              <% end %>
             </div>
           </div>
         </div>
