@@ -1,0 +1,236 @@
+.container {
+  margin-top: 70px;
+  background-color: #F9F8F8;
+  border-radius: 3px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  min-height: calc(100vh - 90px);
+  // margin-left: 50px;
+  // margin-right: 50px;
+}
+
+
+.container p {
+  color: black;
+}
+
+.job-photo img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 10px;
+  background-color: #F9F8F8;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.headers {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.job-headers h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #364156;
+}
+
+.job-content p {
+  font-size: 12px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+.fa-calendar-plus {
+  color: #E26161;
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.fa-euro-sign {
+  color: #E26161;
+ font-size: 24px;
+   margin-left: 5px;
+}
+
+.title_job p {
+  font-size : 18px;
+  margin-left: 10px;
+  color: grey;
+  margin-top: -7px;
+}
+
+.job-content h3 {
+  margin-top: 20px;
+}
+
+.job-content h3 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.job-footer-infos {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  text-align: -webkit-center;
+}
+
+.job-footer-infos i {
+    color: #E26161;
+  font-size: 32px;
+}
+
+.job-footer-infos p {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-right: 10px;
+  font-size : 16px;
+  color: grey;
+  line-height: normal;
+}
+
+.contact p {
+font-size : 12px;
+}
+
+.contact, .address, .accommodation, .meal {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.infos p {
+  margin-bottom: -3px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+}
+
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  width: bold;
+  text-align:center;
+  color: #405F76;
+}
+
+.contact {
+
+}
+.photo-profil {
+  text-align: center;
+  padding: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  background-color: #F9F8F8;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+.fa-user-circle {
+  border-radius: 50%;
+  text-shadow: 1px 1px 3px grey;
+  font-size: 150px;
+  color: lightgray;
+  margin-bottom: 5px;
+}
+.photo-profil p {
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: normal;
+  padding:5px;
+}
+.info-contact {
+  padding: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  background-color: #F9F8F8;
+  border-radius: 7px;
+}
+.info-contact p {
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: normal;
+  padding:5px;
+  border-bottom: 1px solid #499EAA;
+}
+.info-contact p i {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.info-contact h4 {
+  margin-right: 7px;
+  border-bottom: 1px solid #499EAA;
+}
+.favorite {
+  padding: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  background-color: #F9F8F8;
+  border-radius: 7px;
+  width: 360px;
+  height: 280px;
+}
+.favorite h3 {
+  border-bottom: 1px solid #499EAA;
+  font-family: 'Montserrat', sans-serif;
+  color: #405F76;
+  text-align: center;
+}
+.favorite h3 i {
+  color: #405F76;
+  margin-right: 5px;
+  text-align: right;
+}
+.favorite p {
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: normal;
+  padding:5px;
+}
+.my-missions {
+  padding: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  background-color: #F9F8F8;
+  border-radius: 7px;
+  width: 350px;
+  height: 280px;
+}
+.my-missions h3 {
+  border-bottom: 1px solid #499EAA;
+  font-family: 'Montserrat', sans-serif;
+  color: #405F76;
+}
+.my-missions h3 i {
+  color: #405F76;
+  margin-right: 5px;
+}
+.my-missions p {
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: normal;
+  padding:5px;
+}
+.work-experiences {
+  padding: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  background-color: #F9F8F8;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.work-experiences h3 {
+  border-bottom: 1px solid #499EAA;
+  font-family: 'Montserrat', sans-serif;
+  color: #405F76;
+}
