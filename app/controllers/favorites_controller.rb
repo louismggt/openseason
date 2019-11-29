@@ -3,6 +3,10 @@ class FavoritesController < ApplicationController
     @favorites = Favorite.all
   end
 
+  def show
+    @favorite = Favorite.find(params[:job_id])
+  end
+
   def new
     @job = Job.find(params[:job_id])
     @favorite = Favorite.new

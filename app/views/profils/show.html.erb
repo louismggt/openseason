@@ -3,7 +3,7 @@
     <div class="col-12">
       <h1> Mon espace personnel </h1>
     </div>
-    <div class="col-4">
+    <div class="col-3">
       <div class="contact">
         <div class="bio">
           <div class="photo-profil">
@@ -23,19 +23,27 @@
         </div>
       </div>
     </div>
-    <div class="col-8">
+    <div class="col-9">
       <% if current_user == @user %>
         <div class="mission d-flex justify-content-between">
           <div class="favorite">
             <h3> <i class="fas fa-heart"></i>Mes annonces sauvegardées </h3>
+            <div class="favorite-jobs">
+              <% @favorites.each do |favorite| %>
+                <%= render "components/mini_card", job: favorite.job %>
+              <% end %>
+            </div>
           </div>
           <div class="my-missions">
             <h3><i class="fas fa-arrow-circle-right"></i>Mes candidatures</h3>
+            <div class="mission-jobs">
+            </div>
           </div>
         </div>
       <% end %>
       <div class="work-experiences">
         <h3> Mes expériences</h3>
+
       </div>
     </div>
   </div>
