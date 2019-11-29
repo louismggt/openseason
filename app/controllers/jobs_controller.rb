@@ -14,14 +14,31 @@ class JobsController < ApplicationController
       # @jobs = @jobs.select { |job| job[:land_type] == @preferences[0] }
       # @jobs = @jobs.select { |job| job[:category] == @preferences[1] }
       @jobs = @jobs.select { |job| job.duration == @preferences[2] }
+                   .select { |job| job.latitude != nil }
+
+      @markers = @jobs.map do |job|
+      {
+        lat: job.latitude,
+        lng: job.longitude,
+        image_url: helpers.asset_url('pin2.png')
+        # infoWindow: render_to_string(partial: "info_window", locals: { job: job })
+      }
+      end
     end
+
+
   end
 
   def show
-        @jobs        = policy_scope(Job)
+    @jobs        = policy_scope(Job)
 
     @job = Job.find(params[:id])
     authorize @job
+    @markers = [{
+      lat: @job.latitude,
+      lng: @job.longitude
+      # image_url: helpers.asset_url('pin2.png')
+    }]
   end
 
   def new
