@@ -10,7 +10,7 @@
     <%= action_cable_meta_tag %>
     <link href="https://fonts.googleapis.com/css?family=Rancho&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%# stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
   <header><%= render 'components/navbar' %></header>
@@ -18,8 +18,9 @@
 <!--<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p> -->
     <%= yield %>
-    <footer><%= render 'components/footer' %></footer>
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
+  <footer><%= render 'components/footer' %></footer>
 </html>
