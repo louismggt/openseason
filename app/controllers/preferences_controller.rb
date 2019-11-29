@@ -63,9 +63,9 @@ class PreferencesController < ApplicationController
   end
 
   def type_of_preference(step)
-    if step == "1"
+    if step == "0"
       "land_type"
-    elsif step == "2"
+    elsif step == "1"
       "category"
     else
       "duration"
