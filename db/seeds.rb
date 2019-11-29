@@ -9,7 +9,7 @@
 puts "Cleaning database"
 
 Job.destroy_all
-User.destroy_all
+# User.destroy_all
 Mission.destroy_all
 Favorite.destroy_all
 Preference.destroy_all
@@ -17,17 +17,17 @@ Preference.destroy_all
 
 puts "Building database"
 
-User.create!(
-  email: "patujulie@gmail.com",
-  password: "julieto",
-  first_name: "julie",
-  last_name: "Paturel",
-  username: "patujulie",
-  nationality: "francaise",
-  address: "310 ter rue de tourcoing - 59420 Mouvaux",
-  biograophy: "Jeune femme dynamique a la recherche d'un job d'été en extérieur. Je suis souriante, j'aime beaucoup rire et raconter des comptes avec de nouveaux amis ! ",
-  age: 23
-)
+# User.create!(
+#   email: "patujulie@gmail.com",
+#   password: "julieto",
+#   first_name: "julie",
+#   last_name: "Paturel",
+#   username: "patujulie",
+#   nationality: "francaise",
+#   address: "310 ter rue de tourcoing - 59420 Mouvaux",
+#   biograophy: "Jeune femme dynamique a la recherche d'un job d'été en extérieur. Je suis souriante, j'aime beaucoup rire et raconter des comptes avec de nouveaux amis ! ",
+#   age: 23
+# )
 
 Job.create!(
   title: "Ouvrier taille des arbres en pépinière H/F.",
@@ -350,8 +350,8 @@ Vous serez amené à conduire le matériel de l'exploitation.",
   email: "",
   telephone: "0323241376",
   website: "",
-  logo: "",
-  photo: "",
+  logo: "https://occitanie.chambre-agriculture.fr/fileadmin/user_upload/Occitanie/076_Inst-Occitanie/CRAO/Blondes_d_Aquitaine-Chambre_d_agriculture_de_l_Orne.JPG",
+  photo: "https://www.la-viande.fr/sites/default/files/styles/facebook/public/article/images/alimentation-bovins-la-viande-hd.jpg?itok=-FdnynO3",
 )
 
 Job.create!(
@@ -403,4 +403,1378 @@ Des connaissances en soudure et en mécanique seront appréciées. Vous savez ma
   logo: "http://masamiel.fr/wp-content/themes/masamiel/img/logo_alt.jpg",
   photo: "http://www.aocmaury.com/images/fond2000.jpg",
 )
+
+Job.create!(
+  title: "Aide viticole (H/F)",
+  address: "11 RTE DE LA PIERRE PERCEE - 17520 SAINTE-LHEURINE",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 1570,
+  places: 1,
+  start_date: Date.new(2020,9,1),
+  end_date: Date.new(2020,10,5),
+  description: "Exploitation viticole recherche une personne pour tailler les vignes à la tâche.",
+  content: "Exploitation viticole recherche une personne pour tailler les vignes à la tâche.
+Vous avez déjà effectué une saison  en taille ou vous sortez de formation viticole et connaissez la technique.
+Vous travaillerez sur des parcelles situées à Ste Lheurine et Jarnac Champagne
+Poste à pourvoir dès que possible.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "DAVID",
+  email: "",
+  telephone: "0685267514",
+  website: "",
+  logo: "",
+  photo: "",
+)
+
+Job.create!(
+  title: "Aide viticole (H/F)",
+  address: "11 RTE DE LA PIERRE PERCEE - 17520 SAINTE-LHEURINE",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 1570,
+  places: 1,
+  start_date: Date.new(2020,9,1),
+  end_date: Date.new(2020,12,30),
+  description: "Exploitation viticole recherche une personne pour tailler les vignes à la tâche.",
+  content: "Exploitation viticole recherche une personne pour tailler les vignes à la tâche.
+Vous avez déjà effectué une saison  en taille ou vous sortez de formation viticole et connaissez la technique.
+Vous travaillerez sur des parcelles situées à Ste Lheurine et Jarnac Champagne
+Poste à pourvoir dès que possible.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "DAVID",
+  email: "",
+  telephone: "0685267514",
+  website: "",
+  logo: "",
+  photo: "",
+)
+
+Job.create!(
+  title: "Tailleur de vigne (H/F)",
+  address: "33560 - STE EULALIE",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 1428,
+  places: 6,
+  start_date: Date.new(2019,12,1),
+  end_date: Date.new(2020,2,26),
+  description: "Exploitation viticole recherche pour la campagne 2019",
+  content: "Exploitation viticole recherche pour la campagne 2019, 6 personnes pour la taille des vignes.
+Rémunération à l'heure, cat C  Convention Collective agricole de la Gironde. Savoirs et savoir-faire : Techniques de soins aux arbres ou ceps, Techniques de taille de fructification. Savoir-être professionnels
+Travail en équipe
+Rigueur. INFORMATIONS COMPLÉMENTAIRES
+Qualification : Ouvrier qualifié (P1,P2)
+Secteur d'activité : Activités des organisations professionnelles",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Champagne JEAN-LOUIS",
+  email: "",
+  telephone: "",
+  website: "http://gironde.anefa.org",
+  logo: "https://entreprise.pole-emploi.fr/static/img/minisite/fIinrHXoe4HBzwIR46Mx2wjm6T20YeIQ.png",
+  photo: "https://www.lagriculture-recrute.org/Upload/000005.JPG",
+)
+Job.create!(
+  title: "Tourneur de bouteille (H/F)",
+  address: "51200 - Epernay",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 1428,
+  places: 6,
+  start_date: Date.new(2019,12,1),
+  end_date: Date.new(2020,3,5),
+  description: "URGENT -- Vinification 2019",
+  content: "Exploitation viticole recherche pour la campagne 2019, 3 tourneurs de bouteilles.
+  Dans els règles de l'art traditionnel, vous travaillerez en équipe pour assurer la qualité de nos plus grands crus.
+Rigueur. INFORMATIONS COMPLÉMENTAIRES
+Qualification : Ouvrier qualifié (P1,P2)
+Secteur d'activité : Activités des organisations professionnelles",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Champagne JEAN-LOUIS",
+  email: "",
+  telephone: "",
+  website: "http://gironde.anefa.org",
+  logo: "https://entreprise.pole-emploi.fr/static/img/minisite/fIinrHXoe4HBzwIR46Mx2wjm6T20YeIQ.png",
+  photo: "https://www.berger-elaborateur.fr/images/photos/tourneur.jpg",
+)
+Job.create!(
+  title: "Tourneur de bouteille (H/F)",
+  address: "33560 - STE EULALIE",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 1428,
+  places: 6,
+  start_date: Date.new(2019,12,1),
+  end_date: Date.new(2020,1,5),
+  description: "URGENT -- Vinification 2019",
+  content: "Exploitation viticole recherche pour la campagne 2019, 3 tourneurs de bouteilles.
+  Dans els règles de l'art traditionnel, vous travaillerez en équipe pour assurer la qualité de nos plus grands crus.
+Rigueur. INFORMATIONS COMPLÉMENTAIRES
+Qualification : Ouvrier qualifié (P1,P2)
+Secteur d'activité : Activités des organisations professionnelles",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Champagne JEAN-LOUIS",
+  email: "",
+  telephone: "",
+  website: "http://gironde.anefa.org",
+  logo: "https://entreprise.pole-emploi.fr/static/img/minisite/fIinrHXoe4HBzwIR46Mx2wjm6T20YeIQ.png",
+  photo: "https://www.berger-elaborateur.fr/images/photos/tourneur.jpg",
+)
+Job.create!(
+  title: "Préparateur équipement Taille (H/F)",
+  address: "51200 - Epernay",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 1428,
+  places: 6,
+  start_date: Date.new(2020,9,1),
+  end_date: Date.new(2020,9,9),
+  description: "Exploitation viticole recherche pour la campagne 2019",
+  content: "Exploitation viticole recherche pour la campagne 2019, 6 personnes pour la taille des vignes.
+Rémunération à l'heure, cat C  Convention Collective agricole de la Gironde. Savoirs et savoir-faire : Techniques de soins aux arbres ou ceps, Techniques de taille de fructification. Savoir-être professionnels
+Travail en équipe
+Rigueur. INFORMATIONS COMPLÉMENTAIRES
+Qualification : Ouvrier qualifié (P1,P2)
+Secteur d'activité : Activités des organisations professionnelles",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Champagne JEAN-LOUIS",
+  email: "",
+  telephone: "",
+  website: "http://gironde.anefa.org",
+  logo: "https://entreprise.pole-emploi.fr/static/img/minisite/fIinrHXoe4HBzwIR46Mx2wjm6T20YeIQ.png",
+  photo: "https://www.lagriculture-recrute.org/Upload/000005.JPG",
+)
+Job.create!(
+  title: "Mécanicien Tracteur (H/F)",
+  address: "33560 - STE EULALIE",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 1428,
+  places: 6,
+  start_date: Date.new(2020,9,1),
+  end_date: Date.new(2020,9,9),
+  description: "Exploitation viticole recherche pour la campagne 2019",
+  content: "Exploitation viticole recherche pour la campagne 2019, 1 personne pour la préparation/répartion mécanique.
+Rémunération à l'heure, cat C  Convention Collective agricole de la Gironde. Savoirs et savoir-faire : Savoir-être professionnels
+Travail en équipe
+Rigueur. INFORMATIONS COMPLÉMENTAIRES
+Qualification : Mécanicien qualifié (P1,P2)
+Secteur d'activité : Activités des organisations professionnelles",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Champagne JEAN-LOUIS",
+  email: "",
+  telephone: "",
+  website: "http://gironde.anefa.org",
+  logo: "https://entreprise.pole-emploi.fr/static/img/minisite/fIinrHXoe4HBzwIR46Mx2wjm6T20YeIQ.png",
+  photo: "https://www.lagriculture-recrute.org/Upload/000005.JPG",
+)
+Job.create!(
+  title: "Mécanicien Tracteur (H/F)",
+  address: "33560 - STE EULALIE",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 1428,
+  places: 6,
+  start_date: Date.new(2020,9,1),
+  end_date: Date.new(2020,9,30),
+  description: "Exploitation viticole recherche pour la campagne 2019",
+  content: "Exploitation viticole recherche pour la campagne 2019, 1 personne pour la préparation/répartion mécanique.
+Rémunération à l'heure, cat C  Convention Collective agricole de la Gironde. Savoirs et savoir-faire : Savoir-être professionnels
+Travail en équipe
+Rigueur. INFORMATIONS COMPLÉMENTAIRES
+Qualification : Mécanicien qualifié (P1,P2)
+Secteur d'activité : Activités des organisations professionnelles",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Champagne JEAN-LOUIS",
+  email: "",
+  telephone: "",
+  website: "http://gironde.anefa.org",
+  logo: "https://entreprise.pole-emploi.fr/static/img/minisite/fIinrHXoe4HBzwIR46Mx2wjm6T20YeIQ.png",
+  photo: "https://www.lagriculture-recrute.org/Upload/000005.JPG",
+)
+Job.create!(
+  title: "Saisonnier en pépinière (h/f)",
+  address: "49700 - Louresse-Rochemenier",
+  land_type: "Campagne",
+  meal: false,
+  accommodation: false,
+  salary: 1400,
+  places: 1,
+  start_date: Date.new(2019,10,28),
+  end_date: Date.new(2020,1,28),
+  description: "",
+  content: "Vous serez chargé(e) d'assurer :
+- Ecussonnage, attache, pose et dépose de tuteur, ébourgeonnage
+- Entretiens des cultures
+Vous devrez exercer votre fonction dans le respect des normes de qualité et des règles de sécurité.
+Profil recherché :
+- Débutant accepté
+- Des connaissances en milieu agricole, idéalement liées au travail en pépinières et en vergers seraient appréciées
+- Autonomie, implication, sérieux, travail en équipe et rigueur sont des atouts indispensables pour réussir
+- Etre capable de comprendre et retranscrire les consignes écrites et orales",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Terrena",
+  email: "groupeterrena-171175@cvmail.com",
+  telephone: "0240989000",
+  website: "https://www.terrena.fr/",
+  logo: "https://www.terrena.fr/wp-content/uploads/logo_terrena_CMJN.png",
+  photo: "https://cardinale-sud-solutions.com/wp-content/uploads/2018/10/Terrena-social-cardinale-sud-768x511.png",
+)
+Job.create!(
+  title: "Saisonnier en pépinière (h/f)",
+  address: "49700 - Louresse-Rochemenier",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1400,
+  places: 1,
+  start_date: Date.new(2019,10,28),
+  end_date: Date.new(2020,1,28),
+  description: "",
+  content: "Vous serez chargé(e) d'assurer :
+- Ecussonnage, attache, pose et dépose de tuteur, ébourgeonnage
+- Entretiens des cultures
+Vous devrez exercer votre fonction dans le respect des normes de qualité et des règles de sécurité.
+Profil recherché :
+- Débutant accepté
+- Des connaissances en milieu agricole, idéalement liées au travail en pépinières et en vergers seraient appréciées
+- Autonomie, implication, sérieux, travail en équipe et rigueur sont des atouts indispensables pour réussir
+- Etre capable de comprendre et retranscrire les consignes écrites et orales",
+  category: "Service",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Terrena",
+  email: "groupeterrena-171175@cvmail.com",
+  telephone: "0240989000",
+  website: "https://www.terrena.fr/",
+  logo: "https://www.terrena.fr/wp-content/uploads/logo_terrena_CMJN.png",
+  photo: "https://cardinale-sud-solutions.com/wp-content/uploads/2018/10/Terrena-social-cardinale-sud-768x511.png",
+)
+Job.create!(
+  title: "Saisonnier en pépinière (h/f)",
+  address: "49700 - Louresse-Rochemenier",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1400,
+  places: 1,
+  start_date: Date.new(2019,10,28),
+  end_date: Date.new(2020,11,28),
+  description: "",
+  content: "Vous serez chargé(e) d'assurer :
+- Ecussonnage, attache, pose et dépose de tuteur, ébourgeonnage
+- Entretiens des cultures
+Vous devrez exercer votre fonction dans le respect des normes de qualité et des règles de sécurité.
+Profil recherché :
+- Débutant accepté
+- Des connaissances en milieu agricole, idéalement liées au travail en pépinières et en vergers seraient appréciées
+- Autonomie, implication, sérieux, travail en équipe et rigueur sont des atouts indispensables pour réussir
+- Etre capable de comprendre et retranscrire les consignes écrites et orales",
+  category: "Service",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Terrena",
+  email: "groupeterrena-171175@cvmail.com",
+  telephone: "0240989000",
+  website: "https://www.terrena.fr/",
+  logo: "https://www.terrena.fr/wp-content/uploads/logo_terrena_CMJN.png",
+  photo: "https://cardinale-sud-solutions.com/wp-content/uploads/2018/10/Terrena-social-cardinale-sud-768x511.png",
+)
+Job.create!(
+  title: "Saisonnier en pépinière (h/f)",
+  address: "49700 - Louresse-Rochemenier",
+  land_type: "Campagne",
+  meal: false,
+  accommodation: false,
+  salary: 1400,
+  places: 1,
+  start_date: Date.new(2019,10,28),
+  end_date: Date.new(2020,11,28),
+  description: "",
+  content: "Vous serez chargé(e) d'assurer :
+- Ecussonnage, attache, pose et dépose de tuteur, ébourgeonnage
+- Entretiens des cultures
+Vous devrez exercer votre fonction dans le respect des normes de qualité et des règles de sécurité.
+Profil recherché :
+- Débutant accepté
+- Des connaissances en milieu agricole, idéalement liées au travail en pépinières et en vergers seraient appréciées
+- Autonomie, implication, sérieux, travail en équipe et rigueur sont des atouts indispensables pour réussir
+- Etre capable de comprendre et retranscrire les consignes écrites et orales",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Terrena",
+  email: "groupeterrena-171175@cvmail.com",
+  telephone: "0240989000",
+  website: "https://www.terrena.fr/",
+  logo: "https://www.terrena.fr/wp-content/uploads/logo_terrena_CMJN.png",
+  photo: "https://cardinale-sud-solutions.com/wp-content/uploads/2018/10/Terrena-social-cardinale-sud-768x511.png",
+)
+Job.create!(
+  title: "Saisonnier en pépinière (h/f)",
+  address: "49700 - Louresse-Rochemenier",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1400,
+  places: 1,
+  start_date: Date.new(2019,10,28),
+  end_date: Date.new(2020,11,28),
+  description: "",
+  content: "Vous serez chargé(e) d'assurer :
+- Ecussonnage, attache, pose et dépose de tuteur, ébourgeonnage
+- Entretiens des cultures
+Vous devrez exercer votre fonction dans le respect des normes de qualité et des règles de sécurité.
+Profil recherché :
+- Débutant accepté
+- Des connaissances en milieu agricole, idéalement liées au travail en pépinières et en vergers seraient appréciées
+- Autonomie, implication, sérieux, travail en équipe et rigueur sont des atouts indispensables pour réussir
+- Etre capable de comprendre et retranscrire les consignes écrites et orales",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Terrena",
+  email: "groupeterrena-171175@cvmail.com",
+  telephone: "0240989000",
+  website: "https://www.terrena.fr/",
+  logo: "https://www.terrena.fr/wp-content/uploads/logo_terrena_CMJN.png",
+  photo: "https://cardinale-sud-solutions.com/wp-content/uploads/2018/10/Terrena-social-cardinale-sud-768x511.png",
+)
+Job.create!(
+  title: "Saisonnier en pépinière (h/f)",
+  address: "49700 - Louresse-Rochemenier",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1400,
+  places: 1,
+  start_date: Date.new(2019,10,28),
+  end_date: Date.new(2020,1,28),
+  description: "",
+  content: "Vous serez chargé(e) d'assurer :
+- Ecussonnage, attache, pose et dépose de tuteur, ébourgeonnage
+- Entretiens des cultures
+Vous devrez exercer votre fonction dans le respect des normes de qualité et des règles de sécurité.
+Profil recherché :
+- Débutant accepté
+- Des connaissances en milieu agricole, idéalement liées au travail en pépinières et en vergers seraient appréciées
+- Autonomie, implication, sérieux, travail en équipe et rigueur sont des atouts indispensables pour réussir
+- Etre capable de comprendre et retranscrire les consignes écrites et orales",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Terrena",
+  email: "groupeterrena-171175@cvmail.com",
+  telephone: "0240989000",
+  website: "https://www.terrena.fr/",
+  logo: "https://www.terrena.fr/wp-content/uploads/logo_terrena_CMJN.png",
+  photo: "https://cardinale-sud-solutions.com/wp-content/uploads/2018/10/Terrena-social-cardinale-sud-768x511.png",
+)
+Job.create!(
+  title: "Saisonnier en pépinière (h/f)",
+  address: "49700 - Louresse-Rochemenier",
+  land_type: "Campagne",
+  meal: false,
+  accommodation: false,
+  salary: 1400,
+  places: 1,
+  start_date: Date.new(2019,10,28),
+  end_date: Date.new(2020,1,28),
+  description: "",
+  content: "Vous serez chargé(e) d'assurer :
+- Ecussonnage, attache, pose et dépose de tuteur, ébourgeonnage
+- Entretiens des cultures
+Vous devrez exercer votre fonction dans le respect des normes de qualité et des règles de sécurité.
+Profil recherché :
+- Débutant accepté
+- Des connaissances en milieu agricole, idéalement liées au travail en pépinières et en vergers seraient appréciées
+- Autonomie, implication, sérieux, travail en équipe et rigueur sont des atouts indispensables pour réussir
+- Etre capable de comprendre et retranscrire les consignes écrites et orales",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Terrena",
+  email: "groupeterrena-171175@cvmail.com",
+  telephone: "0240989000",
+  website: "https://www.terrena.fr/",
+  logo: "https://www.terrena.fr/wp-content/uploads/logo_terrena_CMJN.png",
+  photo: "https://cardinale-sud-solutions.com/wp-content/uploads/2018/10/Terrena-social-cardinale-sud-768x511.png",
+)
+Job.create!(
+  title: "Saisonnier en pépinière (h/f)",
+  address: "49700 - Louresse-Rochemenier",
+  land_type: "Campagne",
+  meal: false,
+  accommodation: false,
+  salary: 1400,
+  places: 1,
+  start_date: Date.new(2019,10,28),
+  end_date: Date.new(2020,11,28),
+  description: "",
+  content: "Vous serez chargé(e) d'assurer :
+- Ecussonnage, attache, pose et dépose de tuteur, ébourgeonnage
+- Entretiens des cultures
+Vous devrez exercer votre fonction dans le respect des normes de qualité et des règles de sécurité.
+Profil recherché :
+- Débutant accepté
+- Des connaissances en milieu agricole, idéalement liées au travail en pépinières et en vergers seraient appréciées
+- Autonomie, implication, sérieux, travail en équipe et rigueur sont des atouts indispensables pour réussir
+- Etre capable de comprendre et retranscrire les consignes écrites et orales",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Terrena",
+  email: "groupeterrena-171175@cvmail.com",
+  telephone: "0240989000",
+  website: "https://www.terrena.fr/",
+  logo: "https://www.terrena.fr/wp-content/uploads/logo_terrena_CMJN.png",
+  photo: "https://cardinale-sud-solutions.com/wp-content/uploads/2018/10/Terrena-social-cardinale-sud-768x511.png",
+)
+Job.create!(
+  title: "Bûcheron / Bûcheronne",
+  address: "08300  RETHEL",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 1400,
+  places: 1,
+  start_date: Date.new(2020,9,1),
+  end_date: Date.new(2020,10,1),
+  description: "Venez vous défouler contre la nature avec nous",
+  content: "Vous réalisez l'abattage des arbres, la coupe du bois en 2 mètres et la mise en stère.
+Vous intervenez sur plusieurs parcelles dans les Ardennes, Marne et la Meuse, au départ de Rethel.
+Vous êtes véhiculé par l'employeur pour vous rendre sur les chantiers.
+Équipements de sécurité non fournis : casque, chaussures anti-coupures, pantalon anti-coupures.
+Déterminer l'abattage ou l'élagage selon la trajectoire de chute des arbres en prenant en compte l'environnement et les conditions climatiques",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "SEBASTIEN CHAMPEAUX",
+  email: "",
+  telephone: "0626370215",
+  website: "",
+  logo: "",
+  photo: "",
+)
+
+
+Job.create!(
+  title: "Animateur vacances de Noël (H/F)",
+  address: "73210 - Plagne-Montalbert",
+  land_type: "Montagne",
+  meal: true,
+  accommodation: true,
+  salary: 1470,
+  places: 1,
+  start_date: Date.new(2019,12,19),
+  end_date: Date.new(2020,1,3),
+  description: "Animateur enfants 6-8 ans (H/F)
+Vacances de Noël / Poste nourri logé",
+  content: "BAFA ou équivalent
+Permis B
+Village de vacances 3 étoiles, appartenant au Conseil départemental du Val de Marne (300 lits environ), situé au niveau de la station de Montalbert (La Plagne). Logement assuré pour les employés (seul ou à 2 selon disponibilité) en studio meublé, équipé cuisine et salle de bain (charges locatives). 2 jours de repos hebdomadaires
+Vous accompagnez des enfants âgés de 6 à 8 ans (club Cabris).
+Vous serez garant de la sécurité physique et affective des enfants.
+Vous leur proposerez des activités adaptées pour permettre leur épanouissement.
+Vous assurerez les départs et retours ski
+Vous devrez vous adapter au milieu montagnard et leur faire découvrir cet environnement.
+Vous devrez être à l'écoute, savoir travailler en équipe et vous rendre disponible pour les parents.
+Savoirs et savoir-faire
+Informer les parents sur l'organisation de la structure et présenter le programme des activités aux enfants
+Organiser ou adapter la séance d'animation selon le déroulement de la journée
+Préparer l'espace d'animation et guider les participants tout au long de la séance
+Repérer les difficultés ou problèmes d'un enfant, intervenir ou informer le directeur, les parents
+Surveiller le déroulement de l'activité et veiller au respect des consignes de jeux, des règles de vie sociale",
+  category: "Social",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Village vacances Jean Franco",
+  email: "",
+  telephone: "0479557200",
+  website: "http://www.emploi-laplagne.com/",
+  logo: "http://emploi-laplagne.com/wp-content/uploads/2017/10/cropped-logo_la_plagne.png",
+  photo: "https://www.la-plagne.com/sites/default/files/styles/illustration/public/medias/images/DESTI_Montalbert_terrasse-village-hiver_P-Royer.jpg",
+)
+Job.create!(
+  title: "Animateur vacances de Noël (H/F)",
+  address: "73210 - Plagne-Montalbert",
+  land_type: "Montagne",
+  meal: true,
+  accommodation: true,
+  salary: 1470,
+  places: 1,
+  start_date: Date.new(2019,12,19),
+  end_date: Date.new(2020,3,3),
+  description: "Animateur enfants 6-8 ans (H/F)
+Saison complète / Poste nourri logé",
+  content: "BAFA ou équivalent
+Permis B
+Village de vacances 3 étoiles, appartenant au Conseil départemental du Val de Marne (300 lits environ), situé au niveau de la station de Montalbert (La Plagne). Logement assuré pour les employés (seul ou à 2 selon disponibilité) en studio meublé, équipé cuisine et salle de bain (charges locatives). 2 jours de repos hebdomadaires
+Vous accompagnez des enfants âgés de 6 à 8 ans (club Cabris).
+Vous serez garant de la sécurité physique et affective des enfants.
+Vous leur proposerez des activités adaptées pour permettre leur épanouissement.
+Vous assurerez les départs et retours ski
+Vous devrez vous adapter au milieu montagnard et leur faire découvrir cet environnement.
+Vous devrez être à l'écoute, savoir travailler en équipe et vous rendre disponible pour les parents.
+Savoirs et savoir-faire
+Informer les parents sur l'organisation de la structure et présenter le programme des activités aux enfants
+Organiser ou adapter la séance d'animation selon le déroulement de la journée
+Préparer l'espace d'animation et guider les participants tout au long de la séance
+Repérer les difficultés ou problèmes d'un enfant, intervenir ou informer le directeur, les parents
+Surveiller le déroulement de l'activité et veiller au respect des consignes de jeux, des règles de vie sociale",
+  category: "Social",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Village vacances Jean Franco",
+  email: "",
+  telephone: "0479557200",
+  website: "http://www.emploi-laplagne.com/",
+  logo: "http://emploi-laplagne.com/wp-content/uploads/2017/10/cropped-logo_la_plagne.png",
+  photo: "https://www.la-plagne.com/sites/default/files/styles/illustration/public/medias/images/DESTI_Montalbert_terrasse-village-hiver_P-Royer.jpg",
+)
+Job.create!(
+  title: "Animateur Saison hiver (H/F)",
+  address: "73210 - Plagne-Montalbert",
+  land_type: "Montagne",
+  meal: true,
+  accommodation: true,
+  salary: 1470,
+  places: 1,
+  start_date: Date.new(2019,12,19),
+  end_date: Date.new(2020,3,3),
+  description: "Animateur enfants 6-8 ans (H/F)
+Saison complète / Poste nourri logé",
+  content: "BAFA ou équivalent
+Permis B
+Village de vacances 3 étoiles, appartenant au Conseil départemental du Val de Marne (300 lits environ), situé au niveau de la station de Montalbert (La Plagne). Logement assuré pour les employés (seul ou à 2 selon disponibilité) en studio meublé, équipé cuisine et salle de bain (charges locatives). 2 jours de repos hebdomadaires
+Vous accompagnez des enfants âgés de 6 à 8 ans (club Cabris).
+Vous serez garant de la sécurité physique et affective des enfants.
+Vous leur proposerez des activités adaptées pour permettre leur épanouissement.
+Vous assurerez les départs et retours ski
+Vous devrez vous adapter au milieu montagnard et leur faire découvrir cet environnement.
+Vous devrez être à l'écoute, savoir travailler en équipe et vous rendre disponible pour les parents.
+Savoirs et savoir-faire
+Informer les parents sur l'organisation de la structure et présenter le programme des activités aux enfants
+Organiser ou adapter la séance d'animation selon le déroulement de la journée
+Préparer l'espace d'animation et guider les participants tout au long de la séance
+Repérer les difficultés ou problèmes d'un enfant, intervenir ou informer le directeur, les parents
+Surveiller le déroulement de l'activité et veiller au respect des consignes de jeux, des règles de vie sociale",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Village vacances Jean Franco",
+  email: "",
+  telephone: "0479557200",
+  website: "http://www.emploi-laplagne.com/",
+  logo: "http://emploi-laplagne.com/wp-content/uploads/2017/10/cropped-logo_la_plagne.png",
+  photo: "https://www.la-plagne.com/sites/default/files/styles/illustration/public/medias/images/DESTI_Montalbert_terrasse-village-hiver_P-Royer.jpg",
+)
+Job.create!(
+  title: "Animateur Saison hiver (H/F)",
+  address: "73210 - Plagne-Montalbert",
+  land_type: "Montagne",
+  meal: true,
+  accommodation: true,
+  salary: 1470,
+  places: 1,
+  start_date: Date.new(2019,12,19),
+  end_date: Date.new(2020,2,3),
+  description: "Animateur enfants 6-8 ans (H/F)
+Saison complète / Poste nourri logé",
+  content: "BAFA ou équivalent
+Permis B
+Village de vacances 3 étoiles, appartenant au Conseil départemental du Val de Marne (300 lits environ), situé au niveau de la station de Montalbert (La Plagne). Logement assuré pour les employés (seul ou à 2 selon disponibilité) en studio meublé, équipé cuisine et salle de bain (charges locatives). 2 jours de repos hebdomadaires
+Vous accompagnez des enfants âgés de 6 à 8 ans (club Cabris).
+Vous serez garant de la sécurité physique et affective des enfants.
+Vous leur proposerez des activités adaptées pour permettre leur épanouissement.
+Vous assurerez les départs et retours ski
+Vous devrez vous adapter au milieu montagnard et leur faire découvrir cet environnement.
+Vous devrez être à l'écoute, savoir travailler en équipe et vous rendre disponible pour les parents.
+Savoirs et savoir-faire
+Informer les parents sur l'organisation de la structure et présenter le programme des activités aux enfants
+Organiser ou adapter la séance d'animation selon le déroulement de la journée
+Préparer l'espace d'animation et guider les participants tout au long de la séance
+Repérer les difficultés ou problèmes d'un enfant, intervenir ou informer le directeur, les parents
+Surveiller le déroulement de l'activité et veiller au respect des consignes de jeux, des règles de vie sociale",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Village vacances Jean Franco",
+  email: "",
+  telephone: "0479557200",
+  website: "http://www.emploi-laplagne.com/",
+  logo: "http://emploi-laplagne.com/wp-content/uploads/2017/10/cropped-logo_la_plagne.png",
+  photo: "https://www.la-plagne.com/sites/default/files/styles/illustration/public/medias/images/DESTI_Montalbert_terrasse-village-hiver_P-Royer.jpg",
+)
+Job.create!(
+  title: "Animateur Saison hiver (H/F)",
+  address: "73210 - Plagne-Montalbert",
+  land_type: "Montagne",
+  meal: true,
+  accommodation: true,
+  salary: 1470,
+  places: 1,
+  start_date: Date.new(2019,12,19),
+  end_date: Date.new(2020,2,3),
+  description: "Animateur enfants 6-8 ans (H/F)
+Saison complète / Poste nourri logé",
+  content: "BAFA ou équivalent
+Permis B
+Village de vacances 3 étoiles, appartenant au Conseil départemental du Val de Marne (300 lits environ), situé au niveau de la station de Montalbert (La Plagne). Logement assuré pour les employés (seul ou à 2 selon disponibilité) en studio meublé, équipé cuisine et salle de bain (charges locatives). 2 jours de repos hebdomadaires
+Vous accompagnez des enfants âgés de 6 à 8 ans (club Cabris).
+Vous serez garant de la sécurité physique et affective des enfants.
+Vous leur proposerez des activités adaptées pour permettre leur épanouissement.
+Vous assurerez les départs et retours ski
+Vous devrez vous adapter au milieu montagnard et leur faire découvrir cet environnement.
+Vous devrez être à l'écoute, savoir travailler en équipe et vous rendre disponible pour les parents.
+Savoirs et savoir-faire
+Informer les parents sur l'organisation de la structure et présenter le programme des activités aux enfants
+Organiser ou adapter la séance d'animation selon le déroulement de la journée
+Préparer l'espace d'animation et guider les participants tout au long de la séance
+Repérer les difficultés ou problèmes d'un enfant, intervenir ou informer le directeur, les parents
+Surveiller le déroulement de l'activité et veiller au respect des consignes de jeux, des règles de vie sociale",
+  category: "Social",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Village vacances Jean Franco",
+  email: "",
+  telephone: "0479557200",
+  website: "http://www.emploi-laplagne.com/",
+  logo: "http://emploi-laplagne.com/wp-content/uploads/2017/10/cropped-logo_la_plagne.png",
+  photo: "https://www.la-plagne.com/sites/default/files/styles/illustration/public/medias/images/DESTI_Montalbert_terrasse-village-hiver_P-Royer.jpg",
+)
+Job.create!(
+  title: "Barman / Barmaid Serveur H/F",
+  address: "23 Rue François Simon, 13003 Marseille",
+  land_type: "Mer",
+  meal: true,
+  accommodation: true,
+  salary: 1527,
+  places: 1,
+  start_date: Date.new(2019,12,2),
+  end_date: Date.new(2020,3,30),
+  description: "Recherche passionnés par leur métier et prêts à rendre service.",
+  content: "Mission
+Assurer et élaborer le service des boissons chaudes, soft drink et cocktails
+Accueillir et personnaliser la relation client
+Contribuer à l’animation et à l’ambiance du service
+Assurer la mise en place et la fermeture du bar
+Procéder le nettoyage et la remise en ordre du bar et de la salle
+Assurer le respect  et l’application des normes d’hygiène et de qualité conformément à la norme Iso 9001 et à l’HACCP
+
+
+Profil
+CAP/BEP serveur limonadier, ou BTH hôtellerie restauration apprécié
+Expérience significative dans un poste similaire
+Connaissance et savoir faire avéré dans les alcools et cocktails
+Maitrise de l’anglais et/ou du néerlandais appréciée
+Les Villages Clubs du Soleil étudient, à compétences égales, toutes candidatures dont celles de personnes en situation de handicap
+Si en plus vos points forts sont:
+
+Organisation
+Autonomie
+Capacité à gérer en simultanée des opérations de durée et de nature différentes
+Esprit d’équipe
+Imagination et créativité",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Villages Club Soleil Marseille",
+  email: "scalvet@lesvillagesclubsdusoleil.com",
+  telephone: "04 91 95 08 88",
+  website: "https://www.villagesclubsdusoleil.com/",
+  logo: "https://www.villagesclubsdusoleil.com/fstrz/r/s/www.villagesclubsdusoleil.com/skin/frontend/rwd/public/images/logo-vcs.svg",
+  photo: "https://www.lechotouristique.com/mediatheque/4/2/7/000058724.jpg",
+)
+
+Job.create!(
+  title: "Barman / Barmaid Serveur H/F",
+  address: "23 Rue François Simon, 13003 Marseille",
+  land_type: "Mer",
+  meal: true,
+  accommodation: true,
+  salary: 1527,
+  places: 1,
+  start_date: Date.new(2019,12,2),
+  end_date: Date.new(2020,1,30),
+  description: "Remplacement Noël",
+  content: "Mission
+Assurer et élaborer le service des boissons chaudes, soft drink et cocktails
+Accueillir et personnaliser la relation client
+Contribuer à l’animation et à l’ambiance du service
+Assurer la mise en place et la fermeture du bar
+Procéder le nettoyage et la remise en ordre du bar et de la salle
+Assurer le respect  et l’application des normes d’hygiène et de qualité conformément à la norme Iso 9001 et à l’HACCP
+
+
+Profil
+CAP/BEP serveur limonadier, ou BTH hôtellerie restauration apprécié
+Expérience significative dans un poste similaire
+Connaissance et savoir faire avéré dans les alcools et cocktails
+Maitrise de l’anglais et/ou du néerlandais appréciée
+Les Villages Clubs du Soleil étudient, à compétences égales, toutes candidatures dont celles de personnes en situation de handicap
+Si en plus vos points forts sont:
+
+Organisation
+Autonomie
+Capacité à gérer en simultanée des opérations de durée et de nature différentes
+Esprit d’équipe
+Imagination et créativité",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Villages Club Soleil Marseille",
+  email: "scalvet@lesvillagesclubsdusoleil.com",
+  telephone: "04 91 95 08 88",
+  website: "https://www.villagesclubsdusoleil.com/",
+  logo: "https://www.villagesclubsdusoleil.com/fstrz/r/s/www.villagesclubsdusoleil.com/skin/frontend/rwd/public/images/logo-vcs.svg",
+  photo: "https://www.lechotouristique.com/mediatheque/4/2/7/000058724.jpg",
+)
+
+Job.create!(
+  title: "Chef de rang (H/F)",
+  address: "5 Place Bellevue, 64200 Biarritz",
+  land_type: "Mer",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 1,
+  start_date: Date.new(2019,12,1),
+  end_date: Date.new(2020,3,30),
+  description: "Recherche débutant ou confirmé. Faites vite!",
+  content: "LE CAFE DE PARIS recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Café de paris",
+  email: "reception@hotelcafedeparis.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Chef de rang (H/F)",
+  address: "5 Place Bellevue, 64200 Biarritz",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 1,
+  start_date: Date.new(2019,12,1),
+  end_date: Date.new(2020,3,30),
+  description: "Recherche débutant ou confirmé. Faites vite!",
+  content: "LE CAFE DE PARIS recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Café de paris",
+  email: "reception@hotelcafedeparis.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Chef de rang (H/F)",
+  address: "5 Place Bellevue, 64200 Biarritz",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 1,
+  start_date: Date.new(2019,12,1),
+  end_date: Date.new(2020,1,30),
+  description: "Recherche débutant ou confirmé. Faites vite!",
+  content: "LE CAFE DE PARIS recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Café de paris",
+  email: "reception@hotelcafedeparis.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Chorégraphe cocktail",
+  address: "5 Place Bellevue, 64200 Biarritz",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 1,
+  start_date: Date.new(2019,12,1),
+  end_date: Date.new(2020,1,30),
+  description: "Tu te sens l'âme d'un Tom Cruise?",
+  content: "LE CAFE DE PARIS recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Café de paris",
+  email: "reception@hotelcafedeparis.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Chorégraphe cocktail",
+  address: "5 Place Bellevue, 64200 Biarritz",
+  land_type: "Mer",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 1,
+  start_date: Date.new(2019,12,1),
+  end_date: Date.new(2020,1,30),
+  description: "Tu te sens l'âme d'un Tom Cruise?",
+  content: "LE CAFE DE PARIS recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Café de paris",
+  email: "reception@hotelcafedeparis.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Chorégraphe cocktail",
+  address: "5 Place Bellevue, 64200 Biarritz",
+  land_type: "Mer",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 1,
+  start_date: Date.new(2020,5,1),
+  end_date: Date.new(2020,9,30),
+  description: "Tu te sens l'âme d'un Tom Cruise?",
+  content: "LE CAFE DE PARIS recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Café de paris",
+  email: "reception@hotelcafedeparis.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Chorégraphe cocktail",
+  address: "5 Place Bellevue, 64200 Biarritz",
+  land_type: "Mer",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 1,
+  start_date: Date.new(2020,5,1),
+  end_date: Date.new(2020,6,30),
+  description: "Tu te sens l'âme d'un Tom Cruise?",
+  content: "LE CAFE DE PARIS recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Café de paris",
+  email: "reception@hotelcafedeparis.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Chorégraphe cocktail",
+  address: "5 Place Bellevue, 64200 Biarritz",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 1,
+  start_date: Date.new(2020,5,1),
+  end_date: Date.new(2020,6,30),
+  description: "Tu te sens l'âme d'un Tom Cruise?",
+  content: "LE CAFE DE PARIS recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Café de paris",
+  email: "reception@hotelcafedeparis.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Chef de rang (H/F)",
+  address: "74400 - Chamonix",
+  land_type: "Montagne",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 2,
+  start_date: Date.new(2019,12,1),
+  end_date: Date.new(2020,3,30),
+  description: "Recherche débutant ou confirmé. Faites vite!",
+  content: "Le bar du haut des pistes recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Resto la bonne Altitude",
+  email: "reception@labonnealtitude.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Chef de rang (H/F)",
+  address: "74400 - Chamonix",
+  land_type: "Montagne",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 1,
+  start_date: Date.new(2019,2,1),
+  end_date: Date.new(2020,3,10),
+  description: "Recherche débutant ou confirmé. Faites vite!",
+  content: "Le bar du haut des pistes recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Resto la bonne Altitude",
+  email: "reception@labonnealtitude.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Chef de rang (H/F)",
+  address: "74400 - Chamonix",
+  land_type: "Montagne",
+  meal: false,
+  accommodation: false,
+  salary: 1680,
+  places: 1,
+  start_date: Date.new(2019,2,1),
+  end_date: Date.new(2020,5,10),
+  description: "Recherche débutant ou confirmé. Faites vite!",
+  content: "Le bar du haut des pistes recherche un profil serveur(se) ou chef de rang pour le restaurant de l'hôtel avec prise de poste immédiate. CDD jusqu'à fin janvier (hôtel en travaux par la suite) avec possibilité de revenir pour un poste en CDI ou CDD saisonnier selon souhait.
+Contrat de 35 à 39h selon disponibilités, 2 jours de congés consécutifs.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Resto la bonne Altitude",
+  email: "reception@labonnealtitude.com",
+  telephone: "0559241953",
+  website: "https://www.hotel-cafedeparis-biarritz.com/",
+  logo: "https://www.hotel-cafedeparis-biarritz.com/assets/img/hotel-biarritz-cafe-de-paris.png",
+  photo: "https://www.hotel-cafedeparis-biarritz.com/cache/f/3/9/c/4/f39c4b3d3646bb823a682539935aaebb9cd36fd1.jpeg",
+)
+Job.create!(
+  title: "Secretaire comptable (H/F)",
+  address: "30510 - GENERAC",
+  land_type: "Campagne",
+  meal: false,
+  accommodation: false,
+  salary: 1300,
+  places: 1,
+  start_date: Date.new(2020,2,1),
+  end_date: Date.new(2020,4,30),
+  description: "GESTIONNAIRE PAIE / ASSISTANTE COMPTABLE",
+  content: "Au sein d'un service administratif, et rattaché(e) à la direction, vous avez pour missions principales :
+- La gestion et l’établissement de paies (250-300 paies). La gestion des charges sociales et DSN.
+- Une partie de la gestion administrative du personnel (affiliations et suivi des entrées/sorties, soldes de tout compte, visites médicales, gestion des maladies et des absences...) et relations avec les différents organismes sociaux (mutuelle, sécurité sociale...).
+- Assistante comptable vous serez amené(e) également à effectuer des tâches comptables simples (saisie des écritures, pointages…)
+Divers travaux de secrétariat, traitement du courrier.
+Gestion des stocks et de ressources matérielles, archivage.
+
+Vous justifiez impérativement de 2 années d'expérience dans un poste similaire.
+Vous êtes une autonome et dynamique. Vous appréciez le travail en équipe et avez de bonnes capacités relationnelles et d'adaptation.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Domaine des coteaux",
+  email: "domaine.coteaux@domaine-coteaux.fr",
+  telephone: "0466013709",
+  website: "http://www.domaine-coteaux.com/",
+  logo: "http://www.domaine-coteaux.com/images/logo.jpg",
+  photo: "",
+)
+Job.create!(
+  title: "Secretaire comptable (H/F)",
+  address: "30510 - GENERAC",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1300,
+  places: 1,
+  start_date: Date.new(2020,2,1),
+  end_date: Date.new(2020,4,30),
+  description: "Remplacement maternité COMPTABLE",
+  content: "Au sein d'un service administratif, et rattaché(e) à la direction, vous avez pour missions principales :
+- La gestion et l’établissement de paies (250-300 paies). La gestion des charges sociales et DSN.
+- Une partie de la gestion administrative du personnel (affiliations et suivi des entrées/sorties, soldes de tout compte, visites médicales, gestion des maladies et des absences...) et relations avec les différents organismes sociaux (mutuelle, sécurité sociale...).
+- Assistante comptable vous serez amené(e) également à effectuer des tâches comptables simples (saisie des écritures, pointages…)
+Divers travaux de secrétariat, traitement du courrier.
+Gestion des stocks et de ressources matérielles, archivage.
+
+Vous justifiez impérativement de 2 années d'expérience dans un poste similaire.
+Vous êtes une autonome et dynamique. Vous appréciez le travail en équipe et avez de bonnes capacités relationnelles et d'adaptation.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Domaine des coteaux",
+  email: "domaine.coteaux@domaine-coteaux.fr",
+  telephone: "0466013709",
+  website: "http://www.domaine-coteaux.com/",
+  logo: "http://www.domaine-coteaux.com/images/logo.jpg",
+  photo: "",
+)
+Job.create!(
+  title: "Secretaire comptable (H/F)",
+  address: "30510 - GENERAC",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1300,
+  places: 1,
+  start_date: Date.new(2020,2,1),
+  end_date: Date.new(2020,4,30),
+  description: "Remplacement maternité COMPTABLE",
+  content: "Au sein d'un service administratif, et rattaché(e) à la direction, vous avez pour missions principales :
+- La gestion et l’établissement de paies (250-300 paies). La gestion des charges sociales et DSN.
+- Une partie de la gestion administrative du personnel (affiliations et suivi des entrées/sorties, soldes de tout compte, visites médicales, gestion des maladies et des absences...) et relations avec les différents organismes sociaux (mutuelle, sécurité sociale...).
+- Assistante comptable vous serez amené(e) également à effectuer des tâches comptables simples (saisie des écritures, pointages…)
+Divers travaux de secrétariat, traitement du courrier.
+Gestion des stocks et de ressources matérielles, archivage.
+
+Vous justifiez impérativement de 2 années d'expérience dans un poste similaire.
+Vous êtes une autonome et dynamique. Vous appréciez le travail en équipe et avez de bonnes capacités relationnelles et d'adaptation.",
+  category: "Service",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Domaine des coteaux",
+  email: "domaine.coteaux@domaine-coteaux.fr",
+  telephone: "0466013709",
+  website: "http://www.domaine-coteaux.com/",
+  logo: "http://www.domaine-coteaux.com/images/logo.jpg",
+  photo: "",
+)
+Job.create!(
+  title: "Secretaire comptable (H/F)",
+  address: "30510 - GENERAC",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1300,
+  places: 1,
+  start_date: Date.new(2020,2,1),
+  end_date: Date.new(2020,2,28),
+  description: "Remplacement maternité COMPTABLE",
+  content: "Au sein d'un service administratif, et rattaché(e) à la direction, vous avez pour missions principales :
+- La gestion et l’établissement de paies (250-300 paies). La gestion des charges sociales et DSN.
+- Une partie de la gestion administrative du personnel (affiliations et suivi des entrées/sorties, soldes de tout compte, visites médicales, gestion des maladies et des absences...) et relations avec les différents organismes sociaux (mutuelle, sécurité sociale...).
+- Assistante comptable vous serez amené(e) également à effectuer des tâches comptables simples (saisie des écritures, pointages…)
+Divers travaux de secrétariat, traitement du courrier.
+Gestion des stocks et de ressources matérielles, archivage.
+
+Vous justifiez impérativement de 2 années d'expérience dans un poste similaire.
+Vous êtes une autonome et dynamique. Vous appréciez le travail en équipe et avez de bonnes capacités relationnelles et d'adaptation.",
+  category: "Service",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Domaine des coteaux",
+  email: "domaine.coteaux@domaine-coteaux.fr",
+  telephone: "0466013709",
+  website: "http://www.domaine-coteaux.com/",
+  logo: "http://www.domaine-coteaux.com/images/logo.jpg",
+  photo: "",
+)
+Job.create!(
+  title: "Remplacement Fête de la soupe comptable (H/F)",
+  address: "30510 - GENERAC",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1300,
+  places: 1,
+  start_date: Date.new(2020,2,1),
+  end_date: Date.new(2020,2,10),
+  description: "Remplacement Fête de la soupe COMPTABLE",
+  content: "Au sein d'un service administratif, et rattaché(e) à la direction, vous avez pour missions principales :
+- La gestion et l’établissement de paies (250-300 paies). La gestion des charges sociales et DSN.
+- Une partie de la gestion administrative du personnel (affiliations et suivi des entrées/sorties, soldes de tout compte, visites médicales, gestion des maladies et des absences...) et relations avec les différents organismes sociaux (mutuelle, sécurité sociale...).
+- Assistante comptable vous serez amené(e) également à effectuer des tâches comptables simples (saisie des écritures, pointages…)
+Divers travaux de secrétariat, traitement du courrier.
+Gestion des stocks et de ressources matérielles, archivage.
+
+Vous justifiez impérativement de 2 années d'expérience dans un poste similaire.
+Vous êtes une autonome et dynamique. Vous appréciez le travail en équipe et avez de bonnes capacités relationnelles et d'adaptation.",
+  category: "Service",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Domaine des coteaux",
+  email: "domaine.coteaux@domaine-coteaux.fr",
+  telephone: "0466013709",
+  website: "http://www.domaine-coteaux.com/",
+  logo: "http://www.domaine-coteaux.com/images/logo.jpg",
+  photo: "",
+)
+Job.create!(
+  title: "Animateur / Animatrice d'enfants",
+  address: "Promenade des Sources, 64600 Anglet",
+  land_type: "Mer",
+  meal: false,
+  accommodation: false,
+  salary: 1850,
+  places: 2,
+  start_date: Date.new(2019,12,20),
+  end_date: Date.new(2020,5,1),
+  description: "Le bonheur des enfants : votre unique préoccupation !",
+  content: "Dans le respect de la legislation relative à leur accueil, vous animez les activités destinées aux enfants de 3 à 10 ans.
+Garant de leur sécurité et de leur bien-être, vous mettez en oeuvre les activités et les spectacles en respectant le rythme de vie des enfants et en vous conformant au cahier des prestations et au référentiel de service.
+Votre sens des responsabilités et du service client , votre caractère affirmé et votre patience sont indispensables à la réussite de votre mission, la maitrise de l'anglais également.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Hotel Belambra",
+  email: "",
+  telephone: "0890641314",
+  website: "https://www.belambra.fr/club-anglet-la-chambre-d-amour/hiver",
+  logo: "https://www.belambra.fr/files/live/sites/Belambra/files/contributed/2018/belambra-vacances-france.jpg",
+  photo: "https://ecoledesurf.com/anglet/global/img/heb.png",
+)
+Job.create!(
+  title: "Animateur / Animatrice d'enfants",
+  address: "Promenade des Sources, 64600 Anglet",
+  land_type: "Mer",
+  meal: false,
+  accommodation: false,
+  salary: 1850,
+  places: 2,
+  start_date: Date.new(2020,5,1),
+  end_date: Date.new(2020,6,1),
+  description: "Le bonheur des enfants : votre unique préoccupation !",
+  content: "Dans le respect de la legislation relative à leur accueil, vous animez les activités destinées aux enfants de 3 à 10 ans.
+Garant de leur sécurité et de leur bien-être, vous mettez en oeuvre les activités et les spectacles en respectant le rythme de vie des enfants et en vous conformant au cahier des prestations et au référentiel de service.
+Votre sens des responsabilités et du service client , votre caractère affirmé et votre patience sont indispensables à la réussite de votre mission, la maitrise de l'anglais également.",
+  category: "Service",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Hotel Belambra",
+  email: "",
+  telephone: "0890641314",
+  website: "https://www.belambra.fr/club-anglet-la-chambre-d-amour/hiver",
+  logo: "https://www.belambra.fr/files/live/sites/Belambra/files/contributed/2018/belambra-vacances-france.jpg",
+  photo: "https://ecoledesurf.com/anglet/global/img/heb.png",
+)
+
+Job.create!(
+  title: "Directeur séjours adaptés H/F",
+  address: "86370 - VIVONNE",
+  land_type: "Ville",
+  meal: true,
+  accommodation: true,
+  salary: 1624,
+  places: 1,
+  start_date: Date.new(2019,12,21),
+  end_date: Date.new(2020,2,1),
+  description: "Association de Vacances adaptées",
+  content: "Vos missions : Faire passer de bonnes vacances à des adultes en situation de handicap mental et/ou psychique.
+Accompagner les vacanciers dans leur quotidien (aide à la toilette), préparer les repas, adapter et animer les activités du séjour, solliciter les vacanciers à participer à la vie du groupe prendre le temps de vivre…
+Organiser et participer à la vie du groupe (petits groupes de 7 à 11 pers encadrés par 2 ou 3 accompagnateurs).
+Présence en continue sur le séjour
+Hébergement et restauration pris en charge par l'association pendant le séjour
+Le salaire : 52€/jr pour les responsables et 46€/jr pour les animateurs.
+Être âgé de minimum 20 ans et avoir 1 an de permis de conduire.
+Votre contrat prendra effet à Poitiers.
+Profil recherché :
+Sensible au milieu du handicap
+Permis de conduire obligatoire",
+  category: "Social",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Roulotte et Nature",
+  email: "animateur.asso@gmail.com",
+  telephone: "05 49 50 64 60",
+  website: "http://www.vacancesadaptees.org/",
+  logo: "http://www.vacancesadaptees.org/build/img/logo.jpg?1515666919126",
+  photo: "",
+)
+Job.create!(
+  title: "Directeur séjours adaptés H/F",
+  address: "86370 - VIVONNE",
+  land_type: "Ville",
+  meal: true,
+  accommodation: true,
+  salary: 1624,
+  places: 1,
+  start_date: Date.new(2019,12,21),
+  end_date: Date.new(2020,1,10),
+  description: "Association de Vacances adaptées",
+  content: "Vos missions : Faire passer de bonnes vacances à des adultes en situation de handicap mental et/ou psychique.
+Accompagner les vacanciers dans leur quotidien (aide à la toilette), préparer les repas, adapter et animer les activités du séjour, solliciter les vacanciers à participer à la vie du groupe prendre le temps de vivre…
+Organiser et participer à la vie du groupe (petits groupes de 7 à 11 pers encadrés par 2 ou 3 accompagnateurs).
+Présence en continue sur le séjour
+Hébergement et restauration pris en charge par l'association pendant le séjour
+Le salaire : 52€/jr pour les responsables et 46€/jr pour les animateurs.
+Être âgé de minimum 20 ans et avoir 1 an de permis de conduire.
+Votre contrat prendra effet à Poitiers.
+Profil recherché :
+Sensible au milieu du handicap
+Permis de conduire obligatoire",
+  category: "Social",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Roulotte et Nature",
+  email: "animateur.asso@gmail.com",
+  telephone: "05 49 50 64 60",
+  website: "http://www.vacancesadaptees.org/",
+  logo: "http://www.vacancesadaptees.org/build/img/logo.jpg?1515666919126",
+  photo: "",
+)
+Job.create!(
+  title: "Directeur séjours adaptés Nature H/F",
+  address: "86370 - VIVONNE",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: true,
+  salary: 1624,
+  places: 1,
+  start_date: Date.new(2019,12,21),
+  end_date: Date.new(2020,1,10),
+  description: "Association de Vacances adaptées",
+  content: "Vos missions : Faire passer de bonnes vacances à des adultes en situation de handicap mental et/ou psychique.
+Accompagner les vacanciers dans leur quotidien (aide à la toilette), préparer les repas, adapter et animer les activités du séjour, solliciter les vacanciers à participer à la vie du groupe prendre le temps de vivre…
+Organiser et participer à la vie du groupe (petits groupes de 7 à 11 pers encadrés par 2 ou 3 accompagnateurs).
+Présence en continue sur le séjour
+Hébergement et restauration pris en charge par l'association pendant le séjour
+Le salaire : 52€/jr pour les responsables et 46€/jr pour les animateurs.
+Être âgé de minimum 20 ans et avoir 1 an de permis de conduire.
+Votre contrat prendra effet à Poitiers.
+Profil recherché :
+Sensible au milieu du handicap
+Permis de conduire obligatoire",
+  category: "Social",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Roulotte et Nature",
+  email: "animateur.asso@gmail.com",
+  telephone: "05 49 50 64 60",
+  website: "http://www.vacancesadaptees.org/",
+  logo: "http://www.vacancesadaptees.org/build/img/logo.jpg?1515666919126",
+  photo: "",
+)
+Job.create!(
+  title: "Directeur séjours adaptés Nature H/F",
+  address: "86370 - VIVONNE",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: true,
+  salary: 1624,
+  places: 1,
+  start_date: Date.new(2019,12,21),
+  end_date: Date.new(2020,3,10),
+  description: "Association de Vacances adaptées",
+  content: "Vos missions : Faire passer de bonnes vacances à des adultes en situation de handicap mental et/ou psychique.
+Accompagner les vacanciers dans leur quotidien (aide à la toilette), préparer les repas, adapter et animer les activités du séjour, solliciter les vacanciers à participer à la vie du groupe prendre le temps de vivre…
+Organiser et participer à la vie du groupe (petits groupes de 7 à 11 pers encadrés par 2 ou 3 accompagnateurs).
+Présence en continue sur le séjour
+Hébergement et restauration pris en charge par l'association pendant le séjour
+Le salaire : 52€/jr pour les responsables et 46€/jr pour les animateurs.
+Être âgé de minimum 20 ans et avoir 1 an de permis de conduire.
+Votre contrat prendra effet à Poitiers.
+Profil recherché :
+Sensible au milieu du handicap
+Permis de conduire obligatoire",
+  category: "Social",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Roulotte et Nature",
+  email: "animateur.asso@gmail.com",
+  telephone: "05 49 50 64 60",
+  website: "http://www.vacancesadaptees.org/",
+  logo: "http://www.vacancesadaptees.org/build/img/logo.jpg?1515666919126",
+  photo: "",
+)
+Job.create!(
+  title: "Directeur séjours adaptés Nature H/F",
+  address: "86370 - VIVONNE",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: true,
+  salary: 1624,
+  places: 1,
+  start_date: Date.new(2019,12,21),
+  end_date: Date.new(2020,1,10),
+  description: "Association de Vacances adaptées",
+  content: "Vos missions : Faire passer de bonnes vacances à des adultes en situation de handicap mental et/ou psychique.
+Accompagner les vacanciers dans leur quotidien (aide à la toilette), préparer les repas, adapter et animer les activités du séjour, solliciter les vacanciers à participer à la vie du groupe prendre le temps de vivre…
+Organiser et participer à la vie du groupe (petits groupes de 7 à 11 pers encadrés par 2 ou 3 accompagnateurs).
+Présence en continue sur le séjour
+Hébergement et restauration pris en charge par l'association pendant le séjour
+Le salaire : 52€/jr pour les responsables et 46€/jr pour les animateurs.
+Être âgé de minimum 20 ans et avoir 1 an de permis de conduire.
+Votre contrat prendra effet à Poitiers.
+Profil recherché :
+Sensible au milieu du handicap
+Permis de conduire obligatoire",
+  category: "Social",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Roulotte et Nature",
+  email: "animateur.asso@gmail.com",
+  telephone: "05 49 50 64 60",
+  website: "http://www.vacancesadaptees.org/",
+  logo: "http://www.vacancesadaptees.org/build/img/logo.jpg?1515666919126",
+  photo: "",
+)
+Job.create!(
+  title: "Directeur séjours adaptés H/F",
+  address: "86370 - VIVONNE",
+  land_type: "Ville",
+  meal: true,
+  accommodation: true,
+  salary: 1624,
+  places: 1,
+  start_date: Date.new(2019,12,21),
+  end_date: Date.new(2019,12,31),
+  description: "Association de Vacances adaptées",
+  content: "Vos missions : Faire passer de bonnes vacances à des adultes en situation de handicap mental et/ou psychique.
+Accompagner les vacanciers dans leur quotidien (aide à la toilette), préparer les repas, adapter et animer les activités du séjour, solliciter les vacanciers à participer à la vie du groupe prendre le temps de vivre…
+Organiser et participer à la vie du groupe (petits groupes de 7 à 11 pers encadrés par 2 ou 3 accompagnateurs).
+Présence en continue sur le séjour
+Hébergement et restauration pris en charge par l'association pendant le séjour
+Le salaire : 52€/jr pour les responsables et 46€/jr pour les animateurs.
+Être âgé de minimum 20 ans et avoir 1 an de permis de conduire.
+Votre contrat prendra effet à Poitiers.
+Profil recherché :
+Sensible au milieu du handicap
+Permis de conduire obligatoire",
+  category: "Social",
+  professional_domain: "Hôtellerie - Restauration / Tourisme / Animation",
+  name: "Roulotte et Nature",
+  email: "animateur.asso@gmail.com",
+  telephone: "05 49 50 64 60",
+  website: "http://www.vacancesadaptees.org/",
+  logo: "http://www.vacancesadaptees.org/build/img/logo.jpg?1515666919126",
+  photo: "",
+)
+# Job.create!(
+#   title: "",
+#   address: "",
+#   land_type: "",
+#   meal: ,
+#   accommodation: ,
+#   salary: ,
+#   places: ,
+#   start_date: Date.new(),
+#   end_date: Date.new(),
+#   description: "",
+#   content: "",
+#   category: "",
+#   professional_domain: "",
+#   name: "",
+#   email: "",
+#   telephone: "",
+#   website: "",
+#   logo: "",
+#   photo: "",
+# )
+
+
+
 puts "database created"
