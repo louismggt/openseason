@@ -9,4 +9,7 @@ class FavoritePolicy < ApplicationPolicy
     user
   end
 
+  def destroy?
+    user
+  end
 end

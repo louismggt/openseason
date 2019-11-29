@@ -24,7 +24,7 @@ class FavoritesController < ApplicationController
 
     authorize @favorite
     if @favorite.save
-      redirect_to job_path(@job)
+      redirect_to profil_path(current_user)
     else
       render :new
     end
@@ -46,6 +46,11 @@ class FavoritesController < ApplicationController
 
   def destroy
     @favorite = Favorite.find(params[:id])
-    @favorite.destroy
+
+    authorize @favorite
+    if @favorite.destroy
+
+      redirect_to profil_path(current_user)
+    end
   end
 end

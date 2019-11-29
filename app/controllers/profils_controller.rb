@@ -3,5 +3,6 @@ class ProfilsController < ApplicationController
     @user = User.find(params[:id])
     authorize @user
     @favorites = @user.favorites
+    @missions = @user.missions
   end
 end
