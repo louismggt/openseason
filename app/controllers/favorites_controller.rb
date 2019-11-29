@@ -3,9 +3,13 @@ class FavoritesController < ApplicationController
     @favorites = Favorite.all
   end
 
+
+  # LE NEW NE SERT PAS
+
   def show
     @favorite = Favorite.find(params[:job_id])
   end
+
 
   def new
     @job = Job.find(params[:job_id])
@@ -17,6 +21,8 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.new
     @favorite.user = current_user
     @favorite.job = @job
+
+    authorize @favorite
     if @favorite.save
       redirect_to job_path(@job)
     else
