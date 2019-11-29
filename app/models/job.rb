@@ -16,6 +16,10 @@ class Job < ApplicationRecord
     end
   end
 
+  def duration_in_days
+    (self.end_date - self.start_date).to_i
+  end
+
   def zip_code_and_city
      self.address.match(/\d{5}.*/)[0].first(17)...
    end
