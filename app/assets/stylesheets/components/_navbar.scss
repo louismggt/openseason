@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #364156;
+  height: 70px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,6 +14,8 @@
 .navbar .nav-item {
   color: white;
   padding-bottom: 16px;
+  font-weight: bold;
+  font-family: 'Ubuntu';
 }
 .navbar .nav-item a:hover {
   padding-bottom: 16px;
