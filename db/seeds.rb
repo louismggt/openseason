@@ -7,11 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Cleaning database"
-
+Favorite.destroy_all
+Mission.destroy_all
 Job.destroy_all
 # User.destroy_all
-Mission.destroy_all
-Favorite.destroy_all
+
+
 Preference.destroy_all
 
 
@@ -1607,7 +1608,7 @@ Job.create!(
   salary: 1624,
   places: 1,
   start_date: Date.new(2019,12,21),
-  end_date: Date.new(2020,1,10),
+  end_date: Date.new(2020,4,10),
   description: "Association de Vacances adaptées",
   content: "Vos missions : Faire passer de bonnes vacances à des adultes en situation de handicap mental et/ou psychique.
 Accompagner les vacanciers dans leur quotidien (aide à la toilette), préparer les repas, adapter et animer les activités du séjour, solliciter les vacanciers à participer à la vie du groupe prendre le temps de vivre…
@@ -1669,7 +1670,7 @@ Job.create!(
   salary: 1624,
   places: 1,
   start_date: Date.new(2019,12,21),
-  end_date: Date.new(2020,3,10),
+  end_date: Date.new(2020,5,10),
   description: "Association de Vacances adaptées",
   content: "Vos missions : Faire passer de bonnes vacances à des adultes en situation de handicap mental et/ou psychique.
 Accompagner les vacanciers dans leur quotidien (aide à la toilette), préparer les repas, adapter et animer les activités du séjour, solliciter les vacanciers à participer à la vie du groupe prendre le temps de vivre…
@@ -1700,7 +1701,7 @@ Job.create!(
   salary: 1624,
   places: 1,
   start_date: Date.new(2019,12,21),
-  end_date: Date.new(2020,1,10),
+  end_date: Date.new(2019,12,30),
   description: "Association de Vacances adaptées",
   content: "Vos missions : Faire passer de bonnes vacances à des adultes en situation de handicap mental et/ou psychique.
 Accompagner les vacanciers dans leur quotidien (aide à la toilette), préparer les repas, adapter et animer les activités du séjour, solliciter les vacanciers à participer à la vie du groupe prendre le temps de vivre…

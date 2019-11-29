@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-xs-12 col-xl-6">
         <div class="job-containers">
-          <% @jobs.sample(4).each do |job| %>
+          <% @jobs.first(4).each do |job| %>
             <div class="">
               <%= render 'components/card', job: job %>
             </div>
@@ -12,9 +12,8 @@
         </div>
       </div>
       <div class="col-xs-12 col-xl-6">
-        map
+        <%= render 'components/map', markers: @markers %>
       </div>
     </div>
   </div>
 </div>
-
