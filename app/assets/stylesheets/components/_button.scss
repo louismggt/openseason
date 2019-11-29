@@ -11,7 +11,17 @@
   font-size: 32px;
   width: 300px;
   border-color: #E26161;
+  text-decoration: none;
+  transition: 0.2s ease;
   // border: 5px solid #E26161;
+}
+
+.btn-gradient:hover {
+  background-color: #F38686;
+  text-decoration: none;
+  color: white;
+  font-size: 34px;
+  overflow: hidden;
 }
 
 .btn-flat {

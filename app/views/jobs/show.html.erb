@@ -70,8 +70,8 @@
               </div>
             </div>
             <div class="buttons">
-            <%= link_to "sauvegarder", new_job_favorite_path(@job), :class => "btn-flat" %>
-            <%= link_to "postuler", new_job_mission_path(@job), :class => "btn-flat" %>
+            <%= link_to "Sauvegarder", job_favorites_path(job_id: @job.id), method: :post, :class => "btn-flat" %>
+            <%= link_to "Postuler", new_job_mission_path(@job), :class => "btn-flat" %>
             </div>
           </div>
         </div>
