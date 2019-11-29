@@ -18,17 +18,17 @@ Preference.destroy_all
 
 puts "Building database"
 
-User.create!(
-  email: "patujulie@gmail.com",
-  password: "julieto",
-  first_name: "julie",
-  last_name: "Paturel",
-  username: "patujulie",
-  nationality: "francaise",
-  address: "310 ter rue de tourcoing - 59420 Mouvaux",
-  biograophy: "Jeune femme dynamique a la recherche d'un job d'été en extérieur. Je suis souriante, j'aime beaucoup rire et raconter des comptes avec de nouveaux amis ! ",
-  age: 23
-)
+# User.create!(
+#   email: "patujulie@gmail.com",
+#   password: "julieto",
+#   first_name: "julie",
+#   last_name: "Paturel",
+#   username: "patujulie",
+#   nationality: "francaise",
+#   address: "310 ter rue de tourcoing - 59420 Mouvaux",
+#   biograophy: "Jeune femme dynamique a la recherche d'un job d'été en extérieur. Je suis souriante, j'aime beaucoup rire et raconter des comptes avec de nouveaux amis ! ",
+#   age: 23
+# )
 User.create!(
   email: "louis.guig@gmail.com",
   password: "louisto",
