@@ -8,6 +8,9 @@
     <div class="banner-button d-flex justify-content-center">
       <%= link_to "C'est parti !", new_preference_path(step: 0), class: "btn-gradient" %>
     </div>
+    <div class="banner-button d-flex justify-content-center mt-3">
+          <%= link_to "Choisis pour moi", job_path(Job.all.sample), class: "btn-flat" %>
+        </div>
   </div>
   <div class="banner-image">
     <%= image_tag "banner_image.png", class: "banner_title img-fluid mx-auto" %>

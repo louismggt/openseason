@@ -18,17 +18,28 @@ Preference.destroy_all
 
 puts "Building database"
 
-# User.create!(
-#   email: "patujulie@gmail.com",
-#   password: "julieto",
-#   first_name: "julie",
-#   last_name: "Paturel",
-#   username: "patujulie",
-#   nationality: "francaise",
-#   address: "310 ter rue de tourcoing - 59420 Mouvaux",
-#   biograophy: "Jeune femme dynamique a la recherche d'un job d'été en extérieur. Je suis souriante, j'aime beaucoup rire et raconter des comptes avec de nouveaux amis ! ",
-#   age: 23
-# )
+User.create!(
+  email: "patujulie@gmail.com",
+  password: "julieto",
+  first_name: "julie",
+  last_name: "Paturel",
+  username: "patujulie",
+  nationality: "francaise",
+  address: "310 ter rue de tourcoing - 59420 Mouvaux",
+  biograophy: "Jeune femme dynamique a la recherche d'un job d'été en extérieur. Je suis souriante, j'aime beaucoup rire et raconter des comptes avec de nouveaux amis ! ",
+  age: 23
+)
+User.create!(
+  email: "louis.guig@gmail.com",
+  password: "louisto",
+  first_name: "Louis",
+  last_name: "Guiganton",
+  username: "Louismggt",
+  nationality: "francaise",
+  address: "105, rue des martyrs - 59130 LAMBERSART",
+  biograophy: "Farouche jeune homme, courageux, adepte de la musique disco et des voyages en pantoufle et tuktuk",
+  age: 33
+)
 
 Job.create!(
   title: "Ouvrier taille des arbres en pépinière H/F.",
@@ -126,14 +137,14 @@ Assurer l’ensemble des opérations d’entretien journalier et de nettoyage n�
 
 Job.create!(
   title: "Tailleur de vigne H/F",
-  address: "15 Rue DU CHENE LA JEANSONNE - 51270 COURJEONNET",
+  address: "51270 COURJEONNET",
   land_type: "Campagne",
   meal: true,
   accommodation: true,
   salary: 1200,
   places: 10,
   start_date: Date.new(2020,10,1),
-  end_date: Date.new(2020,10,30),
+  end_date: Date.new(2020,10,7),
   description: "Vendangeur(euse) pour une semaine.",
   content: "Domaine familiale recherche vendangeurs hommes et femmes a partir du vendredi 13 septembre pour une durée d'environ 5 jours, nourrit le midi. les repas sont offert. les animaux ne sont pas accepté.",
   category: "Agricole",
