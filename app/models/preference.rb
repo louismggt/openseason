@@ -8,12 +8,12 @@ class Preference < ApplicationRecord
     },
     {
       name: "category",
-      values: ["industrie", "agriculture", "social", "service"],
-      text: 'Ok, ça focalise déjà ta recherche,<br>encore deux petites questions',
+      values: ["industrie", "agricole", "social", "service"],
+      text: 'Ok, on y voit plus clair,<br>encore deux petites questions',
       title: "Quel secteur d'activité ?"
     },
     {
-      name: "land_type",
+      name: "duration",
       values: ["1-semaine", "1-mois", "2-mois"],
       text: 'Ok, dernière question ',
       title: 'Pour combien de temps ?'

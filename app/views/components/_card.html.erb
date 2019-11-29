@@ -32,7 +32,7 @@
   </div>
   <div class="lower-side d-flex justify-content-around mt-3">
     <div class="location"><i class="fas fa-map-marker-alt"></i> <%=job.zip_code_and_city %></div>
-    <%= link_to "Book now", "#", class: "btn btn-flat" %>
+    <%= button_to "> Détails", job_path(job.id), :class => "btn-flat", :method => :get %>
   </div>
 </div>
 
