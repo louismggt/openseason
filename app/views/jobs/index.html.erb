@@ -5,9 +5,18 @@
       <div class="col-xs-12 col-xl-6">
         <div class="job-containers">
           <% if @jobs.empty? %>
-            <div class="head-quizz">
-              Désolé, nous n'avons pas d'offre correspondant.
-              <%= link_to "Spin the wheel!", jobs_path, :class => "btn-flat" %>
+            <div class="container-show-job d-flex">
+              <div class="d-flex flex-column justify-content-around">
+                <div class="mb-3">
+                  Désolé, nous n'avons pas d'offre correspondant.
+                </div>
+                <div class="mb-3">
+                  <%= link_to "Spin the wheel!", job_path(Job.all.sample), :class => "btn-flat" %>
+                </div>
+                <div class="mb-3">
+                  <%= link_to "On tente autre chose?", new_preference_path, :class => "btn-flat" %>
+                </div>
+              </div>
           <% else %>
             <% @jobs.first(4).each do |job| %>
               <div class="">
