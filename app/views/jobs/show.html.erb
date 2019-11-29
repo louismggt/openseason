@@ -27,7 +27,7 @@
                 <div class="title_job d-flex justify-content-around">
                   <div class="date-info d-flex">
                     <i class="far fa-calendar-plus"></i>
-                    <p><%= @job.duration %> jours</p>
+                    <p><%= @job.duration_in_days.to_i %> jours</p>
                   </div>
                   <div class="salary-info d-flex">
                     <i class="fas fa-euro-sign"></i>
