@@ -1,26 +1,51 @@
+.header__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#499EAA, #499EAA);
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.col-3 {
+  padding:0px;
+}
+
 .container {
 
-  margin-top: 70px;
+  display: flex;
+  wrap: flex-wrap;
+  margin-top: 50px;
   background-color: #F4F4F4;
   min-height: calc(100vh - 90px);
+  background-color: #f4f4f4;
   // margin-left: 50px;
   // margin-right: 50px;
+  box-shadow:none;
 }
 
 h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 48px;
+  font-size: 40px;
   width: bold;
   text-align:center;
   color: #405F76;
 }
 
+.contact {
+  background-color: cadetblue;
+}
+
 .photo-profil {
   text-align: center;
   padding: 15px;
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #F9F8F8;
-  border-radius: 7px;
+  border-radius: 3px;
   margin-bottom: 10px;
 }
 .fa-user-circle {
@@ -39,14 +64,14 @@ h1 {
 }
 .info-contact {
   padding: 15px;
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #F9F8F8;
-  border-radius: 7px;
+  border-radius: 3px;
 }
 .info-contact p {
   font-family: 'Ubuntu', sans-serif;
-  color: black;
-  font-size: 16px;
+  color: grey;
+  font-size: 14px;
   line-height: normal;
   padding:5px;
   border-bottom: 1px solid #499EAA;
@@ -54,16 +79,21 @@ h1 {
 .info-contact p i {
   margin-right: 10px;
   font-weight: bold;
+  color: #499EAA;
 }
 .info-contact h4 {
   margin-right: 7px;
-  border-bottom: 1px solid #499EAA;
+  margin-bottom :10px;
+  text-align: center;
+  font-size: 24px;
+  color: #489ea9;
 }
 .favorite {
   padding: 15px;
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #F9F8F8;
-  border-radius: 7px;
+  border-radius: 3px;
+  margin-right: 15px;
 }
 
 .favorite-jobs {
@@ -77,11 +107,13 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   color: #405F76;
   text-align: center;
+  margin-bottom: 14px;
+  font-size: 18px;
 }
 .favorite h3 i {
-  color: #405F76;
+  color: #489EA9;
   margin-right: 5px;
-  text-align: right;
+  text-align: center;
 }
 .favorite p {
   font-family: 'Ubuntu', sans-serif;
@@ -92,9 +124,9 @@ h1 {
 }
 .my-missions {
   padding: 15px;
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #F9F8F8;
-  border-radius: 7px;
+  border-radius: 3px;
 }
 
 .mission-jobs {
@@ -106,9 +138,11 @@ h1 {
   border-bottom: 1px solid #499EAA;
   font-family: 'Montserrat', sans-serif;
   color: #405F76;
+  font-size: 18px;
+  margin-bottom: 14px;
 }
 .my-missions h3 i {
-  color: #405F76;
+  color: #489EA9;
   margin-right: 5px;
 }
 .my-missions p {
@@ -120,9 +154,9 @@ h1 {
 }
 .work-experiences {
   padding: 15px;
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #F9F8F8;
-  border-radius: 7px;
+  border-radius: 3px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -130,4 +164,21 @@ h1 {
   border-bottom: 1px solid #499EAA;
   font-family: 'Montserrat', sans-serif;
   color: #405F76;
+  font-size: 23px;
+}
+
+.button {
+  color: white;
+  background-color: #489ea9;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  font-family: 'Montserrat';
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  white-space: 10px;
+}
+
+.button:hover {
+  background: #66BECB;
+  color: white;
 }
