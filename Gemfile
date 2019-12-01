@@ -20,6 +20,10 @@ gem 'pundit'
 
 gem 'geocoder'
 
+gem 'bootstrap'
+gem 'popper_js'
+gem 'turbolinks'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
