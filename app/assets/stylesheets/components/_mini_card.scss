@@ -6,35 +6,37 @@
   display: flex;
   align-items: center;
   margin-bottom: 4px;
-  border-radius: 3px;
+  border-radius: 10px;
+  border: 1px solid #ccc!important;
 }
 
 .mini-card img {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   object-fit: cover;
+  border-radius: 3px;
 }
 
 .mini-card h2 a {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-  margin-bottom: 0;
+  margin-bottom: -4px;
   margin-top: 0;
   text-decoration: none;
   color: #364156;
   transition: 0.2s ease;
 }
 .mini-card h2 a:hover {
-  color: lightgrey;
+  color: #489ea9;
   transition: 0.2s ease;
 }
 
 .mini-card p {
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 2px;
+  margin-top: -15px;
 }
 
 .mini-card .mini-card-infos {

@@ -1,11 +1,15 @@
+<header>
+  <div class="header__bg">
+  </div>
+</header>
 <div class="full-screen">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1> MON ESPACE PERSONNEL </h1>
+        <h1> Bonjour<%= @user.first_name %> !</h1>
       </div>
       <div class="col-3">
-        <div class="contact">
+        <div class="contact ">
           <div class="bio">
             <div class="photo-profil">
               <i class="fas fa-user-circle"></i>
@@ -17,9 +21,13 @@
               <h4>Mes infos</h4>
               <p><i class="far fa-user"></i><%= @user.username %></p>
               <p><i class="far fa-envelope"></i><%= @user.email %></p>
-              <p>Nationalité : <%= @user.nationality %></p>
-              <p>Âge : <%= @user.age %> ans</p>
+              <p><i class="fas fa-flag"></i> <%= @user.nationality %></p>
+              <p><i class="fas fa-birthday-cake"></i> <%= @user.age %> ans</p>
               <p><i class="fas fa-map-marker-alt"></i><%= @user.address %></p>
+              <div class="profil-btns d-flex justify-content-around">
+              <button type="button" class="button">Éditer</button>
+              <button type="button" class="button">Supprimer</button>
+              </div>
             </div>
           </div>
         </div>
