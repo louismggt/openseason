@@ -1,7 +1,6 @@
 <div class="modal-header">
   <h4 class="modal-title" id="myModalLabel"><%= @job.title %></h4>
   <button type="button" class="close" data-dismiss="modal">x</button>
-
 </div>
 <div class="modal-body">
   <div class="headers d-flex justify-content-around">
@@ -17,17 +16,17 @@
         <div class="date-info d-flex">
           <div class="column">
             <div>
-              <i class="far fa-calendar-plus"></i>
+              <!-- <i class="far fa-calendar-plus"></i> -->
               <p>Début de contrat</p>
             </div>
-            <p><%= @job.start_parsed %></p>
+            <div><p><%= @job.start_parsed %></p></div>
           </div>
           <div class="column">
             <div>
-              <i class="far fa-calendar-plus"></i>
+              <!-- <i class="far fa-calendar-plus"></i> -->
               <p>Fin de contrat</p>
             </div>
-              <p><%= @job.start_parsed %></p>
+              <p><%= @job.end_parsed %></p>
           </div>
         </div>
 
@@ -40,9 +39,11 @@
   </div>
   <div class="job-content-modals">
     <h3>Description</h3>
-    <p><%= @job.content %></p>
+    <div class="pre-scrollable">
+      <p><%= @job.content %></p>
+    </div>
   </div>
-  <div class="job-footer-infos d-flex justify-content-center">
+  <div class="job-footer-infos d-flex justify-content-around">
     <div class="address">
       <i class="far fa-map"></i>
       <p> Lieu de travail</p>

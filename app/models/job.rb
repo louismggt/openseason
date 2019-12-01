@@ -5,7 +5,6 @@ class Job < ApplicationRecord
   has_many :missions
   has_many :favorites
 
-
   def duration
     if (end_date - start_date).to_i < 15
       return "1-semaine"
@@ -20,6 +19,9 @@ class Job < ApplicationRecord
     start_date.to_formatted_s(:long)
   end
 
+  def end_parsed
+    end_date.to_formatted_s(:long)
+  end
 
   def duration_in_days
     (self.end_date - self.start_date).to_i
