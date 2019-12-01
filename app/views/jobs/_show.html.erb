@@ -37,7 +37,7 @@
       </div>
     </div>
   </div>
-  <div class="job-content-modals">
+  <div class="job-content-modals mt-3">
     <h3>Description</h3>
     <div class="pre-scrollable">
       <p><%= @job.content %></p>
@@ -72,9 +72,9 @@
         </div>
     </div>
   </div>
-<div class="modal-footer justify-content-around">
+<div class="modal-footer justify-content-around mt-3">
 
-    <div><%= link_to "Sauvegarder", job_favorites_path(job_id: @job.id), method: :post, :class => "btn-flat" %></div>
-    <div><%= link_to "Postuler", job_missions_path(@job), method: :post, :class => "btn-flat" %></div>
+    <div class="mt-3"><%= link_to "Sauvegarder", job_favorites_path(job_id: @job.id), method: :post, :class => "btn-flat" %></div>
+    <div class="mt-3"><%= link_to "Postuler", job_missions_path(@job), method: :post, :class => "btn-flat" %></div>
 
 </div>
