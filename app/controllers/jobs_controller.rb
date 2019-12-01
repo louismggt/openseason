@@ -34,6 +34,10 @@ class JobsController < ApplicationController
 
     @job = Job.find(params[:id])
     authorize @job
+    respond_to do |format|
+      format.html
+      format.js
+    end
     @markers = [{
       lat: @job.latitude,
       lng: @job.longitude

@@ -16,6 +16,11 @@ class Job < ApplicationRecord
     end
   end
 
+  def start_parsed
+    start_date.to_formatted_s(:long)
+  end
+
+
   def duration_in_days
     (self.end_date - self.start_date).to_i
   end
