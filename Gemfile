@@ -20,9 +20,7 @@ gem 'pundit'
 
 gem 'geocoder'
 
-gem 'bootstrap'
-gem 'popper_js'
-gem 'turbolinks'
+
 
 
 group :development do
