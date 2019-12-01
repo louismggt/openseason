@@ -1,0 +1,33 @@
+
+
+.modal-body .job-content-modals p {
+  color: #364156;
+  font-family: 'Ubuntu';
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 20px;
+}
+.modal-title {
+  font-family: 'Ubuntu';
+  font-size: 24px;
+}
+.modal-dialog {
+  color: black;
+  z-index: 999;
+}
+
+.modal-content {
+  width: 800px;
+  margin: 30px auto;
+  margin-left: -100px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.pre-scrollable {
+  max-height: 120px;
+  overflow-y: scroll;
+}
+.modal-header {
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+}

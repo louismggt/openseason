@@ -1,0 +1,58 @@
+diff --git a/Gemfile b/Gemfile
+index 3f1e224..62c1269 100644
+--- a/Gemfile
++++ b/Gemfile
+@@ -15,6 +15,7 @@ gem 'simple_form'
+ gem 'uglifier'
+ gem 'webpacker'
+ gem 'devise'
++gem 'bootstrap-sass'
+ 
+ gem 'pundit'
+ 
+diff --git a/Gemfile.lock b/Gemfile.lock
+index 5a6b369..49fef83 100644
+--- a/Gemfile.lock
++++ b/Gemfile.lock
+@@ -49,6 +49,9 @@ GEM
+     bindex (0.8.1)
+     bootsnap (1.4.5)
+       msgpack (~> 1.0)
++    bootstrap-sass (3.4.1)
++      autoprefixer-rails (>= 5.2.1)
++      sassc (>= 2.0.0)
+     builder (3.2.3)
+     byebug (11.0.1)
+     coderay (1.1.2)
+@@ -196,6 +199,7 @@ PLATFORMS
+ DEPENDENCIES
+   autoprefixer-rails
+   bootsnap
++  bootstrap-sass
+   devise
+   dotenv-rails
+   font-awesome-sass (~> 5.6.1)
+diff --git a/app/assets/javascripts/application.js b/app/assets/javascripts/application.js
+index 12b05c5..47e63cf 100644
+--- a/app/assets/javascripts/application.js
++++ b/app/assets/javascripts/application.js
+@@ -1,2 +1,4 @@
+ //= require rails-ujs
++//= require bootstrap-modal
++
+ //= require_tree .
+diff --git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb
+index d179859..c7ccce3 100644
+--- a/app/views/layouts/application.html.erb
++++ b/app/views/layouts/application.html.erb
+@@ -9,8 +9,8 @@
+     <%= csrf_meta_tags %>
+     <%= action_cable_meta_tag %>
+     <link href="https://fonts.googleapis.com/css?family=Rancho&display=swap" rel="stylesheet">
+-    <%= stylesheet_link_tag 'application', media: 'all' %>
+-    <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
++    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
++    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track' => true %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+     <%= favicon_link_tag asset_path('favicon.ico') %>
+   </head>
+   <header><%= render 'components/navbar' %></header>
