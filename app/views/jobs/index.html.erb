@@ -30,7 +30,7 @@
           <div class="job-containers">
             <% @jobs.first(4).each do |job| %>
               <div class="">
-                <%= render 'components/card', job: job %>
+                <%= render 'card', job: job %>
               </div>
             <% end %>
           </div>

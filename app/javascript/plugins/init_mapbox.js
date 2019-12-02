@@ -6,6 +6,7 @@ const fitMapToMarkers = (map, markers) => {
   map.fitBounds(bounds, { padding: 100, maxZoom: 6, duration: 1000 });
 };
 
+
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
 
@@ -27,6 +28,7 @@ const initMapbox = () => {
       element.style.width = '40px';
       element.style.height = '40px';
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
+
 
       new mapboxgl.Marker(element)
         .setLngLat([ marker.lng, marker.lat ])

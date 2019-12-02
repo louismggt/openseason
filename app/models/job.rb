@@ -26,14 +26,16 @@ class Job < ApplicationRecord
   def email_display
     if email.empty?
       return "Non renseigné"
-    else email
+    else
+      email
     end
   end
 
   def telephone_display
-    if email.empty?
+    if telephone.empty?
       return "Non renseigné"
-    else telephone
+    else
+      telephone
     end
   end
 
