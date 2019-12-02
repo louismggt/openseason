@@ -2,15 +2,17 @@
   <%= image_tag job.logo %>
   <div class="mini-card-infos">
     <h2><%= link_to job.title, job_path(job.id), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %></h2>
-    <div class="d-flex justify-content-between">
+    <div class="">
       <p><%= job.description %></p>
+    </div>
+    <div class="trash">
       <% if favorite %>
         <%= link_to favorite_path(favorite), method: :delete do %>
-          <i class="far fa-trash-alt"></i>
+          <i class="fas fa-times"></i>
         <% end %>
       <% else %>
         <%= link_to mission_path(mission), method: :delete do %>
-          <i class="far fa-trash-alt"></i>
+          <i class="fas fa-times"></i>
         <% end %>
       <% end %>
     </div>
