@@ -25,14 +25,14 @@
 }
 
 .headers {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
   text-align: center;
 }
 
 .job-headers h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  // margin-top: 20px;
+  // margin-bottom: 10px;
   font-family: Ubuntu;
   font-style: normal;
   font-weight: 500;
@@ -65,6 +65,11 @@
   margin-left: 10px;
   color: grey;
   margin-top: -7px;
+}
+.title_job {
+  max-width: 80%;
+  margin-left: 5%;
+  margin-top: 20px;
 }
 
 .job-content h3 {
