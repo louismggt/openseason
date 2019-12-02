@@ -1,17 +1,35 @@
-
-
-.modal-body .job-content-modals p {
-  color: #364156;
-  font-family: 'Ubuntu';
-  font-weight: lighter;
-  font-size: 16px;
-  line-height: 20px;
-    padding: 30px 30px;
+.modal-header {
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
 }
 .modal-title {
   font-family: 'Ubuntu';
   font-size: 24px;
 }
+
+.modal-content-header {
+  display: flex;
+  flex: justify-content-around;
+  margin-right: 0;
+}
+.job-photo-modal img {
+  width: 250px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 3px;
+  webkit-box-shadow: 0px 0px 8px 2px #e0dede;
+       -moz-box-shadow: 0px 0px 8px 2px #e0dede;
+            box-shadow: 0px 0px 8px 2px #e0dede;
+}
+
+.modal-body .job-content-modals p {
+  color: #364156;
+  font-family: 'Montserrat';
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 20px;
+    padding: 30px 30px;
+}
+
 .modal-dialog {
   color: black;
   z-index: 999;
@@ -30,6 +48,19 @@
   overflow-y: scroll;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
 }
-.modal-header {
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+
+.contact-info {
+  padding-top: 20px;
+
+}
+.contact-info p {
+  font-size: 14px;
+  line-height: 12px;
+  font-family: 'Montserrat';
+}
+.contact-info-title {
+  width: 100%;
+}
+.contact-info-content p {
+  font-size: 14px;
 }

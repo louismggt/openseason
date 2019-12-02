@@ -16,11 +16,18 @@ class Job < ApplicationRecord
   end
 
   def start_parsed
-    start_date.to_formatted_s(:long)
+    start_date.strftime("%d/%m/%Y")
   end
 
   def end_parsed
-    end_date.to_formatted_s(:long)
+    end_date.strftime("%d/%m/%Y")
+  end
+
+  def email_display
+    if email.empty?
+      return "Non renseigné"
+    else email
+    end
   end
 
   def duration_in_days
