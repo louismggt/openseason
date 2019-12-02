@@ -3,50 +3,49 @@
   <button type="button" class="close" data-dismiss="modal">x</button>
 </div>
 <div class="modal-body">
-  <div class="headers d-flex justify-content-around">
-    <div class="job-photo">
+  <div class="modal-content-header d-flex align-middle">
+    <div class="job-photo-modal">
       <% if @job.logo == "" %>
         <%= image_tag "missing_logo.png" %>
       <% else %>
         <%= image_tag @job.logo %>
       <% end %>
     </div>
-    <div class="job-headers text-center">
-      <div class="title_job d-flex justify-content-between mt-3">
-        <div class="date-info d-flex">
-          <div class="column">
-            <div>
-              <!-- <i class="far fa-calendar-plus"></i> -->
-              <p>Début de contrat</p>
-            </div>
-            <div><p><%= @job.start_parsed %></p></div>
-          </div>
-          <div class="column">
-            <div>
-              <!-- <i class="far fa-calendar-plus"></i> -->
-              <p>Fin de contrat</p>
-            </div>
-              <p><%= @job.end_parsed %></p>
-          </div>
+    <div class="modal-content-header align-middle ml-6">
+      <div class="title_job text-center">
+        <div><%= @job.name %> recherche quelqu'un à partir du <strong><%= @job.start_parsed %></strong>
+          jusqu'au <strong><%= @job.end_parsed %></strong>
         </div>
-
-        <div class="salary-info d-flex">
-          <i class="fas fa-euro-sign"></i>
-          <p><%= @job.salary.to_s + ' € par mois' %></p>
+        <div class="contact-info pl-3 pr-3">
+          <div class="contact-info-title">
+            <p>Infos contact :</p>
+          </div>
+          <div class="contact-info-content d-flex justify-content-between">
+            <p>Email: </p>
+            <p><%= @job.email_display.to_s %></p>
+          </div>
+          <div class="contact-info-content d-flex justify-content-between">
+            <p>Tel: </p>
+            <p><%= @job.telephone_display.to_s %></p>
+          </div>
+          <div class="contact-info-content d-flex justify-content-between">
+            <p>Adresse: </p>
+            <p><%= @job.address %></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="job-content-modals">
+  <div class="job-content-modals mt-3">
     <h3>Description</h3>
     <div class="pre-scrollable">
-      <p><%= @job.content %></p>
+      <%= simple_format(@job.content) %>
     </div>
   </div>
   <div class="job-footer-infos d-flex justify-content-around">
     <div class="address">
       <i class="far fa-map"></i>
-      <p> Lieu de travail</p>
+      <p>Lieu de travail</p>
     </div>
     <div class="accommodation">
       <i class="fas fa-bed"></i>
@@ -64,15 +63,9 @@
         <p><%= 'Repas compris' %></p>
       <% end %>
     </div>
-    <div class="contact">
-      <i class="far fa-id-card"></i>
-        <div class="infos">
-          <p><%= @job.email.to_s %></p>
-          <p><%= @job.telephone.to_s %></p>
-        </div>
-    </div>
   </div>
-<div class="modal-footer justify-content-around">
+<div class="modal-footer justify-content-around mt-3">
+
 
     <div>
       <%= link_to "Sauvegarder", job_favorites_path(job_id: @job.id),
