@@ -4,7 +4,8 @@
 }
 
 .container-home {
-  background-color: #499EAA;
+  // background-color: #499EAA;
+  background: linear-gradient(#499EAA, #1e717a);
 }
 
 .ccf {
@@ -26,22 +27,54 @@
   height: 163.84px;
 }
 
-p {
-  font-family: Montserrat;
+.lower, .upper li {
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 40px;
   color: #FFFFFF;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
 }
 
-// .home-png-left {
+.upper i {
+  color: #39d29f;
+  text-shadow: 5px 5px 7px rgba(0,0,0,0.4);
+  padding-left: 5px;
+}
+
+.upper li {
+  margin-top: 40px;
+  margin-left: 40px;
+  text-align: center;
+  list-style-type: none;
+}
+
+p img {
+      width: 150px;
+    padding: 5px;
+}
+
+span {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.home-png-left {
+  margin-left: 100px;
 //   width: 544.84px;
 //   height: 484px;
 //   padding-left: 40px
-// }
+}
 
 // .home-png-right {
 //   width: 544.84px;
 //   height: 484px;
 // }
+
+.lower {
+  margin-top: 40px;
+
+}
