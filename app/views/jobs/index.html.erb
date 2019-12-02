@@ -1,10 +1,9 @@
-
-<div class="main">
-  <div class="wrapper">
-    <div class="row justify-content-around">
-      <div class="col-xs-12 col-xl-6">
-        <div class="job-containers">
-          <% if @jobs.empty? %>
+<% if @jobs.empty? %>
+  <div class="main">
+    <div class="wrapper">
+      <div class="row justify-content-around">
+        <div class="col-xs-12 col-xl-6">
+          <div class="job-containers">
             <div class="container-show-job d-flex">
               <div class="d-flex flex-column justify-content-around">
                 <div class="mb-3">
@@ -17,21 +16,32 @@
                   <%= link_to "On tente autre chose?", new_preference_path, :class => "btn-flat" %>
                 </div>
               </div>
-          <% else %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="main">
+    <div class="wrapper">
+      <div class="row justify-content-around">
+        <div class="col-xs-12 col-xl-6">
+          <div class="job-containers">
             <% @jobs.first(4).each do |job| %>
               <div class="">
                 <%= render 'components/card', job: job %>
               </div>
             <% end %>
-          <% end %>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-xl-6">
-        <%= render 'components/map', markers: @markers %>
+        <div class="col-xs-12 col-xl-6">
+          <%= render 'components/map', markers: @markers %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
 <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content"></div>

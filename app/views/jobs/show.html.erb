@@ -1,84 +1,20 @@
 <div class="main">
   <div class="wrapper">
     <div class="row">
-      <div class="col-12 col-xl-6">
+      <div class="col-12 col-xl-12">
         <div class="job-containers">
-          <% @jobs.sample(4).each do |job| %>
+          <% @jobs.sample(8).each do |job| %>
             <div class="">
               <%= render 'components/card', job: job %>
             </div>
           <% end %>
         </div>
       </div>
-      <div class="col-12 col-xl-6">
-
-        <div class="container">
-          <div class="container-show-job py-6 px-6">
-            <div class="headers d-flex justify-content-around">
-              <div class="job-photo">
-                <% if @job.photo == "" %>
-                  <%= image_tag "missing_logo.png" %>
-                <% else %>
-                  <%= image_tag @job.photo %>
-                <% end %>
-              </div>
-              <div class="job-headers text-center">
-                <h2><%=@job.title%></h2>
-                <div class="title_job d-flex justify-content-around">
-                  <div class="date-info d-flex">
-                    <i class="far fa-calendar-plus"></i>
-                    <p><%= @job.duration_in_days.to_i %> jours</p>
-                  </div>
-                  <div class="salary-info d-flex">
-                    <i class="fas fa-euro-sign"></i>
-                    <p><%= @job.salary.to_s + ' € par mois' %></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="job-content">
-              <h3>Description</h3>
-              <p><%= @job.content %></p>
-            </div>
-            <div class="job-footer-infos d-flex justify-content-center">
-              <div class="address">
-                <i class="far fa-map"></i>
-                <p> Lieu de travail</p>
-              </div>
-              <div class="accommodation">
-                <i class="fas fa-bed"></i>
-                <% if @job.accommodation == false %>
-                  <p><%= 'Hébergement non inclus' %></p>
-                <% else %>
-                  <p><%= 'Hébergement inclus' %></p>
-                <% end %>
-              </div>
-              <div class="meal">
-                <i class="fas fa-utensils"></i>
-                <% if @job.meal == false %>
-                  <p><%= 'Repas non compris' %></p>
-                <% else %>
-                  <p><%= 'Repas compris' %></p>
-                <% end %>
-              </div>
-              <div class="contact">
-                <i class="far fa-id-card"></i>
-                  <div class="infos">
-                    <p><%= @job.email.to_s %></p>
-                    <p><%= @job.telephone.to_s %></p>
-                  </div>
-              </div>
-            </div>
-            <div class="buttons">
-            <%= link_to "Sauvegarder", job_favorites_path(job_id: @job.id), method: :post, :class => "btn-flat" %>
-            <%= link_to "Postuler", job_missions_path(@job), method: :post, :class => "btn-flat" %>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
     </div>
   </div>
 </div>
-
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"></div>
+  </div>
+</div>
