@@ -1,0 +1,40 @@
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.form-image {
+  height: 100px;
+  margin-bottom: 40px;
+}
+
+.form-login {
+  background: #F9F8F8;
+  padding: 10px 50px;
+  margin-top: 50px;
+  border-radius: 3px;
+
+  h2 {
+    font-family: 'Ubuntu';
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #499EAA;
+    text-align: center;
+  }
+  .btn {
+    width: 100%;
+    color: white;
+    margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: #499EAA;
+  transition: background 0.2s ease;
+  font-family: 'Montserrat';
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .btn:hover {
+  background: #66BECB;
+  color: white;
+  }
+}

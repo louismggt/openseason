@@ -1,51 +1,62 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h1> Mon espace personnel </h1>
-    </div>
-    <div class="col-3">
-      <div class="contact">
-        <div class="bio">
-          <div class="photo-profil">
-            <i class="fas fa-user-circle"></i>
-            <p><%= @user.biograophy %></p>
+<header>
+  <div class="header__bg">
+  </div>
+</header>
+<div class="full-screen">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1> Bonjour<%= @user.first_name %> !</h1>
+      </div>
+      <div class="col-3">
+        <div class="contact ">
+          <div class="bio">
+            <div class="photo-profil">
+              <i class="fas fa-user-circle"></i>
+              <p><%= @user.biograophy %></p>
+            </div>
           </div>
-        </div>
-        <div class="info-contact">
-          <div class="info">
-            <h4>Mes infos</h4>
-            <p><i class="far fa-user"></i><%= @user.username %></p>
-            <p><i class="far fa-envelope"></i><%= @user.email %></p>
-            <p>Nationalité : <%= @user.nationality %></p>
-            <p><%= @user.age %> ans</p>
-            <p><i class="fas fa-map-marker-alt"></i><%= @user.address %></p>
+          <div class="info-contact">
+            <div class="info">
+              <h4>Mes infos</h4>
+              <p><i class="far fa-user"></i><%= @user.username %></p>
+              <p><i class="far fa-envelope"></i><%= @user.email %></p>
+              <p><i class="fas fa-flag"></i> <%= @user.nationality %></p>
+              <p><i class="fas fa-birthday-cake"></i> <%= @user.age %> ans</p>
+              <p><i class="fas fa-map-marker-alt"></i><%= @user.address %></p>
+              <div class="profil-btns d-flex justify-content-around">
+              <button type="button" class="button">Éditer</button>
+              <button type="button" class="button">Supprimer</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-9">
-      <% if current_user == @user %>
-        <div class="mission d-flex justify-content-between">
-          <div class="favorite">
-            <h3> <i class="fas fa-heart"></i>Mes annonces sauvegardées </h3>
-            <div class="favorite-jobs">
-              <% @favorites.each do |favorite| %>
-                <%= render "components/mini_card", job: favorite.job, favorite: favorite, mission: nil %>
-              <% end %>
+      <div class="col-9">
+        <% if current_user == @user %>
+          <div class="mission d-flex justify-content-between">
+            <div class="favorite flex-fill">
+              <h3> <i class="fas fa-heart"></i>Mes annonces sauvegardées </h3>
+              <div class="favorite-jobs">
+                <% @favorites.each do |favorite| %>
+                  <%= render "components/mini_card", job: favorite.job, favorite: favorite, mission: nil %>
+                <% end %>
+              </div>
+            </div>
+            <div class="my-missions">
+              <h3><i class="fas fa-arrow-circle-right"></i>Mes candidatures</h3>
+              <div class="mission-jobs">
+                <% @missions.each do |mission| %>
+                  <%= render "components/mini_card", job: mission.job, mission: mission, favorite: nil %>
+                <% end %>
+              </div>
             </div>
           </div>
-          <div class="my-missions">
-            <h3><i class="fas fa-arrow-circle-right"></i>Mes candidatures</h3>
-            <div class="mission-jobs">
-              <% @missions.each do |mission| %>
-                <%= render "components/mini_card", job: mission.job, mission: mission, favorite: nil %>
-              <% end %>
-            </div>
-          </div>
+        <% end %>
+        <div class="work-experiences">
+          <h3> Mes expériences</h3>
+
         </div>
-      <% end %>
-      <div class="work-experiences">
-        <h3> Mes expériences</h3>
       </div>
     </div>
   </div>
@@ -55,4 +66,3 @@
   </div>
 </div>
 </div>
-

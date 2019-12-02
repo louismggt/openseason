@@ -14,12 +14,13 @@
 .navbar .nav-item {
   color: white;
   padding-bottom: 16px;
-  font-weight: bold;
   font-family: 'Ubuntu';
 }
 .navbar .nav-item a:hover {
-  padding-bottom: 16px;
+  padding-bottom: 0px;
   border-bottom: 1px solid;
+  color: #489ea9;
+  text-decoration: none;
 }
 .navbar-nav .nav-item {
   color: white;
