@@ -74,7 +74,18 @@
   </div>
 <div class="modal-footer justify-content-around">
 
-    <div><%= link_to "Sauvegarder", job_favorites_path(job_id: @job.id), method: :post, :class => "btn-flat" %></div>
-    <div><%= link_to "Postuler", job_missions_path(@job), method: :post, :class => "btn-flat" %></div>
-
+    <div>
+      <%= link_to "Sauvegarder", job_favorites_path(job_id: @job.id),
+              onclick:"swal('Annonce sauvegardée !', 'Tu pourras la retrouver dans ton profil.', 'success')",
+              method: :post,
+              :id => "sweet-alert",
+              :class => "btn-flat" %>
+    </div>
+    <div>
+      <%= link_to "Postuler", job_missions_path(@job),
+              onclick:"swal('Candidature envoyée !', 'On croise les doigts pour toi !', 'success')",
+              method: :post,
+              :id => "sweet-alert",
+              :class => "btn-flat" %>
+    </div>
 </div>

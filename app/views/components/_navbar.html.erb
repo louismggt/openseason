@@ -15,7 +15,11 @@
           <%= link_to "PROFIL", profil_path(current_user), class: "animoBorderLeftRight" %>
         </li>
         <li class="nav-item">
-          <%= link_to "DÉCONNEXION", destroy_user_session_path, method: :delete, class: "animoBorderLeftRight" %>
+          <%= link_to "DÉCONNEXION", destroy_user_session_path,
+              :class => "animoBorderLeftRight",
+              :data => {:confirm => "Oh... Vous partez déjà ?",
+               method: :delete,
+              :class => "alert alert-warning"} %>
         </li>
         <% else %>
         <li class="nav-item">

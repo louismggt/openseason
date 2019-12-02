@@ -9,6 +9,7 @@ class MissionsController < ApplicationController
   end
 
   def create
+    sleep 3
     @job = Job.find(params[:job_id])
     @mission = Mission.new
     @mission.user = current_user
