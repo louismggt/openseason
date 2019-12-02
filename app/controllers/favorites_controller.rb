@@ -17,17 +17,15 @@ class FavoritesController < ApplicationController
   end
 
   def create
+    sleep 3
     @job = Job.find(params[:job_id])
     @favorite = Favorite.new
     @favorite.user = current_user
     @favorite.job = @job
 
     authorize @favorite
-    if @favorite.save
-      redirect_to profil_path(current_user)
-    else
-      render :new
-    end
+    @favorite.save
+
   end
 
   def edit

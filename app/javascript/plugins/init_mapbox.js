@@ -26,12 +26,12 @@ const initMapbox = () => {
       element.style.backgroundSize = 'contain';
       element.style.width = '40px';
       element.style.height = '40px';
-      // const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
+      const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
 
       new mapboxgl.Marker(element)
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(map)
-        // .setPopup(popup) // add this
+        .setPopup(popup) // add this
     });
     fitMapToMarkers(map, markers);
   }
