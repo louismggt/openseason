@@ -26,7 +26,7 @@
           </div>
           <div class="contact-info-content d-flex justify-content-between">
             <p>Tel: </p>
-            <p><%= @job.telephone.to_s %></p>
+            <p><%= @job.telephone_display.to_s %></p>
           </div>
           <div class="contact-info-content d-flex justify-content-between">
             <p>Adresse: </p>
@@ -39,7 +39,7 @@
   <div class="job-content-modals mt-3">
     <h3>Description</h3>
     <div class="pre-scrollable">
-      <p><%= simple_format(@job.content) %></p>
+      <%= simple_format(@job.content) %>
     </div>
   </div>
   <div class="job-footer-infos d-flex justify-content-around">
