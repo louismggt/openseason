@@ -25,14 +25,11 @@ class JobsController < ApplicationController
       }
       end
     end
-
-
   end
 
   def show
-    @jobs        = policy_scope(Job)
-
-    @job = Job.find(params[:id])
+    @jobs = policy_scope(Job)
+    @job  = Job.find(params[:id])
     authorize @job
     respond_to do |format|
       format.html
