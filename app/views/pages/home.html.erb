@@ -5,30 +5,25 @@
   <%= image_tag "CCF_.png", class: "CCF-png"%>
 </div>
 
-<div class="container-home d-flex justify-content-around">
-  <div class="left-side mt-5">
+<div class="container-home d-flex justify-content-around ">
+  <div class="upper d-flex justify-content-center flex-wrap mr-5 ml-5 p-5">
     <%= image_tag "communicating_guys.png", class: "home-png-left"%>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    <p>Difficile de naviguer parmis tous les sites de recherches d'emplois
-      et de trouver rapidement LE job qui nous convient.
-      Grâce à notre algorithme révolutionnaire, trouvez en quelques instants une
-      sélection d'annonces qui vous correspondent.</p>
+    <ul>
+      <li><i class="fas fa-arrow-alt-circle-right"></i>   Réponds au quizz</li>
+      <li><i class="fas fa-arrow-alt-circle-right"></i>   Trouve le job qui te correspond</li>
+      <li><i class="fas fa-arrow-alt-circle-right"></i>   Complète ton profil</li>
+      <li><i class="fas fa-arrow-alt-circle-right"></i>   Entre en contact avec ton futur recruteur !</li>
+    </ul>
+    <!-- <p>Difficile de naviguer parmis tous les sites de recherches d'emplois
+       et de trouver rapidement LE job qui nous convient.
+       Grâce à notre algorithme révolutionnaire, trouve en quelques instants
+       une sélection d'annonces qui te correspondent !</p> -->
   </div>
-
-  <div class="right-side">
-    <p>Rentrez en contact avec des employeurs saisonniers, trouvez l'annonce qui
-      vous correspond et échangez avec d'autres travailleurs saisonniers pour
-      arranger au mieux votre déplacement.
-    </p>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    <%= image_tag "data_guy.png", class: "home-png-right"%>
+  <div class="lower d-flex flex-wrap mr-5 ml-5 p-5">
+    <p>Difficile de naviguer parmis tous les sites de recherches d'emplois
+      et de trouver rapidement LE job qui nous convient... Mais grâce à <%= image_tag "logo.png" %> et à notre
+      algorithme révolutionnaire, trouve en quelques instants une sélection
+      d'annonces qui <span>TE</span> correspondent !</p>
+      <%= image_tag "data_guy.png", class: "home-png-right"%>
   </div>
 </div>
