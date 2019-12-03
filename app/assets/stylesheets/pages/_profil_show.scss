@@ -12,7 +12,11 @@
 }
 
 .full-screen-profil {
-  background-image: asset_url('user-background.png');
+
+  background-image: url(user-background.png);
+  background-repeat: no-repeat;
+  background-color: white;
+
 }
 
 .col-12 {
@@ -202,4 +206,52 @@ background-color: cadetblue;
 .button:hover {
   background: #66BECB;
   color: white;
+}
+
+.alumnus-panel {
+  position: relative;
+  flex: 1 1 auto;
+  background-color: white;
+  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+  padding: 24px;
+}
+.alumnus-experience {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+.multiple {
+  margin-top: 24px;
+}
+.alumnus-experience .experience-details {
+  margin-left: 12px;
+}
+.alumnus-experience .experience-img {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+  border: 1px solid #F7F7F7;
+}
+.alumnus-experience .experience-details p {
+  margin: 0;
+}
+.alumnus-experience .experience-title {
+  font-weight: bold;
+}
+.alumnus-experience .experience-details p {
+  margin: 0;
+}
+
+.alumnus-experience .experience-corp-name {
+  font-weight: lighter;
+}
+.multiple .alumnus-experience .experience-line::before {
+  content: '';
+  position: absolute;
+  left: 26px;
+  border: 5px solid #D3D3D3;
+  top: 15px;
+  border-radius: 50%;
 }

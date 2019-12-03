@@ -101,6 +101,13 @@ ActiveRecord::Schema.define(version: 2019_12_03_101518) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "poste_intitulé"
+    t.string "entreprise"
+    t.string "lieux"
+    t.integer "durée"
+    t.date "start_date"
+    t.date "end_date"
+    t.text "description"
     t.index ["user_id"], name: "index_work_experiences_on_user_id"
   end
 
