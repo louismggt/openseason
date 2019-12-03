@@ -1,7 +1,9 @@
-<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabelApply"
+<!-- <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabelApply"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content"> -->
+
+
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Tu postules pour @job.title</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -10,15 +12,17 @@
       </div>
       <div class="modal-body mx-3">
 
-        <form action="/restaurants" method="get">
-          <input type="text" name="food_type" placeholder="What kind of food?">
-          <input type="submit">
-        </form>
+        <%= simple_form_for @mission do |f| %>
+          <%= f.input :message, label: 'Laisse un message pour ton futur employeur!', as: :text %>
+          <%= f.input :message, :as => :hidden, :input_html => { :value => "pending" } %>
+          <%= f.button :submit %>
+        <% end %>
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
         <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
       </div>
-    </div>
+
+<!--     </div>
   </div>
-</div>
+</div> -->
