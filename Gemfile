@@ -23,8 +23,7 @@ gem 'geocoder'
 gem 'bootstrap'
 gem 'popper_js'
 gem 'turbolinks'
-gem 'nokogiri'
-gem 'mechanize'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
