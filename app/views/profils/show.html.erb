@@ -55,6 +55,12 @@
               Click Me
             </div>
             <%= render "work_experiences/show" %>
+            <!-- simple form pour ajouter une work experience -->
+            <%= simple_form_for(@work_experience) do |f| %>
+              <%= f.input :entreprise %>
+              <%= f.button :submit %>
+            <% end %>
+
           </div>
         <% end %>
       </div>

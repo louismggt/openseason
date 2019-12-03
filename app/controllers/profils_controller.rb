@@ -5,5 +5,7 @@ class ProfilsController < ApplicationController
     @favorites = @user.favorites
     @missions = @user.missions
     @work_experiences = @user.work_experiences
+    @work_experience = WorkExperience.new
+    authorize @work_experience
   end
 end
