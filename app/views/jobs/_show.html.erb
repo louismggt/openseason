@@ -59,32 +59,31 @@
             <%= simple_format(@job.content) %>
           </div>
         </div>
-      <div class="job-footer-infos d-flex justify-content-around align-end">
-        <div class="accommodation">
-          <% if @job.accommodation == false %>
+        <div class="job-footer-infos d-flex justify-content-around align-end">
+          <div class="accommodation">
+            <% if @job.accommodation == false %>
+              <span class="fa-stack fa-2x" style="font-size: 16px;">
+                <i class="fas fa-bed fa-stack-1x" style="color:Tomato"></i>
+                <i class="fas fa-ban fa-stack-2x" style="color:grey"></i>
+              </span>
+              <p>Hébergement non inclus</p>
+            <% else %>
+              <i class='fas fa-bed' style="color:Tomato"></i>
+              <p>Hébergement inclus</p>
+            <% end %>
+          </div>
+          <div class="meal text-center">
+            <% if @job.meal == false %>
             <span class="fa-stack fa-2x" style="font-size: 16px;">
-              <i class="fas fa-bed fa-stack-1x" style="color:Tomato"></i>
+              <i class="fas fa-utensils fa-stack-1x" style="color:Tomato"></i>
               <i class="fas fa-ban fa-stack-2x" style="color:grey"></i>
             </span>
-            <p>Hébergement non inclus</p>
-          <% else %>
-            <i class='fas fa-bed' style="color:Tomato"></i>
-            <p>Hébergement inclus</p>
-          <% end %>
-        </div>
-        <div class="meal text-center">
-          <% if @job.meal == false %>
-          <span class="fa-stack fa-2x" style="font-size: 16px;">
-            <i class="fas fa-utensils fa-stack-1x" style="color:Tomato"></i>
-            <i class="fas fa-ban fa-stack-2x" style="color:grey"></i>
-          </span>
-            <p>Repas non compris</p>
-          <% else %>
-            <i class="fas fa-utensils" style="color:Tomato"></i>
-            <p>Repas compris</p>
-          <% end %>
-        </div>
-      </div>
+              <p>Repas non compris</p>
+            <% else %>
+              <i class="fas fa-utensils" style="color:Tomato"></i>
+              <p>Repas compris</p>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
