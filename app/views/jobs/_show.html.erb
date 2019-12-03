@@ -69,7 +69,17 @@
     </div>
   </div>
 <div class="modal-footer justify-content-around mt-3">
-
+<!--   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Cette offre te plait?
+  </button>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <div class="form-group">
+        <label for="/mission">Laisse un message avec ta candidature</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </div>
+  </div> -->
 
     <div>
       <%= link_to "Sauvegarder", job_favorites_path(job_id: @job.id),
@@ -79,10 +89,15 @@
               :class => "btn-flat" %>
     </div>
     <div>
+<!--       <div class="text-center">
+        <a href="" class="btn btn-default btn-rounded mb-4" data-dismiss="modal" onclick="modalContactForm" data-target="#modalContactForm">Launch
+          Modal Contact Form</a>
+      </div> -->
+
       <%= link_to "Postuler", job_missions_path(@job),
               onclick:"swal('Candidature envoyée !', 'On croise les doigts pour toi !', 'success')",
               method: :post,
               :id => "sweet-alert",
               :class => "btn-flat" %>
-    </div>
+  </div>
 </div>

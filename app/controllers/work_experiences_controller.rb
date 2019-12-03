@@ -4,7 +4,7 @@ class WorkExperiencesController < ApplicationController
   end
 
   def show
-    @work_experience = Work_experience.find(params[:id])
+    @work_experience = Work_experience.find(params[:user_id])
   end
 
   def new
