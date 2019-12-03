@@ -1,6 +1,14 @@
-<div class="modal-header">
-  <h4 class="modal-title" id="myModalLabel"><%= @job.title %></h4>
-  <button type="button" class="close" data-dismiss="modal">x</button>
+<div class="modal-header d-flex justify-content-between">
+  <div><h4 class="modal-title" id="myModalLabel"><%= @job.title %></h4></div>
+  <div>
+      <%= link_to "Sauvegarder", job_favorites_path(job_id: @job.id),
+              onclick:"swal('Annonce sauvegardée !', 'Tu pourras la retrouver dans ton profil.', 'success')",
+              method: :post,
+              :id => "sweet-alert",
+              :class => "btn-flat mt-3" %>
+      <button type="button" class="close ml-3" data-dismiss="modal">X</button>
+    </div>
+
 </div>
 <div class="modal-body">
   <div class="modal-content-header d-flex align-middle">
@@ -36,68 +44,72 @@
       </div>
     </div>
   </div>
-  <div class="job-content-modals mt-3">
-    <h3>Description</h3>
-    <div class="pre-scrollable">
-      <%= simple_format(@job.content) %>
-    </div>
-  </div>
-  <div class="job-footer-infos d-flex justify-content-around align-end">
-    <div class="accommodation">
-      <% if @job.accommodation == false %>
-        <span class="fa-stack fa-2x" style="font-size: 16px;">
-          <i class="fas fa-bed fa-stack-1x" style="color:Tomato"></i>
-          <i class="fas fa-ban fa-stack-2x" style="color:grey"></i>
-        </span>
-        <p>Hébergement non inclus</p>
-      <% else %>
-        <i class='fas fa-bed' style="color:Tomato"></i>
-        <p>Hébergement inclus</p>
-      <% end %>
-    </div>
-    <div class="meal text-center">
-      <% if @job.meal == false %>
-      <span class="fa-stack fa-2x" style="font-size: 16px;">
-        <i class="fas fa-utensils fa-stack-1x" style="color:Tomato"></i>
-        <i class="fas fa-ban fa-stack-2x" style="color:grey"></i>
-      </span>
-        <p>Repas non compris</p>
-      <% else %>
-        <i class="fas fa-utensils" style="color:Tomato"></i>
-        <p>Repas compris</p>
-      <% end %>
-    </div>
-  </div>
-<div class="modal-footer justify-content-around mt-3">
-<!--   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Cette offre te plait?
-  </button>
-  <div class="collapse" id="collapseExample">
-    <div class="card card-body">
-      <div class="form-group">
-        <label for="/mission">Laisse un message avec ta candidature</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <div class="accordion mt-3" id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h3 class="mb-0">
+          <button class="btn btn-link button-toggle" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <i class="fas fa-chevron-down"></i> Description du job
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          <div class="pre-scrollable">
+            <%= simple_format(@job.content) %>
+          </div>
+        </div>
+        <div class="job-footer-infos d-flex justify-content-around align-end">
+          <div class="accommodation">
+            <% if @job.accommodation == false %>
+              <span class="fa-stack fa-2x" style="font-size: 16px;">
+                <i class="fas fa-bed fa-stack-1x" style="color:Tomato"></i>
+                <i class="fas fa-ban fa-stack-2x" style="color:grey"></i>
+              </span>
+              <p>Hébergement non inclus</p>
+            <% else %>
+              <i class='fas fa-bed' style="color:Tomato"></i>
+              <p>Hébergement inclus</p>
+            <% end %>
+          </div>
+          <div class="meal text-center">
+            <% if @job.meal == false %>
+            <span class="fa-stack fa-2x" style="font-size: 16px;">
+              <i class="fas fa-utensils fa-stack-1x" style="color:Tomato"></i>
+              <i class="fas fa-ban fa-stack-2x" style="color:grey"></i>
+            </span>
+              <p>Repas non compris</p>
+            <% else %>
+              <i class="fas fa-utensils" style="color:Tomato"></i>
+              <p>Repas compris</p>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
-  </div> -->
-
-    <div>
-      <%= link_to "Sauvegarder", job_favorites_path(job_id: @job.id),
-              onclick:"swal('Annonce sauvegardée !', 'Tu pourras la retrouver dans ton profil.', 'success')",
-              method: :post,
-              :id => "sweet-alert",
-              :class => "btn-flat" %>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link button-toggle collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo">
+            <i class="fas fa-chevron-down"></i> Postuler
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          <%= simple_form_for [@job, Mission.new] do |f| %>
+            <%= f.input :message, label: 'Exprime toi ici et montre leur ta motivation :', as: :text %>
+            <%= f.input :status, as: :hidden, input_html: {value: "pending"} %>
+            <%= f.submit "Postuler", class: "btn-flat", id: "sweet-alert", onclick:"swal('Candidature envoyée !', 'On croise les doigts pour toi !', 'success');" %>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <div>
-<!--       <div class="text-center">
-        <a href="" class="btn btn-default btn-rounded mb-4" data-dismiss="modal" onclick="modalContactForm" data-target="#modalContactForm">Launch
-          Modal Contact Form</a>
-      </div> -->
-
-      <%= link_to "Postuler", job_missions_path(@job),
-              onclick:"swal('Candidature envoyée !', 'On croise les doigts pour toi !', 'success')",
-              method: :post,
-              :id => "sweet-alert",
-              :class => "btn-flat" %>
   </div>
 </div>
+
