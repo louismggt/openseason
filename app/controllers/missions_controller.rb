@@ -10,10 +10,10 @@ class MissionsController < ApplicationController
 
   def create
     sleep 3
-    @job = Job.find(params[:job_id])
-    @mission = Mission.new
+    @job          = Job.find(params[:job_id])
+    @mission      = Mission.new(missions_params)
     @mission.user = current_user
-    @mission.job = @job
+    @mission.job  = @job
     authorize @mission
     if @mission.save
       redirect_to profil_path(current_user)
@@ -41,6 +41,13 @@ class MissionsController < ApplicationController
     authorize @mission
     @mission.destroy
     redirect_to profil_path(current_user)
+  end
+
+
+  private
+
+  def missions_params
+    params.require(:mission).permit(:message, :status)
   end
 end
 
