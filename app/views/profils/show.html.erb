@@ -1,11 +1,11 @@
 <!-- <header class="header__bg">
 </header> -->
 <div class="full-screen-profil">
-  <div class="container pt-4 pb-5">
+  <div class="container-profile-show pt-4 pb-5">
+    <div class="text-center">
+      <h1> Bonjour <%= @user.first_name %> !</h1>
+    </div>
     <div class="row">
-      <div class="col-12">
-        <h1> Bonjour <%= @user.first_name %> !</h1>
-      </div>
       <div class="col-3">
         <div class="contact ">
           <div class="bio">
@@ -50,17 +50,20 @@
               </div>
             </div>
           </div>
+          <div class="my-experiences">
+            <div id="button-toogle-work-experiences" class="btn btn-flat w-100">
+              Click Me
+            </div>
+            <%= render "work_experiences/show" %>
+          </div>
         <% end %>
-        <div class="work-experiences">
-          <%= render "work_experiences/show" %>
-        </div>
       </div>
+
     </div>
   </div>
   <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content"></div>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"></div>
+    </div>
   </div>
 </div>
-</div>
-

@@ -23,5 +23,6 @@ textAnimator();
 
 // Wrap every letter in a span
 
-
-
+$( "#button-toogle-work-experiences" ).click(function() {
+  $( "#work-experiences" ).toggle( "slow");
+});

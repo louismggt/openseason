@@ -34,18 +34,12 @@
   padding:0px;
 }
 
-.container {
-
-  display: flex;
-  wrap: flex-wrap;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  // background-color: #F4F4F4;
-  min-height: calc(100vh - 90px);
-  // margin-left: 50px;
-  // margin-right: 50px;
-  box-shadow:none;
-  background-color: transparent;;
+.container-profile-show {
+  min-height:       calc(100vh - 90px);
+  width:            1000px;
+  margin:           0 auto;
+  box-shadow:       none;
+  background-color: transparent;
 }
 
 h1 {
@@ -211,8 +205,8 @@ background-color: cadetblue;
 .alumnus-panel {
   position: relative;
   flex: 1 1 auto;
-  background-color: white;
-  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+  // background-color: white;
+  // box-shadow: 0 0 16px rgba(0,0,0,0.1);
   padding: 24px;
 }
 .alumnus-experience {
@@ -239,6 +233,7 @@ background-color: cadetblue;
 }
 .alumnus-experience .experience-title {
   font-weight: bold;
+  color: cadetblue;
 }
 .alumnus-experience .experience-details p {
   margin: 0;
@@ -254,4 +249,9 @@ background-color: cadetblue;
   border: 5px solid #D3D3D3;
   top: 15px;
   border-radius: 50%;
+}
+
+.my-experiences {
+  background-color: white;
+  margin-top: 10px;
 }
