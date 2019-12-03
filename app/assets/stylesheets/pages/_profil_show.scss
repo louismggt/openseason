@@ -211,8 +211,8 @@ background-color: cadetblue;
 .alumnus-panel {
   position: relative;
   flex: 1 1 auto;
-  background-color: white;
-  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+  // background-color: white;
+  // box-shadow: 0 0 16px rgba(0,0,0,0.1);
   padding: 24px;
 }
 .alumnus-experience {
@@ -239,6 +239,7 @@ background-color: cadetblue;
 }
 .alumnus-experience .experience-title {
   font-weight: bold;
+  color: cadetblue;
 }
 .alumnus-experience .experience-details p {
   margin: 0;

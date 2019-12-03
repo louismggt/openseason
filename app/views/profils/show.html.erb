@@ -51,10 +51,35 @@
             </div>
           </div>
         <% end %>
-        <div class="work-experiences">
-          <%= render "work_experiences/show" %>
+
+        <!-- COLLAPSE DÉROULANT -->
+
+<!--         <div class="work-experiences">
+          <p>
+            <a class="btn-flat" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            DÉTAILS
+            </a>
+          </p>
+          <div id="collapseExample" class="collapse">
+            <div class="card card-body">
+              <%#= render "work_experiences/show" %>
+              <p>toto</p>
+            </div>
+          </div>
+        </div> -->
+        <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Button with data-target
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
         </div>
-      </div>
+
+      <!-- COLLAPSE ESSAI -->
+
     </div>
   </div>
   <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
