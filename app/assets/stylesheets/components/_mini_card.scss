@@ -2,17 +2,17 @@
   overflow: hidden;
   height: 70px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   // border-radius: 10px;
   border: 1px solid #f2f2f2!important;
   transition: 0.9s ease;
   position: relative;
 }
 .mini-card:hover {
-  box-shadow: 0 0 15px rgba(100,100,100,0.9);
+  box-shadow: 0 0 5px rgba(100,100,100,0.9);
   transition: 0.9s ease;
 }
 
