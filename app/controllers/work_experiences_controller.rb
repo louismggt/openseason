@@ -1,23 +1,13 @@
 class WorkExperiencesController < ApplicationController
-  def index
-    @work_experiences = WorkExperience.all
-  end
-
-  def show
-    @work_experience = WorkExperience.find(params[:user_id])
-  end
-
-  def new
-    @work_experience = WorkExperience.new
-  end
-
   def create
     @work_experience = WorkExperience.new(work_experiences_params)
+    authorize @work_experience
     @work_experience.user = current_user
     if @work_experience.save!
       redirect_to work_experience_path(@work_experience)
+      # redirect to profile
     else
-      render :new
+      render "profils/show"
     end
   end
 
