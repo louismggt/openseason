@@ -10,7 +10,7 @@ puts "Cleaning database"
 Favorite.destroy_all
 Mission.destroy_all
 Job.destroy_all
-Work_experience.destroy_all
+WorkExperience.destroy_all
 
 
 Preference.destroy_all
@@ -41,15 +41,15 @@ louis = User.create!(
           age: 33
         )
 
-Work_experience.create!(
-  user: louis
-  photo: "https://static.wixstatic.com/media/3c6da2_cbfa1840ddca46e29deb49e6a8483f48~mv2.jpg/v1/fill/w_250,h_250,al_c,q_90/file.jpg"
-  poste_intitulé: "Leader Communication & e-commerce - Oxelo Scooter"
-  entreprise: "Oxelo"
-  lieux: "Lille"
-  durée: "2 ans "
-  start_date: "Janvier 2018"
-  end_date: "Aujourd'hui"
+WorkExperience.create!(
+  user: louis,
+  photo: "https://static.wixstatic.com/media/3c6da2_cbfa1840ddca46e29deb49e6a8483f48~mv2.jpg/v1/fill/w_250,h_250,al_c,q_90/file.jpg",
+  poste_intitulé: "Leader Communication & e-commerce - Oxelo Scooter",
+  entreprise: "Oxelo",
+  lieux: "Lille",
+  durée: "2 ans ",
+  start_date: "Janvier 2018",
+  end_date: "Aujourd'hui",
   description: "Leader Communication :
 
   - Définition et mise en place de la politique annuelle de communication de la marque à 3 ans (sélection des opérations commerciales, sélection de produits, plans de communication pour chaque produit)
@@ -61,40 +61,39 @@ Work_experience.create!(
   - Contrôle de la qualité de la base de données produits (création et mise à jour des fiches produits, optimisation SEO).
   - Animation commerciale : rédaction et management du plan commercial digital annuel, suivi des performances et reporting aux équipes."
 )
-Work_experience.create!(
-  user: louis
-  photo: "https://static.wixstatic.com/media/3c6da2_cbfa1840ddca46e29deb49e6a8483f48~mv2.jpg/v1/fill/w_250,h_250,al_c,q_90/file.jpg"
-  poste_intitulé: "Intitulé du posteResponsable e-commerce"
-  entreprise: "Oxelo"
-  lieux: "Lille"
-  durée: "3 ans 11 mois "
-  start_date: "Fevrier 2014"
-  end_date: "Decembre 2017"
+WorkExperience.create!(
+  user: louis,
+  photo: "https://static.wixstatic.com/media/3c6da2_cbfa1840ddca46e29deb49e6a8483f48~mv2.jpg/v1/fill/w_250,h_250,al_c,q_90/file.jpg",
+  poste_intitulé: "Intitulé du posteResponsable e-commerce",
+  entreprise: "Oxelo",
+  lieux: "Lille",
+  durée: "3 ans 11 mois",
+  start_date: "Fevrier 2014",
+  end_date: "Decembre 2017",
   description: "# Gestion et animation de l’activité e-commerce de la marque
   # Gestion de projets web"
-
 )
-Work_experience.create!(
-  user: louis
-  photo: "https://www.iscom.fr//images/iscom_lille-logo-menu.png"
-  poste_intitulé: "Professeur de marketing digital  "
-  entreprise: "ISCOM"
-  lieux: "Lille"
-  durée: "3 mois "
-  start_date: "Octobre 2017"
-  end_date: "Decembre 2017"
+WorkExperience.create!(
+  user: louis,
+  photo: "https://www.iscom.fr//images/iscom_lille-logo-menu.png",
+  poste_intitulé: "Professeur de marketing digital",
+  entreprise: "ISCOM",
+  lieux: "Lille",
+  durée: "3 mois",
+  start_date: "Octobre 2017",
+  end_date: "Decembre 2017",
   description: "- Module de 12 heures de cours auprès des élèves de 4 ème année ISCOM
   - Cours destiné à transmettre les grands aspects du plan digital dans une entreprise."
 )
-Work_experience.create!(
-  user: louis
-  photo: "https://www.decathlon.media/shared/phototheque/visuels/g_logo-decathlon.png"
-  poste_intitulé: "Vendeur"
-  entreprise: "Decathlon"
-  lieux: "Lille"
-  durée: "2 mois "
-  start_date: "Juillet 2004"
-  end_date: "Août 2004"
+WorkExperience.create!(
+  user: louis,
+  photo: "https://www.decathlon.media/shared/phototheque/visuels/g_logo-decathlon.png",
+  poste_intitulé: "Vendeur",
+  entreprise: "Decathlon",
+  lieux: "Lille",
+  durée: "2 mois",
+  start_date: "Juillet 2004",
+  end_date: "Août 2004",
   description: "Vendeur et conseillé, rayon chasse et pêche"
 )
 
