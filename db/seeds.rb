@@ -41,6 +41,18 @@ User.create!(
   age: 33
 )
 
+User.create!(
+  email: "piteurspawn@msn.com",
+  password: "azerty",
+  first_name: "Pierre",
+  last_name: "Danckaert",
+  username: "Dank",
+  nationality: "francaise",
+  address: "2, rue Albert Bailly - 59350 SAINT-ANDRÉ",
+  biograophy: "Sac sur le dos, musique dans les oreilles, crayons à la main, prêt à partir à l'aventure !",
+  age: 33
+)
+
 Job.create!(
   title: "Ouvrier taille des arbres en pépinière H/F.",
   address: "190, Route des Pépinières - 38270 JARCIEU",
