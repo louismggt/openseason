@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :work_experiences
   has_many :preferences
+
+  mount_uploader :cv, PhotoUploader
 end

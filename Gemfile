@@ -23,6 +23,9 @@ gem 'geocoder'
 gem 'bootstrap'
 gem 'popper_js'
 gem 'turbolinks'
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
+
 
 
 group :development do
