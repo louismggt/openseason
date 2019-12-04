@@ -20,5 +20,6 @@ module JobHelper
       return job.logo
     end
   end
+
 end
 
