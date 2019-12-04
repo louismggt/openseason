@@ -2,13 +2,16 @@ const favoriseIcon = () => {
   const btns = document.querySelectorAll('.btn-flat')
   btns.forEach((btn) => {
     btn.addEventListener('click', (event) => {
-      setTimeout(() => { updateIcon(); }, 500)
+      const id = event.currentTarget.dataset.id
+      setTimeout(() => { updateIcon(id); }, 500)
     })
   })
 }
 
-const updateIcon = () => {
-  const icon = getIcon();
+const updateIcon = (id) => {
+  console.log(id)
+  const icon = getIcon(id);
+  console.log(icon)
   icon.addEventListener('click', (event) => {
     const currentIcon = event.currentTarget
     if (currentIcon.classList.contains('far')) {
@@ -29,8 +32,8 @@ const emptyHeartIcon = (icon) => {
   icon.classList.remove('fas')
 }
 
-const getIcon = () => {
-  const icon = document.querySelector('.fa-heart');
+const getIcon = (id) => {
+  const icon = document.querySelector(`.heart${id}`);
   return icon
 }
 

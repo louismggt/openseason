@@ -52,17 +52,15 @@ class Job < ApplicationRecord
     self.favorites.any? { |favorite| favorite.user == user }
   end
 
-  def applicants
-    job_applications = self.missions.select { |mission| mission.job == job }
+  def user_favorite(user)
+    self.favorites.find { |favorite| favorite.user == user }
+  end
 
-    if job_applications.empty?
-      return "Soyez le premier à candidater!"
-      raise
-    elsif job_applications.length == 1
-      return "Une personne a déjà candidaté à ce job."
-      raise
-    else
-      return "Il y a déjà #{job_applications.length} qui ont candidaté à ce job!"
-    end
+  def applicants
+
+    return "Soyez le premier à candidater!" if self.missions.empty?
+    return "Une personne a déjà candidaté à ce job." if self.missions.length == 1
+
+    return "Il y a déjà #{self.missions.length} candidats à ce job!"
   end
 end

@@ -28,18 +28,18 @@ class JobsController < ApplicationController
   end
 
   def show
-    @jobs = policy_scope(Job)
-    @job  = Job.find(params[:id])
-    authorize @job
-    respond_to do |format|
-      format.html
-      format.js
-    end
-    @markers = [{
-      lat: @job.latitude,
-      lng: @job.longitude
-      # image_url: helpers.asset_url('pin2.png')
-    }]
+    # @jobs = policy_scope(Job)
+    # @job  = Job.find(params[:id])
+    # authorize @job
+    # respond_to do |format|
+    #   format.html
+    #   format.js
+    # end
+    # @markers = [{
+    #   lat: @job.latitude,
+    #   lng: @job.longitude
+    #   # image_url: helpers.asset_url('pin2.png')
+    # }]
   end
 
   def new
