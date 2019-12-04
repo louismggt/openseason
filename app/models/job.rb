@@ -46,4 +46,12 @@ class Job < ApplicationRecord
   def zip_code_and_city
     self.address.match(/\d{5}.*/)[0].first(17)...
   end
+
+  def applicants
+    return "Soyez le premier à candidater!" if self.missions.empty?
+    return "Une personne a déjà candidaté à ce job. A ton tour?" if self.missions.length == 1
+
+    return "Il y a déjà #{self.missions.length} candidats à ce job! Dépêche toi de postuler ici!"
+  end
+
 end
