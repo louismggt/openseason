@@ -10,7 +10,7 @@
         <div class="contact ">
           <div class="bio">
             <div class="photo-profil">
-              <i class="fas fa-user-circle"></i>
+              <%= image_tag @user.photo %>
               <p><%= @user.biograophy %></p>
             </div>
           </div>
@@ -22,22 +22,20 @@
               <p><i class="fas fa-flag"></i> <%= @user.nationality %></p>
               <p><i class="fas fa-birthday-cake"></i> <%= @user.age %> ans</p>
               <p><i class="fas fa-map-marker-alt"></i><%= @user.address %></p>
-              <div class="profil-btns d-flex justify-content-around">
-                <button type="button" class="button">Éditer</button>
-                <button type="button" class="button">Supprimer</button>
-              </div>
-              <% if @user == current_user && @user.cv.attached?  %>
-                <%= link_to "Voir mon CV", url_for(@user.cv), download: '', class: "button"%>
-              <% elsif @user == current_user %>
-                <%= simple_form_for @user, url: profil_path, method: :patch do |f| %>
-                  <%= f.file_field :cv, class: "form-control" %>
-                  <%= f.button :submit, class: "button" %>
+              <div class="cv">
+                <% if @user == current_user && @user.cv.attached?  %>
+                  <%= link_to "Voir mon CV", url_for(@user.cv), download: '', class: "button upload"%>
+                <% elsif @user == current_user %>
+                  <%= simple_form_for @user, url: profil_path, method: :patch do |f| %>
+                    <%= f.file_field :cv, class: "form-control" %>
+                    <%= f.button :submit, value: 'Télécharger', class: "button upload" %>
+                  <% end %>
+                <% elsif @user.cv.attached? %>
+                  <%= link_to "Téléchargez le CV", url_for(@user.cv), download: '', class: "btn btn-light"%>
+                <% else %>
+                  <p>Pas encore de CV téléchargé</p>
                 <% end %>
-              <% elsif @user.cv.attached? %>
-                <%= link_to "Téléchargez le CV", url_for(@user.cv), download: '', class: "button"%>
-              <% else %>
-                <p>Pas encore de CV téléchargé</p>
-              <% end %>
+              </div>
             </div>
           </div>
         </div>
@@ -62,7 +60,6 @@
               </div>
             </div>
           </div>
-
           <% unless @user.work_experiences.blank? %>
             <div class="my-experiences">
               <h3><i class="fas fa-user-tie"></i>   Expériences professionnelles</h3>
@@ -80,20 +77,11 @@
               <button id="button-toogle-work-experiences" class="btn btn-flat deroulable d-flex justify-content-center mt-3">
                 Voir toutes les expériences de <%= @user.first_name %>
               </button>
-
               <%= render "work_experiences/show" %>
-
-              <!-- simple form pour ajouter une work experience -->
-              <%= simple_form_for(@work_experience) do |f| %>
-                <%= f.input :entreprise %>
-                <%= f.button :submit %>
-              <% end %>
             </div>
           <% end %>
-
         <% end %>
       </div>
-
     </div>
   </div>
   <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

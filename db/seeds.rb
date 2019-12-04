@@ -41,7 +41,8 @@ louis = User.create!(
           nationality: "francaise",
           address: "105, rue des martyrs - 59130 LAMBERSART",
           biograophy: "Farouche jeune homme, courageux, adepte de la musique disco et des voyages en pantoufle et tuktuk",
-          age: 33
+          age: 33,
+          photo: "https://avatars0.githubusercontent.com/u/17082201?v=4"
         )
 
 WorkExperience.create!(
