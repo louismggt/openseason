@@ -22,22 +22,22 @@
               <p><i class="fas fa-flag"></i> <%= @user.nationality %></p>
               <p><i class="fas fa-birthday-cake"></i> <%= @user.age %> ans</p>
               <p><i class="fas fa-map-marker-alt"></i><%= @user.address %></p>
-<!--               <%#= simple_form_for @user, url: profil_path, method: :patch do |f| %>
-
-                <%#= f.input :cv %>
-                <%#= f.input :cv_cache, as: :hidden %>
-                <%#= f.button :submit, class: "btn btn-flat" %>
-
-              <%# end %> -->
-              <%= simple_form_for @user, url: profil_path, method: :patch do |f| %>
-
-                <%= f.file_field :cv, class: "form-control" %>
-              <% end %>
-              <%#= link_to "Téléchargez le CV", url_for(@user.cv), download: '', class: "btn btn-fade"%>
               <div class="profil-btns d-flex justify-content-around">
                 <button type="button" class="button">Éditer</button>
                 <button type="button" class="button">Supprimer</button>
               </div>
+              <% if @user == current_user && @user.cv.attached?  %>
+                <%= link_to "Voir mon CV", url_for(@user.cv), download: '', class: "button"%>
+              <% elsif @user == current_user %>
+                <%= simple_form_for @user, url: profil_path, method: :patch do |f| %>
+                  <%= f.file_field :cv, class: "form-control" %>
+                  <%= f.button :submit, class: "button" %>
+                <% end %>
+              <% elsif @user.cv.attached? %>
+                <%= link_to "Téléchargez le CV", url_for(@user.cv), download: '', class: "button"%>
+              <% else %>
+                <p>Pas encore de CV téléchargé</p>
+              <% end %>
             </div>
           </div>
         </div>

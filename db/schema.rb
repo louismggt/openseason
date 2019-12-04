@@ -114,7 +114,6 @@ ActiveRecord::Schema.define(version: 2019_12_04_100351) do
     t.float "longitude"
     t.text "biograophy"
     t.string "photo"
-    t.string "cv"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
