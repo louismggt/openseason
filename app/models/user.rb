@@ -9,5 +9,8 @@ class User < ApplicationRecord
   has_many :work_experiences
   has_many :preferences
 
-  mount_uploader :cv, PhotoUploader
+  # mount_uploader :cv, PhotoUploader
+  # # has_many_attached :image
+  has_one_attached :cv
+  # has_one_attached :avatar
 end
