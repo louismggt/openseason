@@ -12,5 +12,13 @@ module JobHelper
       "<i class='fas fa-bed'></i><p>Hébergement inclus</p>".html_safe
     end
   end
+
+  def job_logo(job)
+    if job.logo.empty?
+      job.logo = asset_url('missing_logo.png')
+    else
+      return job.logo
+    end
+  end
 end
 
