@@ -25,7 +25,6 @@ class FavoritesController < ApplicationController
 
     authorize @favorite
     @favorite.save
-
   end
 
   def edit

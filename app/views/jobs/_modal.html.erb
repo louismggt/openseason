@@ -7,17 +7,17 @@
         </div>
         <div class="favor d-flex align-middle">
           <% if job.favorite?(current_user) %>
-             <%= link_to "<i class='fas fa-heart red-icon heart#{job.id}'></i>".html_safe, favorite_path(job.user_favorite(current_user)), method: :delete %>
-             <!-- <i class="fas fa-heart red-icon heart<%= job.id %>"></i> -->
-            <button type="button" class="close ml-3" data-dismiss="modal">X</button>
+            <%= link_to favorite_path(job.user_favorite(current_user)), method: :delete do %>
+              <i class='fas fa-heart red-icon heart#{job.id}'></i>
+            <% end %>
           <% else %>
             <%= link_to "<i class='far fa-heart heart#{job.id}'></i>".html_safe, job_favorites_path(job_id: job.id),
                     onclick:"swal('Annonce sauvegardée !', 'Tu pourras la retrouver dans ton profil.', 'success')",
                     method: :post,
-                    :id => "sweet-alert",
-                    :class => "red-icon" %>
-            <button type="button" class="close ml-3" data-dismiss="modal">X</button>
+                    id: "sweet-alert",
+                    class: "red-icon" %>
           <% end %>
+          <button type="button" class="close ml-3" data-dismiss="modal">X</button>
         </div>
 
       </div>
