@@ -23,6 +23,7 @@ gem 'geocoder'
 gem 'bootstrap'
 gem 'popper_js'
 gem 'turbolinks'
+gem 'activestorage'
 
 
 group :development do

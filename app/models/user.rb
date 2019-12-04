@@ -8,4 +8,7 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :work_experiences
   has_many :preferences
+
+  has_one_attached :cv
+  # has_one_attached :avatar
 end

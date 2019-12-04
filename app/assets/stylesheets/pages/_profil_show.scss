@@ -62,12 +62,11 @@ h1 {
   border-radius: 3px;
   margin-bottom: 10px;
 }
-.fa-user-circle {
+.photo-profil img {
   border-radius: 50%;
-  text-shadow: 1px 1px 3px grey;
-  font-size: 150px;
-  color: lightgray;
+  box-shadow: 3px 3px 3px lightgrey;
   margin-bottom: 5px;
+  max-width: 150px;
 }
 .photo-profil p {
   font-family: 'Ubuntu', sans-serif;
@@ -200,6 +199,21 @@ background-color: cadetblue;
 .button:hover {
   background: #66BECB;
   color: white;
+}
+.upload {
+  color: white;
+  background-color: #489ea9;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  font-family: 'Montserrat';
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  white-space: 10px;
+  margin-top: 10px;
+  width:100%;
+}
+.loose {
+  text-rendering: none;
 }
 
 .alumnus-panel {
