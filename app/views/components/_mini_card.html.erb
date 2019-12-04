@@ -1,7 +1,7 @@
 <div class="mini-card">
   <%= image_tag job.logo %>
   <div class="mini-card-infos">
-    <h2><%= link_to job.title, job_path(job.id), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %></h2>
+    <h2><%= link_to job.title, "", {'data-toggle' =>  "modal", 'data-target' => "#modal-window#{job.id}", 'data-id' => job.id} %></h2>
     <div class="">
       <p><%= job.description %></p>
     </div>
@@ -18,5 +18,5 @@
     </div>
   </div>
 </div>
-
+<%= render "jobs/modal.html.erb", job: job %>
 

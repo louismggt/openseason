@@ -25,7 +25,6 @@ class FavoritesController < ApplicationController
 
     authorize @favorite
     @favorite.save
-
   end
 
   def edit
@@ -48,7 +47,7 @@ class FavoritesController < ApplicationController
     authorize @favorite
     if @favorite.destroy
 
-      redirect_to profil_path(current_user)
+      # redirect_to jobs_path
     end
   end
 end

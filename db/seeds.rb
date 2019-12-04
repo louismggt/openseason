@@ -206,7 +206,11 @@ Job.create!(
   start_date: Date.new(2020,10,1),
   end_date: Date.new(2020,10,7),
   description: "Vendangeur(euse) pour une semaine.",
-  content: "Domaine familiale recherche vendangeurs hommes et femmes a partir du vendredi 13 septembre pour une durée d'environ 5 jours, nourrit le midi. les repas sont offert. les animaux ne sont pas accepté.",
+  content: "Domaine familiale recherche vendangeurs hommes et femmes à partir du 1er octobre pour une durée d'environ 5 jours, nourrit le midi.
+  Expériences précédentes sur les vendanges pas indispensables.
+  Bonne condition physique recommandée (le travail dans les vignes est très intense!)
+  Les repas sont offerts.
+  Les animaux ne sont pas acceptés.",
   category: "Agricole",
   professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
   name: "Champagne Simon Félix",

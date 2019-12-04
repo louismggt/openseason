@@ -46,4 +46,21 @@ class Job < ApplicationRecord
   def zip_code_and_city
     self.address.match(/\d{5}.*/)[0].first(17)...
   end
+
+  def favorite?(user)
+    # sort tous les favoris et verifie s'ils correspondent au user
+    self.favorites.any? { |favorite| favorite.user == user }
+  end
+
+  def user_favorite(user)
+    self.favorites.find { |favorite| favorite.user == user }
+  end
+
+  def applicants
+
+    return "Soyez le premier à candidater!" if self.missions.empty?
+    return "Une personne a déjà candidaté à ce job." if self.missions.length == 1
+
+    return "Il y a déjà #{self.missions.length} candidats à ce job!"
+  end
 end

@@ -15,12 +15,8 @@
   </div>
   <div class="lower-side d-flex justify-content-around mt-3">
     <div class="location"><i class="fas fa-map-marker-alt"></i> <%=job.zip_code_and_city %></div>
-    <%= link_to '> Détails', job_path(job),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-flat'}  %>
-<!--     <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content"></div>
-      </div>
-    </div> -->
+    <%= link_to '> Détails', "",  {'data-toggle' =>  "modal", 'data-target' => "#modal-window#{job.id}", 'data-id' => job.id, class: 'btn btn-flat'}  %>
   </div>
 </div>
 
+<%= render "jobs/modal.html.erb", job: job %>
