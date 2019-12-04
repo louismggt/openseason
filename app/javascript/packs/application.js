@@ -3,9 +3,10 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 import { textAnimator } from '../plugins/init_animtext';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initSweetalert } from '../plugins/init_sweetalert';
-
+import { favoriseIcon } from '../plugins/init_favorite';
 initMapbox();
 textAnimator();
+favoriseIcon();
 
 // initSweetalert('#sweet-alert-demo', {
 //   title: "Are you sure?",

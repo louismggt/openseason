@@ -11,11 +11,11 @@ class MissionPolicy < ApplicationPolicy
 
   def show?
     user
-    # return true, compare le user qui a postulé et le user signed
+    # return true, compare le user qui a postule et le user signed
   end
 
   def destroy?
     record.user = user
-    # return true, compare le user qui a postulé et le user signed
+    # return true, compare le user qui a postule et le user signed
   end
 end
