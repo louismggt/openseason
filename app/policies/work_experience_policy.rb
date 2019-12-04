@@ -1,4 +1,4 @@
-class UserPolicy < ApplicationPolicy
+class WorkExperiencePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -9,12 +9,12 @@ class UserPolicy < ApplicationPolicy
     return true
   end
 
-  def show?
+  def new?
     return true
   end
 
-  def update?
-    record == user
+  def show?
+    return true
   end
-
 end
+

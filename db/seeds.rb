@@ -27,6 +27,11 @@ puts "Building database"
 #   biograophy: "Jeune femme dynamique a la recherche d'un job d'été en extérieur. Je suis souriante, j'aime beaucoup rire et raconter des comptes avec de nouveaux amis ! ",
 #   age: 23
 # )
+
+julie = User.create!(email: "julie@gmail.com", password: "azerty")
+
+alex  = User.create!(email: "alex@gmail.com", password: "azerty")
+
 louis = User.create!(
           email: "louis.guig@gmail.com",
           password: "louisto",
@@ -36,7 +41,8 @@ louis = User.create!(
           nationality: "francaise",
           address: "105, rue des martyrs - 59130 LAMBERSART",
           biograophy: "Farouche jeune homme, courageux, adepte de la musique disco et des voyages en pantoufle et tuktuk",
-          age: 33
+          age: 33,
+          photo: "https://avatars0.githubusercontent.com/u/17082201?v=4"
         )
 
 WorkExperience.create!(

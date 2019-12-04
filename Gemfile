@@ -23,6 +23,8 @@ gem 'geocoder'
 gem 'bootstrap'
 gem 'popper_js'
 gem 'turbolinks'
+gem 'activestorage'
+gem "aws-sdk-s3", require: false
 
 
 group :development do

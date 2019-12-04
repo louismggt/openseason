@@ -10,7 +10,7 @@
         <div class="contact ">
           <div class="bio">
             <div class="photo-profil">
-              <i class="fas fa-user-circle"></i>
+              <%= image_tag @user.photo %>
               <p><%= @user.biograophy %></p>
             </div>
           </div>
@@ -19,12 +19,22 @@
               <h4>Mes infos</h4>
               <p><i class="far fa-user"></i><%= @user.username %></p>
               <p><i class="far fa-envelope"></i><%= @user.email %></p>
-              <p><i class="fas fa-flag"></i> <%= @user.nationality %></p>
+              <p><i class="fas fa-flag"></i> Nationalité : <%= @user.nationality %></p>
               <p><i class="fas fa-birthday-cake"></i> <%= @user.age %> ans</p>
               <p><i class="fas fa-map-marker-alt"></i><%= @user.address %></p>
-              <div class="profil-btns d-flex justify-content-around">
-              <button type="button" class="button">Éditer</button>
-              <button type="button" class="btn btn-outline-secondary">Supprimer</button>
+              <div class="cv">
+                <% if @user == current_user && @user.cv.attached?  %>
+                  <%= link_to "Voir mon CV", url_for(@user.cv), download: '', class: "button upload"%>
+                <% elsif @user == current_user %>
+                  <%= simple_form_for @user, url: profil_path, method: :patch do |f| %>
+                    <%= f.file_field :cv, class: "form-control" %>
+                    <%= f.button :submit, value: 'Télécharger', class: "button upload" %>
+                  <% end %>
+                <% elsif @user.cv.attached? %>
+                  <%= link_to "Téléchargez le CV", url_for(@user.cv), download: '', class: "btn btn-light"%>
+                <% else %>
+                  <p>Pas encore de CV téléchargé</p>
+                <% end %>
               </div>
             </div>
           </div>
@@ -50,15 +60,28 @@
               </div>
             </div>
           </div>
-          <div class="my-experiences">
-            <div id="button-toogle-work-experiences" class="btn btn-flat w-100">
-              Click Me
+          <% unless @user.work_experiences.blank? %>
+            <div class="my-experiences">
+              <h3><i class="fas fa-user-tie"></i>   Expériences professionnelles</h3>
+              <p>Dernière expérience enregistrée</p>
+              <div class="alumnus-experience">
+                <div class="experience-img">
+                  <%= image_tag @user.work_experiences.last.photo %>
+                </div>
+                <div class="experience-details">
+                  <p class="experience-title"><%= @user.work_experiences.last.poste_intitulé %></p>
+                  <p class="experience-corp-name"><%= @user.work_experiences.last.entreprise %>, <%= @user.work_experiences.last.durée %> mois</p>
+                  <p class="experience-dates"><%= @user.work_experiences.last.description %></p>
+                </div>
+              </div>
+              <button id="button-toogle-work-experiences" class="btn btn-flat deroulable d-flex justify-content-center mt-3">
+                Voir toutes les expériences de <%= @user.first_name %>
+              </button>
+              <%= render "work_experiences/show" %>
             </div>
-            <%= render "work_experiences/show" %>
-          </div>
+          <% end %>
         <% end %>
       </div>
-
     </div>
   </div>
 

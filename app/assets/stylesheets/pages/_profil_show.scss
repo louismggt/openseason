@@ -43,11 +43,14 @@
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 40px;
   width: bold;
-  text-align:center;
-  color: #405F76;
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  letter-spacing: 5px;
 }
 
 .contact {
@@ -62,12 +65,11 @@ h1 {
   border-radius: 3px;
   margin-bottom: 10px;
 }
-.fa-user-circle {
+.photo-profil img {
   border-radius: 50%;
-  text-shadow: 1px 1px 3px grey;
-  font-size: 150px;
-  color: lightgray;
+  box-shadow: 3px 3px 3px lightgrey;
   margin-bottom: 5px;
+  max-width: 150px;
 }
 .photo-profil p {
   font-family: 'Ubuntu', sans-serif;
@@ -201,6 +203,21 @@ background-color: cadetblue;
   background: #66BECB;
   color: white;
 }
+.upload {
+  color: white;
+  background-color: #489ea9;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  font-family: 'Montserrat';
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  white-space: 10px;
+  margin-top: 10px;
+  width:100%;
+}
+.loose {
+  text-rendering: none;
+}
 
 .alumnus-panel {
   position: relative;
@@ -212,7 +229,12 @@ background-color: cadetblue;
 .alumnus-experience {
   display: flex;
   align-items: center;
-  margin-top: 24px;
+  margin-top: 15px;
+  margin-right: 20px;
+  border-radius: 5px;
+  // background-color: #efefef;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 .multiple {
   margin-top: 24px;
@@ -220,6 +242,7 @@ background-color: cadetblue;
 .alumnus-experience .experience-details {
   margin-left: 12px;
 }
+
 .alumnus-experience .experience-img {
   width: 60px;
   height: 60px;
@@ -227,23 +250,41 @@ background-color: cadetblue;
   background-position: center;
   border-radius: 3px;
   border: 1px solid #F7F7F7;
+  margin-left:20px;
 }
-.alumnus-experience .experience-details p {
-  margin: 0;
+
+.alumnus-experience .experience-img img{
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+  border: 1px solid #F7F7F7;
 }
+
 .alumnus-experience .experience-title {
   font-weight: bold;
-  color: cadetblue;
+  font-size: 16px;
+  color: slategrey;
 }
+
 .alumnus-experience .experience-details p {
   margin: 0;
 }
 
 .alumnus-experience .experience-corp-name {
   font-weight: lighter;
+  font-size: 14px;
+  color: grey;
 }
+
+.alumnus-experience .experience-dates {
+  font-size: 12px;
+  color: darkgrey;
+  font-weight: lighter;
+}
+
 .multiple .alumnus-experience .experience-line::before {
-  content: '';
   position: absolute;
   left: 26px;
   border: 5px solid #D3D3D3;
@@ -252,6 +293,34 @@ background-color: cadetblue;
 }
 
 .my-experiences {
-  background-color: white;
+  background-color: #f9f8f8;
   margin-top: 10px;
+  border-radius: 5px;
+}
+
+.my-experiences h3 {
+  padding: 10px;
+  border-bottom: 1px solid #499EAA;
+  font-family: 'Montserrat', sans-serif;
+  color: #405F76;
+  font-size: 18px;
+  margin-bottom: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.my-experiences i {
+  color: #489EA9;
+  margin-right: 5px;
+}
+
+.my-experiences p {
+  margin-left: 20px;
+  color: #499EAA;
+  font-weight: bold;
+}
+
+.deroulable {
+  margin: 0 auto;
+  width: 80%;
 }
