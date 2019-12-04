@@ -31,6 +31,7 @@ class Job < ApplicationRecord
     end
   end
 
+
   def telephone_display
     if telephone.empty?
       return "Non renseigné"
