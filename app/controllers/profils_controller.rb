@@ -13,11 +13,6 @@ class ProfilsController < ApplicationController
     @user = current_user
     authorize @user
     @user.update(user_params)
-    puts "je suis dans update"
-    puts "  "
-    puts "  "
-    puts "  "
-    sleep 2
     redirect_to profil_path(@user)
   end
 
