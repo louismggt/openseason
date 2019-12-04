@@ -8,14 +8,11 @@
 
 puts "Cleaning database"
 Favorite.destroy_all
-User.destroy_all
 Mission.destroy_all
 Job.destroy_all
 WorkExperience.destroy_all
-
-
 Preference.destroy_all
-
+User.destroy_all
 
 puts "Building database"
 

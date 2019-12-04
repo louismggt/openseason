@@ -65,13 +65,17 @@
                 <p class="experience-dates"><%= @user.work_experiences.last.description %></p>
               </div>
             </div>
-
-
             <button id="button-toogle-work-experiences" class="btn btn-flat deroulable d-flex justify-content-center mt-3">
               Voir toutes les expériences de <%= @user.first_name %>
             </button>
             <%= render "work_experiences/show" %>
             </div>
+
+            <!-- simple form pour ajouter une work experience -->
+            <%= simple_form_for(@work_experience) do |f| %>
+              <%= f.input :entreprise %>
+              <%= f.button :submit %>
+            <% end %>
           </div>
         <% end %>
       </div>

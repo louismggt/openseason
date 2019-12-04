@@ -4,16 +4,27 @@
       <div class="row justify-content-around">
         <div class="col-xs-12 col-xl-6">
           <div class="job-containers">
+            <h1>Désolé, nous n'avons pas d'offre correspondante...</h1>
             <div class="container-show-job d-flex">
-              <div class="d-flex flex-column justify-content-around">
+              <div class="container-element d-flex flex-column justify-content-around">
                 <div class="mb-3">
-                  Désolé, nous n'avons pas d'offre correspondant.
+
                 </div>
-                <div class="mb-3">
-                  <%= link_to "Spin the wheel!", job_path(Job.all.sample), :class => "btn-flat" %>
+                <div class=" container-logo d-flex  col-md-8 offset-md-2 space-between">
+                  <%= link_to new_preference_path do %>
+                <%= image_tag "aleatoire.png", class: "aleatoire" %>
+                <% end %>
+
+                   <%= link_to job_path(Job.all.sample) do %>
+                <%= image_tag "thoughtfull_girl.png", class: "thoughtfull_girl-image" %>
+                <% end %>
+
                 </div>
-                <div class="mb-3">
-                  <%= link_to "On tente autre chose?", new_preference_path, :class => "btn-flat" %>
+
+
+                <div class="container-text d-flex   justify-content-sm-around">
+                  <div class="title-quizz"><%=("Refaire le quizz ?") %></div>
+                  <div class="title-aleatoire"><%=("Choisir un job aléatoirement ?") %></div>
                 </div>
               </div>
             </div>
