@@ -38,8 +38,8 @@
     <div class="wrapper">
       <div class="row justify-content-around">
         <div class="col-xs-12 col-xl-6">
+          <h1 class="my-5">Nous avons trouvé <%= @jobs.length %> jobs qui peuvent te plaire!</h1>
           <div class="job-containers">
-            <h1 class="mb-5">Nous avons trouvé <%= @jobs.length %> jobs qui peuvent te plaire!</h1>
             <% @jobs.each do |job| %>
               <div class="">
                 <%= render 'card', job: job %>

@@ -8,13 +8,9 @@
   overflow: hidden;
 }
 
-.job-containers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 70px;
-}
 
+
+// TODO: C'est une job card, il faudra la renommer
 .job-container {
   // flex: 1 0 40%;
   min-height: 250px;

@@ -5,16 +5,19 @@
   background-image: asset-url("background.png");
 }
 
-.job-containers h1 {
-  font-family: "Montserrat";
-  color: white;
-  font-size: 24px;
-  font-weight: 700;
-}
 
 .job-containers {
-  margin-top: 88px;
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:              16px;
+  h1 {
+    font-family: "Montserrat";
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
+
 .container-logo {
   padding-top: 180px;
   padding-right: 400px;
