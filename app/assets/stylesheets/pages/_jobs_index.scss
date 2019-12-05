@@ -1,20 +1,10 @@
 .main {
-  // width: 100%;
-  // height: calc(100vh - 140px);
-  min-height: 100vh;
+  // height: 100vh;
   background-color: #499EAA;
   background-repeat: no-repeat;
-  // background: linear-gradient(to bott/om right, #499EAA 0%, #499EAA 50%, $light-gray 50%, $light-gray 100%);
   background-image: asset-url("background.png");
 }
 
-// @media (max-width: 575.98px) {
-
-//   .main {
-//     background-image: asset-url("background-mobile.png");
-//     background-size: cover;
-//   }
-// }
 .job-containers h1 {
   font-family: "Montserrat";
   color: white;
