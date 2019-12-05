@@ -44,6 +44,9 @@
   margin-bottom: 0;
   margin-top: 8px;
 }
+.mini-card-infos {
+  width: 65%;
+}
 
 .trash {
   position: absolute;
@@ -53,6 +56,7 @@
 
 .status {
   font-family: 'Montserrat';
+  text-align: center;
   font-weight: bold;
   font-size: 16px;
   color: $red;
