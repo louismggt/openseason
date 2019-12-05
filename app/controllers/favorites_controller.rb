@@ -49,11 +49,7 @@ class FavoritesController < ApplicationController
 
   def destroy
     @favorite = Favorite.find(params[:id])
-
     authorize @favorite
-    if @favorite.destroy
-
-      redirect_to profil_path(current_user)
-    end
+    @favorite.destroy
   end
 end

@@ -1,7 +1,5 @@
-<div class="mini-card d-flex">
-<!--   <div class="mini-logo"> -->
+<div id="<%= "favorite-#{favorite.id}" if favorite %>" class="mini-card">
   <%= image_tag job.logo %>
-<!--   </div> -->
   <div class="mini-card-infos align-top ml-3">
     <div>
       <h5><%= link_to job.title, job_path(job.id), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %></h5>
@@ -11,7 +9,7 @@
     </div>
     <div class="trash">
       <% if favorite %>
-        <%= link_to favorite_path(favorite), method: :delete do %>
+        <%= link_to favorite_path(favorite), method: :delete, remote: true do %>
           <i class="fas fa-times"></i>
         <% end %>
       <% else %>
