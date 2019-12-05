@@ -1,9 +1,11 @@
 <div class="mini-card">
   <%= image_tag job.logo %>
-  <div class="mini-card-infos align-top">
-    <h2><%= link_to job.title, job_path(job.id), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %></h2>
-    <div class="">
-      <p><%= job.description %></p>
+  <div class="mini-card-infos align-top ml-3">
+    <div>
+      <h2><%= link_to job.title, job_path(job.id), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %></h2>
+      <div class="">
+        <p><%= job.description %></p>
+      </div>
     </div>
     <div class="trash">
       <% if favorite %>
@@ -16,6 +18,11 @@
         <% end %>
       <% end %>
     </div>
+  </div>
+  <div class="float-right ml-5 status">
+    <% if mission %>
+      <%= mission.application %>
+    <% end %>
   </div>
 </div>
 
