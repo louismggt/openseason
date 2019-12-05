@@ -45,26 +45,7 @@ louis = User.create!(
           photo: "https://avatars0.githubusercontent.com/u/17082201?v=4"
         )
 
-WorkExperience.create!(
-  user: louis,
-  photo: "https://static.wixstatic.com/media/3c6da2_cbfa1840ddca46e29deb49e6a8483f48~mv2.jpg/v1/fill/w_250,h_250,al_c,q_90/file.jpg",
-  poste_intitulé: "Leader Communication & e-commerce - Oxelo Scooter",
-  entreprise: "Oxelo",
-  lieux: "Lille",
-  durée: "2 ans ",
-  start_date: "Janvier 2018",
-  end_date: "Aujourd'hui",
-  description: "Leader Communication :
 
-  - Définition et mise en place de la politique annuelle de communication de la marque à 3 ans (sélection des opérations commerciales, sélection de produits, plans de communication pour chaque produit)
-
-  Leader e-commerce :
-
-  # Gestion et animation de l’activité e-commerce de la marque
-
-  - Contrôle de la qualité de la base de données produits (création et mise à jour des fiches produits, optimisation SEO).
-  - Animation commerciale : rédaction et management du plan commercial digital annuel, suivi des performances et reporting aux équipes."
-)
 WorkExperience.create!(
   user: louis,
   photo: "https://static.wixstatic.com/media/3c6da2_cbfa1840ddca46e29deb49e6a8483f48~mv2.jpg/v1/fill/w_250,h_250,al_c,q_90/file.jpg",
@@ -100,6 +81,26 @@ WorkExperience.create!(
   end_date: "Août 2004",
   description: "Vendeur et conseillé, rayon chasse et pêche"
 )
+WorkExperience.create!(
+  user: louis,
+  photo: "https://static.wixstatic.com/media/3c6da2_cbfa1840ddca46e29deb49e6a8483f48~mv2.jpg/v1/fill/w_250,h_250,al_c,q_90/file.jpg",
+  poste_intitulé: "Leader Communication & e-commerce - Oxelo Scooter",
+  entreprise: "Oxelo",
+  lieux: "Lille",
+  durée: "2 ans ",
+  start_date: "Janvier 2018",
+  end_date: "Aujourd'hui",
+  description: "Leader Communication :
+
+  - Définition et mise en place de la politique annuelle de communication de la marque à 3 ans (sélection des opérations commerciales, sélection de produits, plans de communication pour chaque produit)
+
+  Leader e-commerce :
+
+  # Gestion et animation de l’activité e-commerce de la marque
+
+  - Contrôle de la qualité de la base de données produits (création et mise à jour des fiches produits, optimisation SEO).
+  - Animation commerciale : rédaction et management du plan commercial digital annuel, suivi des performances et reporting aux équipes."
+)
 
 Job.create!(
   title: "Ouvrier taille des arbres en pépinière H/F.",
@@ -125,7 +126,7 @@ Job.create!(
 
 Job.create!(
   title: "Animateur d'enfants H/F",
-  address: "Immeuble La Lauzière - 73130 SAINT FRANÇOIS",
+  address: "Immeuble La Lauzière - 73130 Saint François",
   land_type: "Montagne",
   meal: false,
   accommodation: true,
@@ -205,8 +206,11 @@ Job.create!(
   places: 10,
   start_date: Date.new(2020,10,1),
   end_date: Date.new(2020,10,7),
-  description: "Vendangeur(euse) pour une semaine.",
-  content: "Domaine familiale recherche vendangeurs hommes et femmes a partir du vendredi 13 septembre pour une durée d'environ 5 jours, nourrit le midi. les repas sont offert. les animaux ne sont pas accepté.",
+  description: "Recherche 10 Vendangeur(euse) pour une semaine.",
+  content: "Domaine familiale recherche vendangeurs hommes et femmes à partir du 1er octobre pour une durée d'environ 5 jours, nourrit le midi.
+  Expérience précédente sur les vignes pas indispensable.
+  Une bonne condition physique est recommandée pour tenir le rythme!
+  Les repas sont offerts. Les animaux ne sont pas acceptés.",
   category: "Agricole",
   professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
   name: "Champagne Simon Félix",
@@ -216,7 +220,96 @@ Job.create!(
   logo: "https://www.champagnesimonfelix.fr/wp-content/uploads/2019/02/cropped-LOGO-NOIR-copie.png",
   photo: "https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/76693409_807270383026278_7825131097041141760_o.jpg?_nc_cat=109&_nc_ohc=QMjkUYKjP1cAQkCMCIsR1XoJF1N8Pd9mMG1Ii0GalpvWGG-Wb-p8xkNqQ&_nc_ht=scontent-lht6-1.xx&oh=c9da9d2bb9142bf1503a19b472926ed8&oe=5E82B2C9",
 )
-
+Job.create!(
+  title: "Animateur (H/F)",
+  address: "Centre d'animation Monséjour - 33000 Bordeaux",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1200,
+  places: 2,
+  start_date: Date.new(2020,1,1),
+  end_date: Date.new(2020,10,7),
+  description: "Animateur (trice) en direction des enfants de 3-5 ans en accueil périscolaire",
+  content: "Animateur (trice) en direction des enfants de 3-5 ans en accueil périscolaire",
+  category: "Social",
+  professional_domain: "Animation",
+  name: "Centre d'animation Monséjour",
+  email: "",
+  telephone: "0689786580",
+  website: "https://centresanimationbordeaux.fr/monsejour/",
+  logo: "http://www.bordeaux.fr/images/ebx/fr/organisme/621/W332012387-008_20181017_1.jpg",
+  photo: "http://idi-asso.org/wp-content/uploads/2012/09/mons-carnaval-2011-046.jpg",
+)
+Job.create!(
+  title: "Animateurs saisonniers (H/F)",
+  address: "DOMAINE DE DIANE - 80120 Quend",
+  land_type: "Mer",
+  meal: false,
+  accommodation: false,
+  salary: 1200,
+  places: 1,
+  start_date: Date.new(2020,7,1),
+  end_date: Date.new(2020,8,7),
+  description: "Comédien? Sportif? Créatif? Tu es le/la bienvenue!",
+  content: "Nous recherchons à étoffer notre équipe d'animation pour la saison 2020-2020 !
+    Vous êtes musiciens? Comédien? Sportif? Créatif? Bricoleur? Vos amis disent que vous avez de la répartie et que vous devriez monter sur scène? Vous êtes à l'aise en public? et avec les enfants?!
+    Tous les profils nous intéressent mais disposer d'une de ces aptitudes est un plus !
+    Etudiants en STAPS, ce job est particulièrement fait pour vous ! Nous vous proposons de travailler les week-ends fériés, les vacances scolaires et l'été !
+    Envoyez-nous une présentation de vous (à votre image ;) et donnez-nous envie de vous rencontrer !
+    Type d'emploi : Temps plein, CDD
+    animateur: 3 ans (Souhaité)",
+  category: "Social",
+  professional_domain: "Animation",
+  name: "Champagne Simon Félix",
+  email: "Domaine de Diane",
+  telephone: "068964512",
+  website: "https://www.domainedediane.com/fr/",
+  logo: "http://asgolfbelledune.com/wp-content/uploads/2016/12/Domaine-de-Diane-LOGO-2017-e1485529992549.png",
+  photo: "https://www.domainedediane.com/img/slider/default/lg/03.jpg",
+)
+Job.create!(
+  title: "Equipier (H/F)",
+  address: "183 Boulevard Maréchal Leclerc - 33000 Bordeaux",
+  land_type: "Ville",
+  meal: false,
+  accommodation: false,
+  salary: 1200 ,
+  places: 2,
+  start_date: Date.new(2020,1,1),
+  end_date: Date.new(2020,10,7),
+  description: "job étudiant, saisonnier, en CDI, à temps partiel ou juste le week-end.",
+  content: "Il faut être polyvalent et réactif, c'est certain. Mais ce qui est génial c'est qu'on m'a formée dès le début et que j'ai pu choisir le contrat qui me convenait : job étudiant, saisonnier, en CDI, à temps partiel ou juste le week-end.",
+  category: "Service",
+  professional_domain: "Ville",
+  name: "McDonald's",
+  email: "",
+  telephone: "0689784320",
+  website: "https://www.indeed.fr/cmp/McDonald's?from=2pane&fromjk=fd1fdf3cc781ba17&jcid=f30ea0386898f1a2&attributionid=2pane-name",
+  logo: "https://www.toute-la-franchise.com/images/zoom/logo-mcdonald-s-200418.jpg",
+  photo: "https://www.toute-la-franchise.com/images/zoom/logo-mcdonald-s-200418.jpg"
+)
+Job.create!(
+  title: "Chef cuisinier H/F",
+  address: "27 Place du Taurobole, 26600 Tain-l'Hermitage",
+  land_type: "Ville",
+  meal: true,
+  accommodation: false,
+  salary: 2600,
+  places: 1,
+  start_date: Date.new(2020,10,1),
+  end_date: Date.new(2020,11,7),
+  description: "Cuisinier de 10 ans d' expérience au minimum",
+  content: "Restaurant type brasserie située dans une très jolie petite ville de 6000 habitants, renommée pour son vin et son chocolat traditionnel, recherche une ou un cuisinier de 10 ans d' expérience au minimum pour un poste de chef cuisinier disponible immédiatement à temps plein en CDI.",
+  category: "Ville",
+  professional_domain: "Service",
+  name: "BRASSERIE LE TAINOIS",
+  email: "",
+  telephone: "0689786580",
+  website: "https://centresanimationbordeaux.fr/monsejour/",
+  logo: "http://www.bordeaux.fr/images/ebx/fr/organisme/621/W332012387-008_20181017_1.jpg",
+  photo: "https://c.tfstatic.com/w_656,h_368,c_fill,g_auto:subject,q_auto,f_auto/restaurant_photos/405/352405/source/l-univerre-suggestion-de-plat-aec04.jpg"
+)
 
 Job.create!(
   title: "Ouvrier(ère) de culture maraîchère",
@@ -239,7 +332,50 @@ Job.create!(
   logo: "",
   photo: "",
 )
-
+Job.create!(
+  title: "Serveur chef de rang H/F",
+  address: "83-85 rue du Bac, 75007, Paris",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 3000,
+  places: 2,
+  start_date: Date.new(2020,1,1),
+  end_date: Date.new(2022,9,7),
+  description: "Recherche une personne souriante et avenante ayant le sens du relationnel pour une clientèle haut de gamme.",
+  content: "Recherche une personne souriante et avenante ayant le sens du relationnel pour une clientèle haut de gamme. Expérience en bistronomie ou gastronomie préférable. Base en anglais indispensable. Doit s'intéresser au vin pour pouvoir en parler et conseillé.",
+  category: "Service",
+  professional_domain: "Service",
+  name: "Le Cohe",
+  email: "reservations.paris@coyarestaurant.com",
+  telephone: "0689786570",
+  website: "https://www.le-cohe.fr/",
+  logo: "https://s3-eu-west-1.amazonaws.com/sc-files.pjms.fr/p/pjms/974/000/568/679/98ff78de7e014649897ba93c07a83de7_thumb.jpg",
+  photo: "https://www.pagesjaunes.fr/media/cviv/09296427_N_0004_photo.png"
+)
+Job.create!(
+  title: "Agent en maraîchage Saisonnier F-H",
+  address: "59237 - Verlinghem",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: false,
+  salary: 1000,
+  places: 2,
+  start_date: Date.new(2020,10,1),
+  end_date: Date.new(2020,10,7),
+  description: "Recherche pour la récolte de choux.",
+  content: "Secteur Lille
+  Le Groupement d'employeurs Flandres-Lille recherche pour l'un de ses adhérents un salarié en tant qu'agent en maraichage saisonnier (H/F) pour la récolte de choux.
+  Poste en saisonnier à temps plein.",
+  category: "Agricole",
+  professional_domain: "Espaces verts",
+  name: "ANEFA",
+  email: "",
+  telephone: "0689722440",
+  website: "http://www.anefa.org/",
+  logo: "https://media.licdn.com/dms/image/C4D0BAQGSokwNFKH8Fw/company-logo_200_200/0?e=2159024400&v=beta&t=IhsgT75oZSgqHrtw5SwGHndBVbIoeuzXYnqE0ZUqz6c",
+  photo: "http://www.anefa.org/sites/default/files/styles/slider_hp/public/slider/_F4A4506.jpg?itok=iiOfsfu3"
+)
 
 Job.create!(
   title: "Éducateur de jeunes enfants H/F",
@@ -388,8 +524,8 @@ Job.create!(
   accommodation: true,
   salary: 1400,
   places: 1,
-  start_date: Date.new(2019,12,15),
-  end_date: Date.new(2020,2,15),
+  start_date: Date.new(2019,9,15),
+  end_date: Date.new(2020,9,23),
   description: "Taille en cordon de royat à l'aide d'un ciseau électrique",
   content: "Vous serez chargé(e) de la taille en cordon de royat à l'aide d'un ciseau électrique fourni par l'employeur. Expérience obligatoire d'au moins une saison de taille.",
   category: "Agricole",
@@ -410,8 +546,8 @@ Job.create!(
   accommodation: false,
   salary: 1680,
   places: 2,
-  start_date: Date.new(2020,8,1),
-  end_date: Date.new(2020,12,31),
+  start_date: Date.new(2020,6,1),
+  end_date: Date.new(2020,6,15),
   description: "Vous intervenez sur une exploitation ayant 200 vaches allaitantes.",
   content: "Vous prodiguerez le soin aux animaux, le nourrissage, le vêlage serait un plus.
 Exploitation avec des bâtiments neufs, une pailleuse et un manitou.
@@ -528,7 +664,7 @@ Poste à pourvoir dès que possible.",
 
 Job.create!(
   title: "Tailleur de vigne (H/F)",
-  address: "33560 - STE EULALIE",
+  address: "33560 - Sainte Eulalie",
   land_type: "Campagne",
   meal: true,
   accommodation: false,
@@ -545,11 +681,11 @@ Qualification : Ouvrier qualifié (P1,P2)
 Secteur d'activité : Activités des organisations professionnelles",
   category: "Agricole",
   professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
-  name: "Champagne JEAN-LOUIS",
-  email: "",
-  telephone: "",
-  website: "http://gironde.anefa.org",
-  logo: "https://entreprise.pole-emploi.fr/static/img/minisite/fIinrHXoe4HBzwIR46Mx2wjm6T20YeIQ.png",
+  name: "Champagne Sainte Eulalie",
+  email: "info@chateausainteeulalie.com",
+  telephone: "+33 04 68 91 42 72",
+  website: "https://www.chateausainteeulalie.com/",
+  logo: "https://www.cavedelacrosse.fr/3116-home_default/chateau-sainte-eulalie-grand-vin-minervois-la-liviniere.jpg",
   photo: "https://www.lagriculture-recrute.org/Upload/000005.JPG",
 )
 Job.create!(
@@ -647,13 +783,14 @@ Qualification : Mécanicien qualifié (P1,P2)
 Secteur d'activité : Activités des organisations professionnelles",
   category: "Agricole",
   professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
-  name: "Champagne JEAN-LOUIS",
-  email: "",
-  telephone: "",
-  website: "http://gironde.anefa.org",
-  logo: "https://entreprise.pole-emploi.fr/static/img/minisite/fIinrHXoe4HBzwIR46Mx2wjm6T20YeIQ.png",
+  name: "Champagne Sainte Eulalie",
+  email: "info@chateausainteeulalie.com",
+  telephone: "+33 04 68 91 42 72",
+  website: "https://www.chateausainteeulalie.com/",
+  logo: "https://www.cavedelacrosse.fr/3116-home_default/chateau-sainte-eulalie-grand-vin-minervois-la-liviniere.jpg",
   photo: "https://www.lagriculture-recrute.org/Upload/000005.JPG",
 )
+
 Job.create!(
   title: "Mécanicien Tracteur (H/F)",
   address: "33560 - STE EULALIE",
@@ -1703,7 +1840,7 @@ Permis de conduire obligatoire",
 )
 Job.create!(
   title: "Directeur séjours adaptés Nature H/F",
-  address: "86370 - VIVONNE",
+  address: "86370 - Vivonne",
   land_type: "Campagne",
   meal: true,
   accommodation: true,
@@ -1765,7 +1902,7 @@ Permis de conduire obligatoire",
 )
 Job.create!(
   title: "Directeur séjours adaptés Nature H/F",
-  address: "86370 - VIVONNE",
+  address: "86370 - Vivonne",
   land_type: "Campagne",
   meal: true,
   accommodation: true,
@@ -1796,7 +1933,7 @@ Permis de conduire obligatoire",
 )
 Job.create!(
   title: "Directeur séjours adaptés H/F",
-  address: "86370 - VIVONNE",
+  address: "11 Avenue de la Plage, 86370 Vivonne",
   land_type: "Ville",
   meal: true,
   accommodation: true,
@@ -1825,6 +1962,137 @@ Permis de conduire obligatoire",
   logo: "http://www.vacancesadaptees.org/build/img/logo.jpg?1515666919126",
   photo: "",
 )
+Job.create!(
+  title: "Saisonnier viticole h/f",
+  address: "33850 - Martillac",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: true,
+  salary: 1400,
+  places: 1,
+  start_date: Date.new(2020,5,1),
+  end_date: Date.new(2020,7,1),
+  description: "Recherche un Saisonnier Viticole H/F",
+  content: "Sous la responsabilité du Chef de Culture, vous aurez pour mission d'effectuer les travaux d'hiver : tirage et sortie des bois, calage, pliage, complantation etc... Vous disposez idéalement d'une expérience dans les tâches viticoles courantes et apportez un soin particulier à la réalisation du travail. Poste basé à Martillac avec des déplacements ponctuels à prévoir sur Pessac.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Groupe Pichet",
+  email: "jobs@pichet.com",
+  telephone: "0543127656",
+  website: "www.groupepichet.fr",
+  logo: "https://lh3.googleusercontent.com/9LyG1BMhtO_EQ1D0dHyiyxZZR17qXrMBjVB4zEEacLIW7kB2kUCimYWEhtORRdPE7A6tCqYFeGXqTQRBYuSh=s150",
+  photo: "https://www.ouestfrance-emploi.com/sites/default/files/styles/180-largeur/public/enora-saisonnier.jpg?itok=IDDryJZY",
+)
+Job.create!(
+  title: "Vendeur confiseries ambullant (H/F)",
+  address: "33120 - ARCACHON",
+  land_type: "Mer",
+  meal: false,
+  accommodation: false,
+  salary: 950,
+  places: 1,
+  start_date: Date.new(2020,7,1),
+  end_date: Date.new(2020,9,1),
+  description: "Beignets, Chouchous, Croustillons ! Nous cherchons un saisonnier pour l'été 2020.",
+  content: "Pour assurer l'été 2020, nous recherchons un vendeur H/F afin d'assurer les ventes de nos confiseries sur la plage. Expérience exigée, profil motivé, dynamique et sociable.",
+  category: "Service",
+  professional_domain: "Commerce / Vente",
+  name: "Miam Playa",
+  email: "miamplaya@gmail.com",
+  telephone: "0654367865",
+  website: "www.miamplaya.fr",
+  logo: "https://png.pngtree.com/png-vector/20190323/ourlarge/pngtree-beach-logo-design-vector-png-image_874316.jpg",
+  photo: "https://cdn.pixabay.com/photo/2016/07/25/15/16/ice-1540685_1280.jpg",
+)
+Job.create!(
+  title: "Ouvrier Viticole Polyvalent - Tractoriste H/F",
+  address: "68000 - COLMAR",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: true,
+  salary: 1800,
+  places: 1,
+  start_date: Date.new(2020,5,1),
+  end_date: Date.new(2020,7,1),
+  description: "De formation agricole/viticole, vous avez le sens du terrain et vous aimez travailler en plein air.",
+  content: "Le Groupe Les Grands Chais de France, premier exportateur français de vins et de spiritueux, est présent dans les principales régions viticoles françaises. Notre filiale, le Domaine Viticole de la Ville de Colmar, cultive un domaine viticole de 40 ha qui s'étend d'Eguisheim à Ribeauvillé réunissant 8 terroirs de grands crus prestigieux (dont les GC Hengst, Florimont, Kaefferkopf, Schlossberg...), dans un soucis permanent de qualité. Pour renforcer notre équipe, nous recherchons un tractoriste - ouvrier viticole polyvalent H/F en CDD.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Les Grands Chais de France",
+  email: "recrutement@chais.fr",
+  telephone: "0543543856",
+  website: "www.grandchais.fr",
+  logo: "https://www.groupegcf.fr/images/logo-groupe-gcf.png",
+  photo: "https://www.groupegcf.fr/uploads/images/slider/4-slide-terroirs.jpg",
+)
+Job.create!(
+  title: "Tractoriste Ouvrier Viticole H/F",
+  address: "21700 - NUIT-ST-GEORGES",
+  land_type: "Campagne",
+  meal: false,
+  accommodation: false,
+  salary: 1700,
+  places: 1,
+  start_date: Date.new(2020,5,1),
+  end_date: Date.new(2020,5,10),
+  description: "Boisset - La Famille des Grands Vins recherche un tractoriste ouvrier viticole.",
+  content: "Boisset, La Famille des Grands Vins, est une entreprise familiale qui a su devenir un grand nom international en s'appuyant sur des valeurs fortes, tirées de ses origines bourguignonnes. Avec plus de 350 salariés et une présence dans 80 pays, le groupe se classe parmi les 5 premières entreprises françaises évoluant dans le domaine des vins fins et des vins effervescents. Missions : Conduite d'enjambeur (petit tracteur agricole). Réalisation des travaux du sol : griffage, labours, interceps. Réalisation des traitements phytosanitaires. Effectuer la maintenance préventive et curative des tracteurs et du matériel. Respecter et faire respecter les règles de sécurité. Effectuer les travaux de la vigne : de la taille jusqu'à la récolte.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Boisset - La famille des grands vins",
+  email: "contact@boisset.fr",
+  telephone: "0434435278",
+  website: "www.boisset.fr",
+  logo: "http://www.boisset.fr/images/logo_site_9.png",
+  photo: "http://www.boisset.fr/images/image_lang_info_217_1.jpg",
+)
+Job.create!(
+  title: "Ouvrier Viticole Polyvalent - Tractoriste H/F",
+  address: "1 Rue de la Division Leclerc, 67290 Petersbach",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: true,
+  salary: 1800,
+  places: 1,
+  start_date: Date.new(2020,5,1),
+  end_date: Date.new(2020,5,9),
+  description: "Pour amateur de travail en plein air.",
+  content: "Le Groupe Les Grands Chais de France, premier exportateur français de vins et de spiritueux, est présent dans les principales régions viticoles françaises.
+De formation agricole/viticole, vous avez le sens du terrain et vous aimez travailler en plein air.
+  Notre filiale, le Domaine Viticole de la Ville de Colmar, cultive un domaine viticole de 40 ha qui s'étend d'Eguisheim à Ribeauvillé réunissant 8 terroirs de grands crus prestigieux (dont les GC Hengst, Florimont, Kaefferkopf, Schlossberg...), dans un soucis permanent de qualité.
+
+  Pour renforcer notre équipe, nous recherchons un tractoriste - ouvrier viticole polyvalent H/F en CDD.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Les Grands Chais de France",
+  email: "recrutement@chais.fr",
+  telephone: "0543543856",
+  website: "www.grandchais.fr",
+  logo: "https://www.groupegcf.fr/images/logo-groupe-gcf.png",
+  photo: "https://www.groupegcf.fr/uploads/images/slider/4-slide-terroirs.jpg",
+)
+Job.create!(
+  title: "Tractoriste Ouvrier Viticole H/F",
+  address: "Rue de la Montagne, 21640 Vougeot",
+  land_type: "Campagne",
+  meal: false,
+  accommodation: false,
+  salary: 1700,
+  places: 1,
+  start_date: Date.new(2020,9,1),
+  end_date: Date.new(2020,9,10),
+  description: "Boisset - La Famille des Grands Vins recherche un tractoriste ouvrier viticole.",
+  content: "Boisset, La Famille des Grands Vins, est une entreprise familiale qui a su devenir un grand nom international en s'appuyant sur des valeurs fortes, tirées de ses origines bourguignonnes. Avec plus de 350 salariés et une présence dans 80 pays, le groupe se classe parmi les 5 premières entreprises françaises évoluant dans le domaine des vins fins et des vins effervescents. Missions : Conduite d'enjambeur (petit tracteur agricole). Réalisation des travaux du sol : griffage, labours, interceps. Réalisation des traitements phytosanitaires. Effectuer la maintenance préventive et curative des tracteurs et du matériel. Respecter et faire respecter les règles de sécurité. Effectuer les travaux de la vigne : de la taille jusqu'à la récolte.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Boisset - La famille des grands vins",
+  email: "contact@boisset.fr",
+  telephone: "0434435278",
+  website: "www.boisset.fr",
+  logo: "http://www.boisset.fr/images/logo_site_9.png",
+  photo: "http://www.boisset.fr/images/image_lang_info_217_1.jpg",
+)
+
 # Job.create!(
 #   title: "",
 #   address: "",
