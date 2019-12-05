@@ -1,8 +1,10 @@
-<div class="mini-card">
+<div class="mini-card d-flex">
+<!--   <div class="mini-logo"> -->
   <%= image_tag job.logo %>
+<!--   </div> -->
   <div class="mini-card-infos align-top ml-3">
     <div>
-      <h2><%= link_to job.title, job_path(job.id), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %></h2>
+      <h5><%= link_to job.title, job_path(job.id), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %></h5>
       <div class="">
         <p><%= job.description %></p>
       </div>
