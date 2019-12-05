@@ -1,8 +1,8 @@
 .main {
   // height: 100vh;
-  background-color: white;
+  background-color:  white;
   background-repeat: no-repeat;
-  background-image: asset-url("background.png");
+  background-image:  asset-url("background.png");
 }
 
 .jobs-cards-and-title {
@@ -27,30 +27,23 @@
   padding-right: 400px;
 }
 
-.thoughtfull_girl-image {
-  max-height: 250px;
-  padding-left: 150px;
+.thumbnails{
+  width: 350px;
+  text-align: center;
+  .image {
+    height: 250px;
+  }
+  .image:hover {
+    opacity: 0.9;
+  }
+  .title {
+    font-family: 'Rancho';
+    font-size:   35px;
+    text-align:  center;
+    color:       $charcoal;
+  }
 }
 
-.thoughtfull_girl-image:hover {
-  max-height: 250px;
-  opacity: 0.9;
-}
-
-
-.aleatoire {
-  max-height: 250px;
-  padding-left: 40px;
-}
-
-.aleatoire:hover {
-  max-height: 250px;
-  opacity: 0.9;
-}
-
-.container-text {
-
-}
 
 .container-element {
   // padding-right: 203px;
@@ -64,22 +57,3 @@
   font-family: 'Rancho';
 }
 
-.title-quizz {
-  font-family: 'Rancho';
-  font-size: 35px;
-  color: #364156;
-  padding-left: 179px;
-  // margin-left: 217px;
-}
-
-.title-aleatoire {
-  font-family: 'Rancho';
-  font-size: 35px;
-  color: #364156;
-  padding-right: 124px;
-
-  // padding-left: 185px;
-}
-.container-text {
-
-}
