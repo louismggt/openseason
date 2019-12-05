@@ -1,31 +1,27 @@
 <% if @jobs.empty? %>
-  <div class="main">
+  <div class="main full-screen pt-5">
     <div class="wrapper">
       <div class="row justify-content-around">
         <div class="col-xs-12 col-xl-6">
-          <div class="job-containers">
-            <h1>Désolé, nous n'avons pas d'offre correspondante...</h1>
-            <div class="container-show-job d-flex">
-              <div class="container-element d-flex flex-column justify-content-around">
-                <div class="mb-3">
-
-                </div>
-                <div class=" container-logo d-flex  col-md-8 offset-md-2 space-between">
-                  <%= link_to new_preference_path do %>
-                <%= image_tag "aleatoire.png", class: "aleatoire" %>
-                <% end %>
-
-                   <%= link_to job_path(Job.all.sample) do %>
-                <%= image_tag "thoughtfull_girl.png", class: "thoughtfull_girl-image" %>
-                <% end %>
-
-                </div>
-
-
-                <div class="container-text d-flex   justify-content-sm-around">
-                  <div class="title-quizz"><%=("Refaire le quizz ?") %></div>
-                  <div class="title-aleatoire"><%=("Choisir un job aléatoirement ?") %></div>
-                </div>
+          <h1 class="my-5">
+            Oups ! <br>
+            Nous n'avons rien trouvé...
+          </h1>
+          <div class="d-flex justify-content-around">
+            <div class="thumbnails">
+              <%= link_to new_preference_path do %>
+                <%= image_tag "aleatoire.png", class: "image" %>
+              <% end %>
+              <div class="title">
+                Refaire le quizz ?
+              </div>
+            </div>
+            <div class="thumbnails">
+              <%= link_to job_path(Job.all.sample) do %>
+                <%= image_tag "thoughtfull_girl.png", class: "image" %>
+              <% end %>
+              <div class="title">
+                Choisir un job aléatoirement ?
               </div>
             </div>
           </div>
@@ -36,20 +32,21 @@
 <% else %>
   <div class="main">
     <div class="wrapper">
-      <div class="row justify-content-around">
-        <div class="col-xs-12 col-xl-6">
-          <h1 class="my-5">Nous avons trouvé <%= @jobs.length %> jobs qui peuvent te plaire!</h1>
+      <div class="d-flex">
+        <div class="jobs-cards-and-title">
+          <h1 class="my-5">
+            Nous avons trouvé <span class="font-weight-bold text-warning"><%= @jobs.length %></span> jobs <br>
+            qui peuvent te plaire!
+          </h1>
           <div class="job-containers">
             <% @jobs.each do |job| %>
-              <div class="">
+              <div class="m-auto">
                 <%= render 'card', job: job %>
               </div>
             <% end %>
           </div>
         </div>
-        <div class="col-xs-12 col-xl-6">
-          <%= render 'components/map', markers: @markers %>
-        </div>
+        <%= render 'components/map', markers: @markers %>
       </div>
     </div>
   </div>

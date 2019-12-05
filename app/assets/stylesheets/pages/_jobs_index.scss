@@ -1,15 +1,13 @@
 .main {
   // height: 100vh;
-  background-color: #499EAA;
+  background-color:  white;
   background-repeat: no-repeat;
-  background-image: asset-url("background.png");
+  background-image:  asset-url("background.png");
 }
 
-
-.job-containers {
-  display:               grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap:              16px;
+.jobs-cards-and-title {
+  width:  800px;
+  margin: 0 auto;
   h1 {
     font-family: "Montserrat";
     color: white;
@@ -18,35 +16,34 @@
   }
 }
 
+.job-containers {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:              16px;
+}
+
 .container-logo {
   padding-top: 180px;
   padding-right: 400px;
 }
 
-.thoughtfull_girl-image {
-  max-height: 250px;
-  padding-left: 150px;
+.thumbnails{
+  width: 350px;
+  text-align: center;
+  .image {
+    height: 250px;
+  }
+  .image:hover {
+    opacity: 0.9;
+  }
+  .title {
+    font-family: 'Rancho';
+    font-size:   35px;
+    text-align:  center;
+    color:       $charcoal;
+  }
 }
 
-.thoughtfull_girl-image:hover {
-  max-height: 250px;
-  opacity: 0.9;
-}
-
-
-.aleatoire {
-  max-height: 250px;
-  padding-left: 40px;
-}
-
-.aleatoire:hover {
-  max-height: 250px;
-  opacity: 0.9;
-}
-
-.container-text {
-
-}
 
 .container-element {
   // padding-right: 203px;
@@ -60,22 +57,3 @@
   font-family: 'Rancho';
 }
 
-.title-quizz {
-  font-family: 'Rancho';
-  font-size: 35px;
-  color: #364156;
-  padding-left: 179px;
-  // margin-left: 217px;
-}
-
-.title-aleatoire {
-  font-family: 'Rancho';
-  font-size: 35px;
-  color: #364156;
-  padding-right: 124px;
-
-  // padding-left: 185px;
-}
-.container-text {
-
-}
