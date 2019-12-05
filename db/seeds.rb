@@ -126,7 +126,7 @@ Job.create!(
 
 Job.create!(
   title: "Animateur d'enfants H/F",
-  address: "Immeuble La Lauzière - 73130 SAINT FRANÇOIS",
+  address: "Immeuble La Lauzière - 73130 Saint François",
   land_type: "Montagne",
   meal: false,
   accommodation: true,
@@ -206,8 +206,11 @@ Job.create!(
   places: 10,
   start_date: Date.new(2020,10,1),
   end_date: Date.new(2020,10,7),
-  description: "Vendangeur(euse) pour une semaine.",
-  content: "Domaine familiale recherche vendangeurs hommes et femmes a partir du vendredi 13 septembre pour une durée d'environ 5 jours, nourrit le midi. les repas sont offert. les animaux ne sont pas accepté.",
+  description: "Recherche 10 Vendangeur(euse) pour une semaine.",
+  content: "Domaine familiale recherche vendangeurs hommes et femmes à partir du 1er octobre pour une durée d'environ 5 jours, nourrit le midi.
+  Expérience précédente sur les vignes pas indispensable.
+  Une bonne condition physique est recommandée pour tenir le rythme!
+  Les repas sont offerts. Les animaux ne sont pas acceptés.",
   category: "Agricole",
   professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
   name: "Champagne Simon Félix",
@@ -370,7 +373,7 @@ Job.create!(
   email: "",
   telephone: "0689722440",
   website: "http://www.anefa.org/",
-  logo: "http://tarn-et-garonne.anefa.org/sites/default/files/styles/actu_hp/public/actualites/Logo_ANEFA_TarnEtGaronne.png?itok=MY5eV9wI",
+  logo: "https://media.licdn.com/dms/image/C4D0BAQGSokwNFKH8Fw/company-logo_200_200/0?e=2159024400&v=beta&t=IhsgT75oZSgqHrtw5SwGHndBVbIoeuzXYnqE0ZUqz6c",
   photo: "http://www.anefa.org/sites/default/files/styles/slider_hp/public/slider/_F4A4506.jpg?itok=iiOfsfu3"
 )
 
@@ -521,8 +524,8 @@ Job.create!(
   accommodation: true,
   salary: 1400,
   places: 1,
-  start_date: Date.new(2019,12,15),
-  end_date: Date.new(2020,2,15),
+  start_date: Date.new(2019,9,15),
+  end_date: Date.new(2020,9,23),
   description: "Taille en cordon de royat à l'aide d'un ciseau électrique",
   content: "Vous serez chargé(e) de la taille en cordon de royat à l'aide d'un ciseau électrique fourni par l'employeur. Expérience obligatoire d'au moins une saison de taille.",
   category: "Agricole",
@@ -543,8 +546,8 @@ Job.create!(
   accommodation: false,
   salary: 1680,
   places: 2,
-  start_date: Date.new(2020,8,1),
-  end_date: Date.new(2020,12,31),
+  start_date: Date.new(2020,6,1),
+  end_date: Date.new(2020,6,15),
   description: "Vous intervenez sur une exploitation ayant 200 vaches allaitantes.",
   content: "Vous prodiguerez le soin aux animaux, le nourrissage, le vêlage serait un plus.
 Exploitation avec des bâtiments neufs, une pailleuse et un manitou.
@@ -661,7 +664,7 @@ Poste à pourvoir dès que possible.",
 
 Job.create!(
   title: "Tailleur de vigne (H/F)",
-  address: "33560 - STE EULALIE",
+  address: "33560 - Sainte Eulalie",
   land_type: "Campagne",
   meal: true,
   accommodation: false,
@@ -678,11 +681,11 @@ Qualification : Ouvrier qualifié (P1,P2)
 Secteur d'activité : Activités des organisations professionnelles",
   category: "Agricole",
   professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
-  name: "Champagne JEAN-LOUIS",
-  email: "",
-  telephone: "",
-  website: "http://gironde.anefa.org",
-  logo: "https://entreprise.pole-emploi.fr/static/img/minisite/fIinrHXoe4HBzwIR46Mx2wjm6T20YeIQ.png",
+  name: "Champagne Sainte Eulalie",
+  email: "info@chateausainteeulalie.com",
+  telephone: "+33 04 68 91 42 72",
+  website: "https://www.chateausainteeulalie.com/",
+  logo: "https://www.cavedelacrosse.fr/3116-home_default/chateau-sainte-eulalie-grand-vin-minervois-la-liviniere.jpg",
   photo: "https://www.lagriculture-recrute.org/Upload/000005.JPG",
 )
 Job.create!(
@@ -780,13 +783,14 @@ Qualification : Mécanicien qualifié (P1,P2)
 Secteur d'activité : Activités des organisations professionnelles",
   category: "Agricole",
   professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
-  name: "Champagne JEAN-LOUIS",
-  email: "",
-  telephone: "",
-  website: "http://gironde.anefa.org",
-  logo: "https://entreprise.pole-emploi.fr/static/img/minisite/fIinrHXoe4HBzwIR46Mx2wjm6T20YeIQ.png",
+  name: "Champagne Sainte Eulalie",
+  email: "info@chateausainteeulalie.com",
+  telephone: "+33 04 68 91 42 72",
+  website: "https://www.chateausainteeulalie.com/",
+  logo: "https://www.cavedelacrosse.fr/3116-home_default/chateau-sainte-eulalie-grand-vin-minervois-la-liviniere.jpg",
   photo: "https://www.lagriculture-recrute.org/Upload/000005.JPG",
 )
+
 Job.create!(
   title: "Mécanicien Tracteur (H/F)",
   address: "33560 - STE EULALIE",
@@ -1836,7 +1840,7 @@ Permis de conduire obligatoire",
 )
 Job.create!(
   title: "Directeur séjours adaptés Nature H/F",
-  address: "86370 - VIVONNE",
+  address: "86370 - Vivonne",
   land_type: "Campagne",
   meal: true,
   accommodation: true,
@@ -1898,7 +1902,7 @@ Permis de conduire obligatoire",
 )
 Job.create!(
   title: "Directeur séjours adaptés Nature H/F",
-  address: "86370 - VIVONNE",
+  address: "86370 - Vivonne",
   land_type: "Campagne",
   meal: true,
   accommodation: true,
@@ -1929,7 +1933,7 @@ Permis de conduire obligatoire",
 )
 Job.create!(
   title: "Directeur séjours adaptés H/F",
-  address: "86370 - VIVONNE",
+  address: "11 Avenue de la Plage, 86370 Vivonne",
   land_type: "Ville",
   meal: true,
   accommodation: true,
@@ -1960,7 +1964,7 @@ Permis de conduire obligatoire",
 )
 Job.create!(
   title: "Saisonnier viticole h/f",
-  address: "33850 - MARTILLAC",
+  address: "33850 - Martillac",
   land_type: "Campagne",
   meal: true,
   accommodation: true,
@@ -2042,6 +2046,53 @@ Job.create!(
   logo: "http://www.boisset.fr/images/logo_site_9.png",
   photo: "http://www.boisset.fr/images/image_lang_info_217_1.jpg",
 )
+Job.create!(
+  title: "Ouvrier Viticole Polyvalent - Tractoriste H/F",
+  address: "1 Rue de la Division Leclerc, 67290 Petersbach",
+  land_type: "Campagne",
+  meal: true,
+  accommodation: true,
+  salary: 1800,
+  places: 1,
+  start_date: Date.new(2020,5,1),
+  end_date: Date.new(2020,5,9),
+  description: "Pour amateur de travail en plein air.",
+  content: "Le Groupe Les Grands Chais de France, premier exportateur français de vins et de spiritueux, est présent dans les principales régions viticoles françaises.
+De formation agricole/viticole, vous avez le sens du terrain et vous aimez travailler en plein air.
+  Notre filiale, le Domaine Viticole de la Ville de Colmar, cultive un domaine viticole de 40 ha qui s'étend d'Eguisheim à Ribeauvillé réunissant 8 terroirs de grands crus prestigieux (dont les GC Hengst, Florimont, Kaefferkopf, Schlossberg...), dans un soucis permanent de qualité.
+
+  Pour renforcer notre équipe, nous recherchons un tractoriste - ouvrier viticole polyvalent H/F en CDD.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Les Grands Chais de France",
+  email: "recrutement@chais.fr",
+  telephone: "0543543856",
+  website: "www.grandchais.fr",
+  logo: "https://www.groupegcf.fr/images/logo-groupe-gcf.png",
+  photo: "https://www.groupegcf.fr/uploads/images/slider/4-slide-terroirs.jpg",
+)
+Job.create!(
+  title: "Tractoriste Ouvrier Viticole H/F",
+  address: "Rue de la Montagne, 21640 Vougeot",
+  land_type: "Campagne",
+  meal: false,
+  accommodation: false,
+  salary: 1700,
+  places: 1,
+  start_date: Date.new(2020,9,1),
+  end_date: Date.new(2020,9,10),
+  description: "Boisset - La Famille des Grands Vins recherche un tractoriste ouvrier viticole.",
+  content: "Boisset, La Famille des Grands Vins, est une entreprise familiale qui a su devenir un grand nom international en s'appuyant sur des valeurs fortes, tirées de ses origines bourguignonnes. Avec plus de 350 salariés et une présence dans 80 pays, le groupe se classe parmi les 5 premières entreprises françaises évoluant dans le domaine des vins fins et des vins effervescents. Missions : Conduite d'enjambeur (petit tracteur agricole). Réalisation des travaux du sol : griffage, labours, interceps. Réalisation des traitements phytosanitaires. Effectuer la maintenance préventive et curative des tracteurs et du matériel. Respecter et faire respecter les règles de sécurité. Effectuer les travaux de la vigne : de la taille jusqu'à la récolte.",
+  category: "Agricole",
+  professional_domain: "Espaces verts et naturels / Agriculture / Pêche / Soins aux animaux",
+  name: "Boisset - La famille des grands vins",
+  email: "contact@boisset.fr",
+  telephone: "0434435278",
+  website: "www.boisset.fr",
+  logo: "http://www.boisset.fr/images/logo_site_9.png",
+  photo: "http://www.boisset.fr/images/image_lang_info_217_1.jpg",
+)
+
 # Job.create!(
 #   title: "",
 #   address: "",
