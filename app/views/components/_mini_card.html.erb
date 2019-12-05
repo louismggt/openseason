@@ -10,11 +10,11 @@
     <div class="trash">
       <% if favorite %>
         <%= link_to favorite_path(favorite), method: :delete, remote: true do %>
-          <i class="fas fa-times"></i>
+          <i class="far fa-trash-alt"></i>
         <% end %>
       <% else %>
         <%= link_to mission_path(mission), method: :delete do %>
-          <i class="fas fa-times"></i>
+          <i class="far fa-trash-alt"></i>
         <% end %>
       <% end %>
     </div>

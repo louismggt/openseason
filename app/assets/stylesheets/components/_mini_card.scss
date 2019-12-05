@@ -44,12 +44,12 @@
   margin-top: 8px;
 }
 .mini-card-infos {
-  width: 65%;
+  width: 55%;
 }
 
 .trash {
   position: absolute;
-  top: 5px;
+  top: 20px;
   right: 10px;
 }
 
@@ -59,4 +59,8 @@
   font-weight: bold;
   font-size: 16px;
   color: $red;
+  line-height:16px;
+}
+.application-validated {
+  color: #499DAA;
 }
