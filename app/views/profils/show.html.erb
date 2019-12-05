@@ -54,8 +54,18 @@
               <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
                   <div class="mission-jobs">
-                    <% @missions.each do |mission| %>
-                      <%= render "components/mini_card", job: mission.job, mission: mission, favorite: nil %>
+                    <% if @missions.empty? %>
+                      <div class="empty-alert">Pas de candidature en cours, on s'y met?
+                      </div>
+                      <div class="empty-alert">
+                        <%= link_to new_preference_path do %>
+                          <%= image_tag "aleatoire.png", class: "image" %>
+                        <% end %>
+                      </div>
+                    <% else %>
+                      <% @missions.each do |mission| %>
+                        <%= render "components/mini_card", job: mission.job, mission: mission, favorite: nil %>
+                      <% end %>
                     <% end %>
                   </div>
                 </div>
@@ -72,9 +82,15 @@
               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                   <div class="favorite-jobs">
-                    <% if @favorites.nil? %>
-                      <h3>Tu n'as aucune annonce de sauvegardée...</h3>
-                      <h3><%= link_to "on s'y met?", new_preference_path %></h3>
+                    <% if @favorites.empty? %>
+                      <div class="empty-alert">
+                        Tu n'as pas encore d'annonce sauvegardée!
+                      </div>
+                      <div class="empty-alert">
+                        <%= link_to new_preference_path do %>
+                          <%= image_tag "aleatoire.png", class: "image" %>
+                        <% end %>
+                      </div>
                     <% else %>
                       <% @favorites.each do |favorite| %>
                         <%= render "components/mini_card", job: favorite.job, favorite: favorite, mission: nil %>

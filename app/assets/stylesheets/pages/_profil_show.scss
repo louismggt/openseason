@@ -327,3 +327,15 @@ background-color: cadetblue;
   margin: 0 auto;
   width: 80%;
 }
+
+.empty-alert {
+  font-family: 'Montserrat';
+  font-size: 24px;
+  text-align: center;
+  color: $red;
+
+  img {
+    height: 100px;
+    text-align: center;
+  }
+}
