@@ -31,7 +31,7 @@
                     <%= f.button :submit, value: 'Télécharger', class: "button upload" %>
                   <% end %>
                 <% elsif @user.cv.attached? %>
-                  <%= link_to "Téléchargez le CV", url_for(@user.cv), download: '', class: "btn btn-light"%>
+                  <%= link_to "Téléchargez le CV", url_for(@user.cv), download: '', class: "button upload"%>
                 <% else %>
                   <p>Pas encore de CV téléchargé</p>
                 <% end %>
