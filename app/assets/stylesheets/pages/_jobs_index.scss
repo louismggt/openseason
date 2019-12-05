@@ -8,18 +8,18 @@
 .jobs-cards-and-title {
   width:  800px;
   margin: 0 auto;
-}
-
-.job-containers {
-  display:               grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap:              16px;
   h1 {
     font-family: "Montserrat";
     color: white;
     font-size: 24px;
     font-weight: 700;
   }
+}
+
+.job-containers {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:              16px;
 }
 
 .container-logo {

@@ -38,9 +38,10 @@
     <div class="wrapper">
       <div class="d-flex">
         <div class="jobs-cards-and-title">
-          <div>
-            <h1 class="my-5">Nous avons trouvé <%= @jobs.length %> jobs qui peuvent te plaire!</h1>
-          </div>
+          <h1 class="my-5">
+            Nous avons trouvé <span class="font-weight-bold text-warning"><%= @jobs.length %></span> jobs <br>
+            qui peuvent te plaire!
+          </h1>
           <div class="job-containers">
             <% @jobs.each do |job| %>
               <div class="m-auto">
