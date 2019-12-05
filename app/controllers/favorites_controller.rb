@@ -17,15 +17,20 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    sleep 3
-    @job = Job.find(params[:job_id])
-    @favorite = Favorite.new
+    @job           = Job.find(params[:job_id])
+    @favorite      = Favorite.new
     @favorite.user = current_user
-    @favorite.job = @job
-
+    @favorite.job  = @job
     authorize @favorite
-    @favorite.save
-
+    if @favorite.save
+      respond_to do |format|
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.js
+      end
+    end
   end
 
   def edit
