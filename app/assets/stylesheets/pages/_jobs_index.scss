@@ -1,10 +1,14 @@
 .main {
   // height: 100vh;
-  background-color: #499EAA;
+  background-color: white;
   background-repeat: no-repeat;
   background-image: asset-url("background.png");
 }
 
+.jobs-cards-and-title {
+  width:  800px;
+  margin: 0 auto;
+}
 
 .job-containers {
   display:               grid;
