@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  // border-radius: 10px;
+  border-radius: 10px;
   border: 1px solid #f2f2f2!important;
   transition: 0.9s ease;
   position: relative;
@@ -21,34 +21,33 @@
   width: 60px;
   object-fit: cover;
   border-radius: 3px;
+  vertical-align: text-bottom
 }
 
-.mini-card h2 a {
-  font-size: 14px;
+.mini-card h5 a {
+  font-size: 15px;
   font-weight: bold;
-  margin-bottom: -4px;
   margin-top: 0;
   text-decoration: none;
   color: #364156;
   transition: 0.2s ease;
 }
-.mini-card h2 a:hover {
+.mini-card h5 a:hover {
   color: #489ea9;
   transition: 0.2s ease;
 }
 
 .mini-card p {
-  font-size: 9px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: -15px;
+  margin-top: 8px;
+}
+.mini-card-infos {
+  width: 65%;
 }
 
-.mini-card .mini-card-infos {
-  // padding: 10px;
-  width: 50%;
-}
 .trash {
   position: absolute;
   top: 5px;
@@ -57,6 +56,7 @@
 
 .status {
   font-family: 'Montserrat';
+  text-align: center;
   font-weight: bold;
   font-size: 16px;
   color: $red;
