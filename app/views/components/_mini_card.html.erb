@@ -1,4 +1,4 @@
-<div class="mini-card">
+<div id="<%= "favorite-#{favorite.id}" if favorite %>" class="mini-card">
   <%= image_tag job.logo %>
   <div class="mini-card-infos align-top ml-3">
     <div>
@@ -9,7 +9,7 @@
     </div>
     <div class="trash">
       <% if favorite %>
-        <%= link_to favorite_path(favorite), method: :delete do %>
+        <%= link_to favorite_path(favorite), method: :delete, remote: true do %>
           <i class="fas fa-times"></i>
         <% end %>
       <% else %>
