@@ -26,12 +26,22 @@
                 <% if @user == current_user && @user.cv.attached?  %>
                   <%= link_to "Voir mon CV", url_for(@user.cv), download: '', class: "button upload"%>
                 <% elsif @user == current_user %>
+
                   <%= simple_form_for @user, url: profil_path, method: :patch do |f| %>
-                    <%= f.file_field :cv, class: "form-control" %>
+                    <div class="text-center">
+                      <label for="user_cv" class="btn-upload">
+                      <div class="cv-filename-show">
+                        Upload ton CV !
+                      </div>
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <div id="cv-filename" class="cv-filename-show"></div>
+                      </label>
+                    </div>
+                    <%= f.file_field :cv, class: "form-inline d-none" %>
                     <%= f.button :submit, value: 'Télécharger', class: "button upload" %>
                   <% end %>
                 <% elsif @user.cv.attached? %>
-                  <%= link_to "Téléchargez le CV", url_for(@user.cv), download: '', class: "button upload"%>
+                  <%= link_to "Téléchargez le CV", url_for(@user.cv), download: '', class: "button"%>
                 <% else %>
                   <p>Pas encore de CV téléchargé</p>
                 <% end %>

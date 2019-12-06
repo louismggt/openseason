@@ -26,3 +26,9 @@ textAnimator();
 $( "#button-toogle-work-experiences" ).click(function() {
   $( "#work-experiences" ).toggle( "slow");
 });
+
+$("#user_cv").change(function() {
+  const filename = this.files[0].name;
+  console.log(filename);
+  document.getElementById("cv-filename").innerHTML = filename
+});
